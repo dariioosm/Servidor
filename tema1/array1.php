@@ -5,6 +5,7 @@ for($i=0;$i<=1;$i++){
     }
 }
 echo $M[1][2];
+echo '<br>';
 var_dump($M);
 
 ?>
