@@ -7,5 +7,19 @@
 *8 se pagan las primeras 8 al doble de lo que se pagan las horas normales y el resto
 *al triple.
 */
-
+$horas=49;
+$extras=0;
+$final=0;
+if($horas>40){
+    $extras=$horas-40;
+    
+    if($extras<=8){
+        echo $extras." horas que se pagaran al doble <br>";
+    }
+    else if($extras>8){
+        $final=$extras-8;
+        echo $final."horas que se pagan al triple";
+    }
+    
+}
 ?>
