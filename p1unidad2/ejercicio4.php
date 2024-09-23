@@ -8,17 +8,17 @@ $numero1= rand(0,100);
 $numero2= rand(0,100);
 if($numero1>$numero2){
     if($numero1%2==0){
-        echo $numero1." es mayor que ". $numero2."y ademas es par";
+        echo $numero1." es mayor que ". $numero2." y ademas es par";
     }
     else{
-        echo $numero1." es mayor que ". $numero2."y ademas es impar";
+        echo $numero1." es mayor que ". $numero2." y ademas es impar";
     }
 }else{
     if($numero2%2==0){
-        echo $numero2." es mayor que ". $numero1."y ademas es par";
+        echo $numero2." es mayor que ". $numero1." y ademas es par";
     }
     else{
-        echo $numero2." es mayor que ". $numero1."y ademas es impar";
+        echo $numero2." es mayor que ". $numero1." y ademas es impar";
     }
 }
 
