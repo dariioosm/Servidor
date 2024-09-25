@@ -6,20 +6,25 @@
 *                       ****
 *                       ****      
 */
-
+$principal=0;
+$secundaria=0;
 $M= array(
-    array(1,0,0,1),
+    array(1,0,0,2),
     array(0,1,1,0),
     array(0,1,1,0),
-    array(1,0,0,1),
-)
+    array(2,0,0,1),
+);
 //bucle diagonal principal
 for($i=0;$i<=3;$i++){
-    $principal+=$M[$i][$i];
-} 
-//bucle diagonal secundaria
-for($j=count($M);$j=0;$j--){
-    $secundaria+=$M[$j][$j];
+    $principal= $principal+ $M[$i][$i];
 }
-echo "La suma principal es: $principal y, la suma de la secundaria es: $secundaria"
+//bucle diagonal secundaria
+//-i,+j;
+$cont=0;
+for($j=3;$j>=0;$j--){
+    
+    $secundaria = $secundaria +$M[$cont][$j];
+    $cont++;
+}
+echo "La suma principal es: $principal <br> La suma de la secundaria es: $secundaria"
 ?>
