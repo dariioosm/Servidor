@@ -4,6 +4,10 @@
 *muestre por pantalla. Un número primo es un número entero que sólo es
 *divisible por 1 y por sí mismo.
 */
+for($i=1;$i<=50;$i++){
+    if($i){
 
+    }
+}
 
 ?>
