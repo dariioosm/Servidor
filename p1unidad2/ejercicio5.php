@@ -8,4 +8,9 @@
 * si es positivo, hay dos soluciones: (-b+sqrt(b2-4ac))/(2a) y (-bsqrt(b2-4ac))/(2a)
 
 */
+$a=0;
+$b=0;
+$c=0;
+
+
 ?>
