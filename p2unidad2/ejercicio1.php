@@ -40,8 +40,11 @@ TODO apartado d)
 */
 echo "apartado d) <br><br>";
 $jugador=array("Crovic","Antic","Malic","Zulic","Rostrich");
-echo "La alineación del equipo está compuesta por: $jugador["0"]";
-for ($i=<1; $i<=count($jugador)){
-    echo $jugador[$i];
+echo "La alineación del equipo está compuesta por: ";
+for ($i=0; $i<=count($jugador)-1;$i++){
+    echo $jugador[$i].", ";
+    if($i==4){
+        echo " y, ".$jugador[$i].".";
+    }
 }
 ?>
