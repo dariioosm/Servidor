@@ -25,13 +25,17 @@ TODO suma por filas para saber numero de alumnos por nivel
 */
 for($i=0;$i<count($alumnos);$i++){
     for($j=0;$j<count($alumnos[$i]);$j++){
-    $basico+=$alumnos[0][$j];
-    $medio+=$alumnos[1][$j];
-    $perfe+=$alumnos[2][$j];
+        if($i==0){
+            $basico+=$alumnos[$i][$j];
+        }elseif ($i==1) {
+            $medio+=$alumnos[$i][$j];
+        }elseif($i==2){
+            $perfe+=$alumnos[$i][$j];
+        }
     }
     
 }
-echo "El total de los alumnos en nivel básico es: ".$basico." en nivel medio: ".$medio." en nivel perfeccionamiento: ".$perfe;
+echo "El total de los alumnos en nivel básico es: ".$basico." en nivel medio: ".$medio." y, en nivel perfeccionamiento: ".$perfe;
 echo"<br>";
 
 /*
@@ -42,12 +46,10 @@ $aleman=0;
 $frances=0;
 $ruso=0;
 for($l=0;$l<=count($alumnos);$l++){
-    for($k=0;$k<4;$k++){
         $ingles+=$alumnos[$l][0];
         $aleman+=$alumnos[$l][1];
         $frances+=$alumnos[$l][2];
         $ruso+=$alumnos[$l][3];
-    }
 }
 echo "El total de los alumnos en inglés es: ".$ingles." en alemán: ".$aleman." en francés: ".$frances." y, en ruso: ".$ruso;
 
