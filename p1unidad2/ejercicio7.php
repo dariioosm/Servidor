@@ -5,9 +5,13 @@
 *divisible por 1 y por sí mismo.
 */
 for($i=1;$i<=50;$i++){
-    if(){
-
-    }
+    
+if($i<=3){
+    echo $i."<br>";
+}else if($i>3  && $i%2!=0 || $i%3!=0){
+    
+    echo $i."<br>";
+}
 }
 
 ?>
