@@ -5,8 +5,8 @@
 *divisible por 1 y por sí mismo.
 */
 for($i=1;$i<=50;$i++){
-    if($i){
-        
+    if(){
+
     }
 }
 
