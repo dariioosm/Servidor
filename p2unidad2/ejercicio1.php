@@ -6,9 +6,10 @@ TODO apartado a)
 *pantalla el elemento con localizador 5. Deberás obtener por pantalla que se visualiza -3
 */
 
-
-
-
+$coches = array(32, 11, 45, 22, 78, -3, 9, 66, 5);
+echo "apartado a) <br> <br>";
+echo $coches["5"];
+echo "<br> <br>";
 /*
 TODO apartado b)
 *Declara un array de numéricos decimales tipo double de nombre $importe e
