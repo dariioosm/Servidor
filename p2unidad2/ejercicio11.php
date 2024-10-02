@@ -15,5 +15,6 @@ foreach ($cine as $mes => $numero) {
     if($numero!=0){
         echo $mes."<br>";
     }
+    
 }
 ?>
