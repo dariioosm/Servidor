@@ -24,6 +24,4 @@ echo"No hay soluciones"
     $solucion1=-$b/2$a;
     echo $solucion1;
 }
-
-
 ?>
