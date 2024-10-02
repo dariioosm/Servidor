@@ -2,11 +2,10 @@
 /*
 * Almacena en un array los 10 primeros numeros pares e imprimelos cada uno en una fila
 */
-for($i=0;$i<=20;$i++){
-    if($i%2==0){
-        $vector= array($i);
-        echo"$vector";
-    }
+$numeros= array(2,4,6,8,10,12,14,16,18,20);
+for ($i=0;$i<count($numeros);$i++){
+    echo $numeros[$i]." ";
 }
 
 ?>
+
