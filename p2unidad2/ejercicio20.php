@@ -14,6 +14,7 @@ $estadios_futbol=array(
 * Elimina el estadio asociado al Real Madrid
 * Vuelve a mostrar los valores para comprobar que el valor ha sido eliminado, esta vez en una lista numerada
 */
+//? mirar como se saca como tabla html en casa
 echo"<table>";
 foreach($estadios_futbol as $equipo => $campo){
     echo "<tr>";
