@@ -11,7 +11,22 @@
 */
 $deportes=array("futbol", "baloncesto", "natación", "tenis");
 
+//TODO vardump de la matriz para la comprobacion del resultado de los echo
+echo "vardump de la matriz para la comprobacion del resultado de los echo <br>".var_dump($deportes)."<br>";
 //TODO total de valores
-echo count($deportes);
+echo count($deportes)." Numero de indices en el vector ";
+
+//TODO usar current para indicar donde eseta el programam en ese punto
+$actual= current($deportes);
+echo  "<br> El puntero está en: ".$actual;
+//TODO usar next para avanzar el puntero del programa
+$siguiente = next($deportes);
+echo "<br> La siguiente posicion del puntero es: ".$siguiente;
+//TODO usar end para avanzar el puntero hasta el final del array 
+$final = end($deportes);
+echo "<br> La posicion final del vector es: ".$final;
+//TODO usar prev para sacar el penultimo valor guardado en vector
+$penultimo=prev($deportes);
+echo "<br> La penultima posicion del vector es: ".$penultimo;
 
 ?>
