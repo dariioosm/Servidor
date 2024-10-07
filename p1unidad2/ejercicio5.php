@@ -21,7 +21,7 @@ echo"No hay soluciones"
     echo $solucion1;
     echo $solucion2;
 }else if(((2*$b)-(4*$a*$c))!==0){
-    $solucion1=-$b/2$a;
+    $solucion1=-$b/2*$a;
     echo $solucion1;
 }
 ?>
