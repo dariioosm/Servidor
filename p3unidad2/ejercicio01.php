@@ -6,23 +6,28 @@
     $a=0;
     $b=0;
     $c=0;
+    $is_real=false;
 function resultado($a, $b,$c){
     $solucion1=0;
     $solucion2=0;
-    $is_real=false;
+    
     if(((2*$b)-(4*$a*$c))<0){
-    echo"No hay soluciones"
+    echo"No hay soluciones";
+    return false;
     }else if(((2*$b)-(4*$a*$c))>=0){
         $solucion1=(-$b+sqrt(2*$b)-(4*$a*$c))/(2*$a);
         $solucion2=(-$b+sqrt(2*$b)+(4*$a*$c))/(2*$a);
-        echo $solucion1;
-        echo $solucion2;
+        return array($solucion1,$solucion2);
     }else if(((2*$b)-(4*$a*$c))!==0){
         $solucion1=-$b/2*$a;
-        echo $solucion1;
+        
+        return $solucion1;
     }
-    
-    
 }
 
+if($is_real=true){
+    echo $solucion1, $solucion2;
+}else{
+    echo "no hay soluciones posibles";
+}
 ?>
