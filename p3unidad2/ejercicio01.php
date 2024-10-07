@@ -25,7 +25,7 @@ function resultado($a, $b,$c){
     }
 }
 
-if($is_real=true){
+if($is_real==true){
     echo $solucion1, $solucion2;
 }else{
     echo "no hay soluciones posibles";
