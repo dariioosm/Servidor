@@ -26,14 +26,34 @@
 *       array_key_exists($arr, $cla) Devuelve verdadero si algún elemento de $arr tiene clave $cla Devuelve el número de elementos del array
 *       count($arr) Devuelve numero de elementos de array
 */
-
 //TODO funciones de variables
 
-
-
-
-
-
-
+$var = 'hola';
+echo '<br>';
+echo isset($var) ? 'true' : 'false';
+echo '<br>';
+echo is_null($var) ? 'true' : 'false';
+echo '<br>';
+echo is_array($var) ? 'true' : 'false';
+echo '<br>';
+//TODO funciones de cadenas
+$cad1 = "jibiri";
+$cad2 = 'holiwii';
+echo '<br>';
+echo strlen($cad1);
+echo '<br>';
+echo strtoupper($cad2);
+echo '<br>';
+echo strcmp($cad1, $cad2);
+echo '<br>';
+//TODO funciones de array
+$arr = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+echo '<br>';
+rsort($arr);
+print_r($arr);
+echo '<br>';
+print_r(array_keys($arr));
+echo '<br>';
+print_r(array_values($arr));
 
 ?>

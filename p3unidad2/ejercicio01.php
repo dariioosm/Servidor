@@ -12,21 +12,21 @@
     
 function resultado($a, $b,$c){
     
-    if(((2**$b)-(4*$a*$c))<0){
+    if((($b*$b)-(4*$a*$c))<0){
         $is_real=false;
-    }else if(((2**$b)-(4*$a*$c))>=0){
+    }else if((($b*$b)-(4*$a*$c))>=0){
         $solucion1=(-$b+sqrt(2*$b)-(4*$a*$c))/(2*$a);
         $solucion2=(-$b+sqrt(2*$b)+(4*$a*$c))/(2*$a);
-        //$is_real=true;
-    }else if(((2**$b)-(4*$a*$c))!==0){
+        return array($solucion1,$solucion2);
+    }else if((($b*$b)-(4*$a*$c))!==0){
         $solucion1=-$b/(2*$a);
-        //$is_real=true;
+        return array($solucion1);
     }
-    return array($solucion1,$solucion2);
+    //return array($solucion1,$solucion2);
 }
 $resultados=resultado($a,$b,$c);
 
-if($is_real=false){
+if($is_real==false){
     echo "no hay soluciones posibles";
 }else{
     if(count($resultados)==1){
