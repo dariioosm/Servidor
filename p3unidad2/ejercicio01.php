@@ -6,33 +6,31 @@
     $a=6;
     $b=7;
     $c=8;
-    $is_real=true;
-    $solucion1=0;
-    $solucion2=0;
     
 function resultado($a, $b,$c){
     
-    if((($b*$b)-(4*$a*$c))<0){
-        $is_real=false;
-    }else if((($b*$b)-(4*$a*$c))>=0){
-        $solucion1=(-$b+sqrt(2*$b)-(4*$a*$c))/(2*$a);
-        $solucion2=(-$b+sqrt(2*$b)+(4*$a*$c))/(2*$a);
-        return array($solucion1,$solucion2);
-    }else if((($b*$b)-(4*$a*$c))!==0){
-        $solucion1=-$b/(2*$a);
-        return array($solucion1);
+    $discriminante=($b*$b)-(4*$a*$c);
+    if($discriminante<0){
+        return false;
+    }else if($discriminante==0){
+        $solucion=-$b/(2*$a);
+        return array($solucion);
+    }else if($discriminante>0){
+        $solucion1 = (-$b + sqrt($discriminante)) / (2 * $a);
+        $solucion2 = (-$b - sqrt($discriminante)) / (2 * $a);
+        return array($solucion1, $solucion2);
     }
-    //return array($solucion1,$solucion2);
 }
-$resultados=resultado($a,$b,$c);
 
-if($is_real==false){
-    echo "no hay soluciones posibles";
+$resultados=resultado($a,$b,$c);
+if($resultados===false){
+    echo'no hay solucion';
 }else{
     if(count($resultados)==1){
-        echo $resultados[0];
+        echo 'La solucion es '. $resultados[0];
     }else{
-        echo $resultados[0].' y '.$resultados[1];
+        echo 'La solucion 1 es '. $resultados[0].' y la solucion 2 es '. $resultados[1];
     }
 }
+
 ?>
