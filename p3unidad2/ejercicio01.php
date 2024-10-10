@@ -3,9 +3,9 @@
 *Crea una función para resolver la ecuación de segundo grado. Esta función recibe los coeficientes de la ecuación y devuelve un array con las soluciones. 
 *Si no hay soluciones reales, devuelve FALSE.
 */
-    $a=6;
-    $b=7;
-    $c=8;
+    $a=1;
+    $b=-3;
+    $c=2;
     
 function resultado($a, $b,$c){
     
