@@ -7,7 +7,8 @@ include 'ejercicio01.php';
 $a=1;
 $b=-3;
 $c=2;
-$resultado($a,$b,$c);
-echo $resultado($a,$b,$c);
+//? llamo directamente a la funcion, porque dentro de la misma tiene declaraciones echo.
+//? si le pongo otras declaraciones de impresion como echo o print_r es redundante.
+resultado($a,$b,$c);
 
 ?>
