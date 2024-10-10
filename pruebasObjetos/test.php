@@ -1,13 +1,10 @@
 <?php
+//Importamos la clase Persona.
 require_once 'persona.php';
-//Creamos el objeto.
-$persona = new Persona();
-//Seteamos las propiedades.
-$persona->nombre = 'Dario';
-$persona->apellido = 'Sanchez';
-$persona->edad = 24;
-//Mostramos el resultado de las propiedades.
-echo 'Nombre: ' . $persona->nombre . '<br />';
-echo 'Apellido: ' . $persona->apellido . '<br />';
-echo 'Edad: ' . $persona->edad . '<br />';
+//Creamos el objeto con los valores que se definen en el constructor.
+$persona = new Persona('Fernando', 'Gaitan', 26);
+//Mostramos por pantalla los valores.
+echo $persona->saludar();
+//Destruimos el objeto.
+unset($persona);
 ?>
