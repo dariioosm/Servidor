@@ -9,7 +9,8 @@ class Vehiculo{
         echo $is_circula == true ? "Circula":"No circula"; 
     }
     public function annadir_persona($peso_persona){
-        return ;
+        
+        return  ;
     }
 
     public function __construct($color, $peso){
