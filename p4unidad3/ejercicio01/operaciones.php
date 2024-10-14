@@ -19,4 +19,14 @@ class Operaciones{
         return 'El resultado de la suma es: '.$resultado;
     }
 }
+
+
+
+$operar= new operaciones(20,50);
+//echo $operar."<br>";
+echo $operar -> suma(20,50)."<br>";
+echo $operar-> resta(20,50)."<br>";
+echo $operar-> multiplicacion(20,50)."<br>";
+echo $operar-> division(20,50)."<br>";
+
 ?>
