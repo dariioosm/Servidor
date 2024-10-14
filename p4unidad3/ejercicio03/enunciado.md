@@ -11,4 +11,4 @@ Realice las siguientes operaciones (continuación del ejercicio anterior, dificu
     Peso y color: 1500 negro
     El vehiculo circula
     Se sube una persona
-    Peso y color 
+    Peso y color 1570 negro
