@@ -19,7 +19,8 @@ class Vehiculo{
     }
     
     public function __toString($peso,$color){
-     return "Peso y color: ".$peso." ".$color;   
+        
+     return  "Peso y color: ".$this->peso." ".$this->$color;   
     }
 }
 

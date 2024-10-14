@@ -1,6 +1,6 @@
 <?php
 class Cuatro_ruedas extends Vehiculo{
-    public $numero_puertas;
+    protected $numero_puertas;
     
     public function repintar($color){
 
