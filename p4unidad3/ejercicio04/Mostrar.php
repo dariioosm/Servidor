@@ -1,12 +1,11 @@
 <?php 
-require('Vehiculo.php');
-$miVehiculo= new Vehiculo(1500,'negro');
+require('Coche.php');
+echo $mi_coche = new Coche(1400,'negro');
 echo '<br>';
-echo $miVehiculo;
+echo $mi_coche ->annadir_persona(130);
 echo '<br>';
-echo $miVehiculo -> annadir_persona(70);
+echo $mi_coche ->repintar('rojo');
 echo '<br>';
-echo $miVehiculo -> circula();
-echo '<br>';
-echo $miVehiculo;
+echo $mi_coche -> annadir_cadenas_nieve(2);
+
 ?>

@@ -1,8 +1,21 @@
 <?php
 class Camion extends Cuatro_ruedas{
-    private $longitud;
-    private function annadir_remolque($longitud_remolque){
+    public $longitud;
 
+    //TODO getter/setter de longitud
+
+    public function setLongitud($longitud){
+        $this->longitud;
+    }
+    
+    public function getLongitud(){
+        return $this -> longitud;
+    }
+
+
+    //TODO  hacer que el metodo remolque modifique la longitud del camion
+    public function annadir_remolque($longitud_remolque){
+        $this->longitud = $this->longitud +$longitud_remolque; 
     }
 }
 
