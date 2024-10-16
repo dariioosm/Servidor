@@ -2,8 +2,11 @@
 class Cuatro_ruedas extends Vehiculo{
     protected $numero_puertas;
     
-    protected function repintar($color){
+    //TODO hacer funcional el metodo repintar
 
+    public function repintar($color){
+        $this -> color = $color;
+        return 'El coche es de color '.$this->color;
     }
 }
 
