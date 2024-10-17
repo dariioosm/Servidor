@@ -1,5 +1,5 @@
 <?php
-class Vehiculo{
+abstract class Vehiculo{
     public $color;
     public $peso;
 
@@ -32,10 +32,7 @@ class Vehiculo{
         echo 'el vehiculo circula <br>';
     }
 
-    public function annadir_persona($peso_persona){
-        $this -> peso = $this->peso + $peso_persona;
-        return 'Se annadio una persona';
-    }
+    abstract public function annadir_persona($num_personas);
     
     
     //TODO metodo toString para sacar info del objeto
