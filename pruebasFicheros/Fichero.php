@@ -15,7 +15,7 @@ echo <<< _END
     <title>Document</title>
 </head>
 <body>
-    <form action="Fichero2.php" method="post">
+    <form action="#" method="post">
         <label for="nombre">Nombre:</label><br>
         <input type="text" id="nombre" name="nombre"><br><br>
 
