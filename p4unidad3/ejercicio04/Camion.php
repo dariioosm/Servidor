@@ -17,6 +17,7 @@ class Camion extends Cuatro_ruedas{
     //TODO  hacer que el metodo remolque modifique la longitud del camion
     public function annadir_remolque($longitud_remolque){
         $this->longitud = $this->longitud +$longitud_remolque; 
+        return 'La longitud del camion es de '. $this -> longitud.' metros';
     }
 }
 
