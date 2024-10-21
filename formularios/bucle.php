@@ -7,9 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-    <form>
+    <form method="get" action="resultadodinamico.php">
     <?php
-    for($i =0; $i<10;$i++){
+    for($i =0; $i<3;$i++){
         echo $i."<label name='$i':> </label> <input type='number' name='$i':></input> <br>";
     }
     ?>
