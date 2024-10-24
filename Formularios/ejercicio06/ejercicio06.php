@@ -13,6 +13,7 @@ if(isset($_POST['valor'])){
     }
     echo '<input type="submit" value="enviar">';
     echo '</form>';
+    
     if(isset($_POST['0'])){
         $suma=0;
     foreach($_POST as $indice => $valor){
