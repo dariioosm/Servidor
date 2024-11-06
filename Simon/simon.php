@@ -15,31 +15,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .circulo {
+    .circulo {
+            display: inline-block;
             width: 100px; /* Ancho del círculo */
             height: 100px; /* Alto del círculo */
             background-color: <?php  echo $color;?>;
             border-radius: 50%; /* Hace que el div sea un círculo */
         }
         .circulo2 {
+            display: inline-block;
             width: 100px; /* Ancho del círculo */
             height: 100px; /* Alto del círculo */
             background-color: <?php  echo $color2;?>;
             border-radius: 50%; /* Hace que el div sea un círculo */
         }
         .circulo3 {
+            display: inline-block;
             width: 100px; /* Ancho del círculo */
             height: 100px; /* Alto del círculo */
             background-color: <?php  echo $color3;?>;
             border-radius: 50%; /* Hace que el div sea un círculo */
         }
         .circulo4 {
+            display: inline-block;
             width: 100px; /* Ancho del círculo */
             height: 100px; /* Alto del círculo */
             background-color: <?php  echo $color4;?>;
             border-radius: 50%; /* Hace que el div sea un círculo */
         }
-
         button {
             display: block;
             margin: 0 auto;

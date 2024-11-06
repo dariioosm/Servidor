@@ -16,10 +16,32 @@ if(isset($_POST['respuesta'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .circulo {
+         .circulo {
+            display: inline-block;
             width: 100px; /* Ancho del círculo */
             height: 100px; /* Alto del círculo */
-            background-color: <?php  echo $color;?>;
+            background-color: <?php  echo $respuesta;?>;
+            border-radius: 50%; /* Hace que el div sea un círculo */
+        }
+        .circulo2 {
+            display: inline-block;
+            width: 100px; /* Ancho del círculo */
+            height: 100px; /* Alto del círculo */
+            background-color: <?php  echo $respuesta?>;
+            border-radius: 50%; /* Hace que el div sea un círculo */
+        }
+        .circulo3 {
+            display: inline-block;
+            width: 100px; /* Ancho del círculo */
+            height: 100px; /* Alto del círculo */
+            background-color: <?php  echo $respuesta;?>;
+            border-radius: 50%; /* Hace que el div sea un círculo */
+        }
+        .circulo4 {
+            display: inline-block;
+            width: 100px; /* Ancho del círculo */
+            height: 100px; /* Alto del círculo */
+            background-color: <?php  echo $respuesta;?>;
             border-radius: 50%; /* Hace que el div sea un círculo */
         }
         button {
@@ -32,7 +54,12 @@ if(isset($_POST['respuesta'])){
     </style>
 </head>
 <body>
+    <!-- Salen los circulos en negro -->
     <div class="circulo"></div>
+    <div class="circulo2"></div>
+    <div class="circulo3"></div>
+    <div class="circulo4"></div>
+    
     <form action="#" method="post">
         <input type="submit" name="respuesta" value="rojo">
         <input type="submit" name="respuesta"value="verde">
