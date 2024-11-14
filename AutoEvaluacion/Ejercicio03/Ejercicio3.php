@@ -8,7 +8,7 @@
 <body>
 <?php
     session_start();
-    $numero_aleatorio=3;
+    $numero_aleatorio=rand(1,100);
     if(!isset($_SESSION['contador'])){
         $_SESSION['contador']=0;
     }if($_POST['numero']==$numero_aleatorio){
