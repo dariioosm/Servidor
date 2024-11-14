@@ -21,8 +21,8 @@
     echo "<input type = 'submit' value = 'calcular'>";    
     echo  "</form> ";
 
-    //TODO hacer bucle para generar la matriz
-    if(!isset($_POST['numero'])){
+    //TODO hacer comprobacion del envio de formulario
+    if(isset($_POST["numero'.$i.$j.'"])){
         echo'<form>';
         echo'<table>';
     for ($i =0; $i<2;$i++){
@@ -37,23 +37,10 @@
     echo '</table>';
     echo '</form>';
     echo "<input type = 'submit' value = 'calcular'>";
-
+    for($i=0;$i<2;$i++){
+        for($j=0;$j<3;$j++){
+            echo $_POST["numero'.$i.$j.'"].''. decbin($_POST["numero'.$i.$j.'"]);
+        }
     }
-    echo'<form>';
-    echo'<table>';
-for ($i =0; $i<2;$i++){
-echo '<tr>';
-for($j=0;$j<3;$j++){
-    echo'<td>';
-        echo'<label>'.$i.$j.'</label> <input type="number" name="numero'.$i.$j.'" min="1" max="100"></input>';
-    echo'</td>';  
     }
-echo'</tr>';
-}
-echo '</table>';
-echo '</form>';
-
-    
-
-
 ?>

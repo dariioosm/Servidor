@@ -35,7 +35,7 @@
     ?>
     <form action='#' method="post">
     <label for="nombre">Adivina mi numero</label>
-    <input type="number" name="numero"/>
+    <input type="number" name="numero" min='1' max='100'/>
     </form>
 
 </body>
