@@ -4,25 +4,56 @@
 *Para crear el formulario se han de utilizar bucles, el formulario solo ha de contener una etiqueta, una caja de texto y un botón. 
 *El ejercicio se resolverá en un único fichero llamado ejercicio1.php, en la primera ejecución se mostrará el formulario y en la recarga una vez pulsado el botón se mostrará el resultado
 */
-
-
-
+    //TODO primer formulario
+    echo"<form action ='#' method = 'post'>";
+    echo'<table>';
+    for ($i =0; $i<2;$i++){
+        
+    echo '<tr>';
+    for($j=0;$j<3;$j++){
+        echo'<td>';
+            echo'<label>'.$i.$j.'</label> <input type="number" name="numero'.$i.$j.'" min="1" max="100"></input>';
+        echo'</td>';  
+        }
+    echo'</tr>';
+    }
+    echo '</table>';
+    echo "<input type = 'submit' value = 'calcular'>";    
+    echo  "</form> ";
 
     //TODO hacer bucle para generar la matriz
-for ($i =0; $i<3;$i++){
+    if(!isset($_POST['numero'])){
+        echo'<form>';
+        echo'<table>';
+    for ($i =0; $i<2;$i++){
     echo '<tr>';
-    for($j=0;$j<4;$j++){
+    for($j=0;$j<3;$j++){
         echo'<td>';
-        echo"<form action='#' method = 'post'>
-        <label>Numero de elementos: </label>
-        <input type = 'number' name= 'valor' required/>
-        <input type = 'submit' value = 'calcular'>
-    </form>";
-          
+            echo'<label>'.$i.$j.'</label> <input type="number" name="numero'.$i.$j.'" min="1" max="100"></input>';
+        echo'</td>';  
+        }
+    echo'</tr>';
     }
+    echo '</table>';
+    echo '</form>';
+    echo "<input type = 'submit' value = 'calcular'>";
+
+    }
+    echo'<form>';
+    echo'<table>';
+for ($i =0; $i<2;$i++){
+echo '<tr>';
+for($j=0;$j<3;$j++){
+    echo'<td>';
+        echo'<label>'.$i.$j.'</label> <input type="number" name="numero'.$i.$j.'" min="1" max="100"></input>';
+    echo'</td>';  
+    }
+echo'</tr>';
 }
+echo '</table>';
+echo '</form>';
 
-
+    
 
 
 ?>
