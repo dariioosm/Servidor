@@ -40,9 +40,9 @@
     for ($i = 3; $i >= 0; $i--) {
         if ($num[$i] == 1) {
             $potencia = 2 ** $i;
-            echo '<img src="' . $imagenes[$potencia] . '">';
+            echo '<img src="img/' . $imagenes[$potencia] . '">';
         } else {
-            echo '<img src="blanco.jpg">';
+            echo '<img src="img/blanco.jpg">';
         }
     }
 
