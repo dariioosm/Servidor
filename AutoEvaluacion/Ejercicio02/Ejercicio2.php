@@ -29,22 +29,24 @@
         $potencias[$i] = 2**$i;
     }
 
-    // Mostrar representación gráfica según los bits
+    // Mostrar fotos
     $imagenes = [
-        1 => 'uno.jpg',
-        2 => 'dos.jpg',
-        4 => 'cuatro.jpg',
-        8 => 'ocho.jpg'
+        1 => '1.jpg',
+        2 => '2.jpg',
+        4 => '4.jpg',
+        8 => '8.jpg'
     ];
-
+    
     for ($i = 3; $i >= 0; $i--) {
+        $potencia = 2 ** $i;
+    
         if ($num[$i] == 1) {
-            $potencia = 2 ** $i;
-            echo '<img src="img/' . $imagenes[$potencia] . '">';
+            echo '<img src="img/' . $imagenes[$potencia] . '" alt="' . $potencia . '">';
         } else {
-            echo '<img src="img/blanco.jpg">';
+            echo '<img src="img/blanco.jpg" alt="blanco">';
         }
     }
+    
 
     // Calcular el valor decimal del binario
     $decimal = 0;
