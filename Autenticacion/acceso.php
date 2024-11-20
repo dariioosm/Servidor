@@ -8,10 +8,10 @@
 <body>
     <form action="prueba.php" method="POST" >
     <label for="">Usuario</label>
-    <input type="text" id="user" name="user">
+    <input type="text" id="user" name="user" required>
     <label for="">Password</label>
-    <input type="password" id="pass" name="pass">
-    <button type="submit">ENviar</button>
+    <input type="password" id="pass" name="pass" require>
+    <button type="submit">Enviar</button>
     </form>
 </body>
 </html>
