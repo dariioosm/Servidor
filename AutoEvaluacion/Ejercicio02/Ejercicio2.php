@@ -10,11 +10,12 @@
     <?php 
     session_start();
 
-    // Generar el número binario aleatorio
+    // Generar el número binario aleatorio y guardalo en sesion
     $num = [];
     for ($i = 0; $i < 4; $i++) { 
         $num[$i] = rand(0, 1);
     }
+    $_SESSION['decimalcorrecto'] = $decimal;
 
     // Mostrar el número binario
     echo "<h2>El número en binario es: ";
@@ -55,9 +56,7 @@
             $decimal += $potencias[$i];
         }
     }
-
-    // Guardar el valor decimal en sesión
-    $_SESSION['decimalcorrecto'] = $decimal;
+    
     ?>
 
     <form action="ejercicio21.php" method="post">
