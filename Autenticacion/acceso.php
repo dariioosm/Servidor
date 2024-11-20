@@ -11,6 +11,7 @@
     <input type="text" id="user" name="user" required>
     <label for="">Password</label>
     <input type="password" id="pass" name="pass" require>
+    <a href="registro.php">Registrarse</a>
     <button type="submit">Enviar</button>
     </form>
 </body>
