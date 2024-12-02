@@ -1,5 +1,5 @@
 <?php 
-session_start();
+/*session_start();
 if(isset($_POST['cambiar_color'])){
     $_SESSION['cambiar_color']=$_POST['cambiar_color'];
 }
@@ -8,6 +8,25 @@ if(isset($_POST['respuesta'])){
 }else{
     $respuesta='black';
 }
+foreach($adivinaColor as $index=>$value){
+    
+}*/
+session_start();
+
+// Si se presiona el botón 'cambiar_color', se asigna un nuevo color aleatorio
+if (isset($_POST['cambiar_color'])) {
+    $colores = ['red', 'green', 'yellow', 'blue'];
+    $_SESSION['color'] = $colores[array_rand($colores)];
+}
+
+// Si el usuario elige un color, se asigna a la variable $respuesta
+if (isset($_POST['respuesta'])) {
+    $respuesta = $_POST['respuesta'];
+} else {
+    // Si no se ha seleccionado ningún color, asignamos el color guardado en la sesión o un valor predeterminado
+    $respuesta = isset($_SESSION['color']) ? $_SESSION['color'] : 'black';
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -65,6 +84,10 @@ if(isset($_POST['respuesta'])){
         <input type="submit" name="respuesta"value="verde">
         <input type="submit" name="respuesta"value="azul">
         <input type="submit" name="respuesta"value=amarillo>
+
+        <?php
+            
+        ?>
     </form>
 </body>
 </html>

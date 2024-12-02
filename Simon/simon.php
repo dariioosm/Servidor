@@ -1,4 +1,5 @@
 <?php 
+            session_start();
             $colores =['red', 'green', 'yellow', 'blue'];
             $color = $colores[array_rand($colores)];
             $color2 = $colores[array_rand($colores)];
@@ -7,6 +8,8 @@
             if (isset($_POST['cambiar_color'])) {
                 $color = $colores[array_rand($colores)];
             }
+            $_SESSION['adivinar']=$colores[array_rand(($colores))];
+            $_SESSION['colores']=$colores;
         ?>
 <!DOCTYPE html>
 <html lang="es">
