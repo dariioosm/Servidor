@@ -28,6 +28,13 @@
     $color2=$paleta_colores[$randomcolor2];
     $color3=$paleta_colores[$randomcolor3];
     $color4=$paleta_colores[$randomcolor4];
+
+    
+    //! esto es lo que realmente coge el comparador ejn jugar.php
+    $_SESSION['color1']=$color1;
+    $_SESSION['color2']=$color2;
+    $_SESSION['color3']=$color3;
+    $_SESSION['color4']=$color4;
     
     function color($color1,$color2,$color3,$color4){
         $colores=[$color1,$color2,$color3,$color4]; //? combinacion para jugar

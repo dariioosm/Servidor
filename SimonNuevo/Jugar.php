@@ -28,7 +28,8 @@
         if (!isset($_SESSION['contador'])) {
             $_SESSION['contador'] = 0;
             $_SESSION['colors'] = ['black', 'black', 'black', 'black'];
-            $_SESSION['combinacion_correcta'] = ['randomcolor', 'randomcolor2', 'randomcolor3', 'randomcolor4']; // Asegúrate de que los colores coincidan
+            $_SESSION['combinacion_correcta'] = [$_SESSION['color1'],$_SESSION['color2'], $_SESSION['color3'],$_SESSION ['color4']]; 
+            
         } else {
             // Verifica si se ha enviado un color
             if (isset($_POST['color'])) {

@@ -24,7 +24,7 @@
     }
     session_destroy();
     ?>
-    <a href="Inicio.php" style="text_align:left;">
+    <a href="Inicio.php">
         Volver al juego
     </a>
 </body>
