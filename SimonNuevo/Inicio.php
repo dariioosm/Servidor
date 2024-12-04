@@ -10,33 +10,6 @@
     <h6>Hola, memoriza la combinacion</h6>
     <?php
     
-    session_start();
-    
-
-    //TODO agarrar la info del post y guardarlo en variables de sesion y posteriormente, pasarlos a una $ para meterlo en las query de la bbdd
-    $_SESSION['user']=$_POST['user'];
-    $_SESSION['pass']=$_POST['pass'];
-
-    if(isset($_SESSION['user']) && isset($_SESSION['pass'])){
-        
-    $user=$_SESSION['user'];
-    $pass=$_SESSION['pass'];
-
-    }
-    var_dump($user,$pass);
-    //? conexion a bbdd con la info del root
-    $connection = new mysqli('localhost:8080','root','','bdsimon');
-    $query= "SELECT Nombre, Clave from usuarios where Nombre like '$user' and Clave like '$pass'";
-    $salida=$connection->query($query);
-    if(!$salida)die ('fatal error');
-
-
-
-
-
-
-
-
     $paleta_colores=["red","green","blue","yellow"];
     $_SESSION['randomcolor']=rand(0,3);
     $_SESSION['randomcolor2']=rand(0,3);
@@ -57,7 +30,7 @@
     $color4=$paleta_colores[$randomcolor4];
 
     
-    //! esto es lo que realmente coge el comparador ejn jugar.php
+    //! esto es lo que realmente coge el comparador en jugar.php
     $_SESSION['color1']=$color1;
     $_SESSION['color2']=$color2;
     $_SESSION['color3']=$color3;

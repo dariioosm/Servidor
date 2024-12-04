@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>¡Vamos a jugar al simon!</h1>
-    <form action="login.php" method="POST" >
+    <form action="Inicio.php" method="POST" >
     <label for="">Usuario</label>
     <input type="text" id="user" name="user" required>
     <label for="">Password</label>
@@ -17,3 +17,34 @@
     </form>
 </body>
 </html>
+<?php 
+session_start();
+
+//? comprueba que los post user y pass contengan informacion
+if (isset($_POST['user']) && isset($_POST['pass'])) {
+    $_SESSION['user'] = $_POST['user'];
+    $_SESSION['pass'] = $_POST['pass'];
+}
+//TODO agarrar la info del post y guardarlo en variables de sesion y posteriormente, pasarlos a una $ para meterlo en las query de la bbdd
+
+if(isset($_SESSION['user']) && isset($_SESSION['pass'])){
+    
+$user=$_SESSION['user'];
+$pass=$_SESSION['pass'];
+
+}
+
+//? conexion a bbdd con la info del root
+
+$connection = new mysqli('localhost','root','','bdsimon');
+$query = "SELECT Nombre, Clave FROM usuarios WHERE Nombre LIKE '$user' AND Clave LIKE '$pass'";
+$result=$connection->query($query);
+if($result&&$result -> num_rows>0){
+    $fila = $result ->fetch_assoc();
+    echo "Bienvenido, " . htmlspecialchars($fila['Nombre']) . "!<br>"; 
+}else {
+    echo "Usuario o contraseña incorrectos.<br>";
+}
+if(!$result)die ('fatal error');
+
+?>
