@@ -7,12 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="prueba.php" method="POST" >
+    <h1>¡Vamos a jugar al simon!</h1>
+    <form action="login.php" method="POST" >
     <label for="">Usuario</label>
     <input type="text" id="user" name="user" required>
     <label for="">Password</label>
     <input type="password" id="pass" name="pass" require>
-    <a href="registro.php">Registrarse</a>
     <button type="submit">Enviar</button>
     </form>
 </body>
