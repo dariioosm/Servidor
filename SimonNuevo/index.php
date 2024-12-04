@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="prueba.php" method="POST" >
+    <form action="inicio.php" method="POST" >
     <label for="">Usuario</label>
     <input type="text" id="user" name="user" required>
     <label for="">Password</label>
@@ -17,6 +17,3 @@
     </form>
 </body>
 </html>
-<?php
-
-?>
