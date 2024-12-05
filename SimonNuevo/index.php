@@ -37,7 +37,7 @@ $pass=$_SESSION['pass'];
 //? conexion a bbdd con la info del root
 
 $connection = new mysqli('localhost','root','','bdsimon');
-$query = "SELECT Nombre, Clave FROM usuarios WHERE Nombre LIKE '$user' AND Clave LIKE '$pass'";
+$query = "SELECT Nombre, Clave FROM usuarios WHERE Nombre like '$user' AND Clave like '$pass'";
 $result=$connection->query($query);
 if($result&&$result -> num_rows>0){
     $fila = $result ->fetch_assoc();
