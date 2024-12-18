@@ -15,7 +15,7 @@ if(file_exists($target_file)){
     echo "El fichero existe";
 }
 //TODO comprobar tipo de archivo
-if($tipoArchivo !="jpg" && $tipoArchivo !="png" && $tipoArchivo !="jpeg" && $tipoArchivo !="gif"){
+if($tipoArchivo !="jpg" && $tipoArchivo !="png" && $tipoArchivo !="jpeg" && $tipoArchivo !="gif" && $tipoArchivo !="jfif"){
     echo "solo se puede subir archivos de imagen";
 }
 
