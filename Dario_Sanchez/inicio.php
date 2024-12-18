@@ -8,6 +8,12 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 
 $consulta="SELECT nombre from jugador where 'login' like '$user'";
 $nombre=$conn->query($consulta);
+$rows= $nombre->num_rows;
+for($j = 0 ; $j < $rows ; ++$j){
+    $nombre->data_seek($j);
+    echo'Bienvenido: '.htmlspecialchars($nombre->fetch_assoc()['login']);
+}
+$nombre->close();
 $conn->close();
 ?>
 
@@ -19,9 +25,9 @@ $conn->close();
     <title>Document</title>
 </head>
 <body>
-    <h2>Bienvenido <?php echo $user ?></h2> <br> <br>
+    <h2> Bienvenido <?php echo $user?></h2> <br> <br>
     <img src="imagen/20241212.jpg" alt="">
-    <form action="resultado.php">
+    <form action="resultado.php" method="post">
         <label for="solucion"> Solucion Jeroglifico</label> <input type="text" name="respuesta" id="respuesta">
         <button type="submit">Enviar</button>
     </form>
@@ -29,3 +35,9 @@ $conn->close();
     <a href="resultado.php">Resultados del dia</a>
 </body>
 </html>
+<?php
+
+
+
+
+?>
