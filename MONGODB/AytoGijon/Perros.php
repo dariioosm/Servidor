@@ -1,21 +1,24 @@
 <?php 
 require '../vendor/autoload.php';
-$clientMongo= new MongoDB\Client('mongodb://localhost:27017');
-$bdMongo=$clientMongo->perros;
-$coleccion_perros=$bd_mongo->peligrosos;
-$file='perros.json';
-$jsonData=file_get_contents($file);
-$perros=json_decode($jsonData,true);
-if($perros==null){
-    die('Error al encontrar perros.json');
+$clientMongo = new MongoDB\Client('mongodb://localhost:27017');
+$bdMongo = $clientMongo->perros;
+$coleccion_perros = $bdMongo->peligrosos;
+
+$file = 'perros.json';
+$jsonData = file_get_contents($file);
+
+$perros = json_decode($jsonData, true);
+if ($perros == null) {
+    die('Error al leer el archivo JSON');
 }
 
-$insert = $coleccion_perros->insertMany($perros);
-
-if($insert->getInsertedCount()>0){
-    echo "Se han insertado {$insert->getInsertedCount()} perros peligrosos en MongoDB \n";
-}else{
-    echo "No se han insertado PPP en MongoDB";
+foreach ($perros as $perro) {
+    // Insertar un perro a la vez en MongoDB
+    $insert = $coleccion_perros->insertOne($perro);
+    if ($insert->getInsertedCount() > 0) {
+        echo "Perro insertado: {$perro['nombre']} \n";
+    } else {
+        echo "Error al insertar el perro: {$perro['nombre']} \n";
+    }
 }
-
 ?>
