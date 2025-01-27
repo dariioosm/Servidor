@@ -1,0 +1,2841 @@
+{
+    "animales": {
+        "animal": [
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33206,
+                "barrio": "Centro",
+                "numero": 4
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33203,
+                "barrio": "L' Arena",
+                "numero": 5
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33203,
+                "barrio": "L' Arena",
+                "numero": 3
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33213,
+                "barrio": "La Calzada",
+                "numero": 30
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33202,
+                "barrio": "Centro",
+                "numero": 13
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33204,
+                "barrio": "L' Arena",
+                "numero": 4
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33207,
+                "barrio": "Laviada",
+                "numero": 26
+            },
+            {
+                "descripcion": "AMERICAN BULLY",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33207,
+                "barrio": "El Pol\u00edgono",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33211,
+                "barrio": "Montevil",
+                "numero": 7
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33210,
+                "barrio": "Contrueces",
+                "numero": 3
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33691,
+                "barrio": "Veri\u00f1a",
+                "numero": 1
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Grande",
+                "codigo_postal": 33207,
+                "barrio": "Laviada",
+                "numero": 2
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Grande",
+                "codigo_postal": 33202,
+                "barrio": "Centro",
+                "numero": 2
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33392,
+                "barrio": "Ruedes",
+                "numero": 2
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33208,
+                "barrio": "El Llano",
+                "numero": 12
+            },
+            {
+                "descripcion": "PINCHERE (CHIGUAGUA)",
+                "tama\u00d1o": "Peque\u00f1o",
+                "codigo_postal": 33208,
+                "barrio": "El Llano",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN BULLY",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33208,
+                "barrio": "El Llano",
+                "numero": 5
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33212,
+                "barrio": "La Calzada",
+                "numero": 5
+            },
+            {
+                "descripcion": "AMERICAN BULLY",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33350,
+                "barrio": "Vega",
+                "numero": 2
+            },
+            {
+                "descripcion": "DOBERMAN",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33203,
+                "barrio": "Somi\u00f3",
+                "numero": 1
+            },
+            {
+                "descripcion": "AKITA INU",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33203,
+                "barrio": "Somi\u00f3",
+                "numero": 1
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33697,
+                "barrio": "San Andr\u00e9s de los Tacones",
+                "numero": 3
+            },
+            {
+                "descripcion": "MESTIZO",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33201,
+                "barrio": "Cimavilla",
+                "numero": 2
+            },
+            {
+                "descripcion": "DOGO ARGENTINO",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33202,
+                "barrio": "L' Arena",
+                "numero": 1
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33691,
+                "barrio": "Veri\u00f1a",
+                "numero": 2
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33212,
+                "barrio": "Moreda",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33212,
+                "barrio": "Moreda",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Grande",
+                "codigo_postal": 33209,
+                "barrio": "El Llano",
+                "numero": 1
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33204,
+                "barrio": "Viesques",
+                "numero": 1
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33204,
+                "barrio": "Viesques",
+                "numero": 8
+            },
+            {
+                "descripcion": "FILA BRASILEIRO",
+                "tama\u00d1o": "Peque\u00f1o",
+                "codigo_postal": 33213,
+                "barrio": "La Calzada",
+                "numero": 1
+            },
+            {
+                "descripcion": "MESTIZO",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33208,
+                "barrio": "El Llano",
+                "numero": 2
+            },
+            {
+                "descripcion": "MAST\u00cdN",
+                "tama\u00d1o": "Grande",
+                "codigo_postal": 33208,
+                "barrio": "El Llano",
+                "numero": 1
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33299,
+                "barrio": "La Calzada",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN BULLY",
+                "tama\u00d1o": "Peque\u00f1o",
+                "codigo_postal": 33212,
+                "barrio": "El Natahoyo",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN BULLY",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33209,
+                "barrio": "El Llano",
+                "numero": 2
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33394,
+                "barrio": "Cabue\u00f1es",
+                "numero": 4
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33392,
+                "barrio": "Porceyo",
+                "numero": 4
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33391,
+                "barrio": "Granda",
+                "numero": 5
+            },
+            {
+                "descripcion": "MESTIZO",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33203,
+                "barrio": "Somi\u00f3",
+                "numero": 1
+            },
+            {
+                "descripcion": "BOXER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33209,
+                "barrio": "Ceares\/Ciares",
+                "numero": 1
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33211,
+                "barrio": "Trema\u00f1es",
+                "numero": 2
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33392,
+                "barrio": "La Pedrera",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33393,
+                "barrio": "L' Abad\u00eda Cenero",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN BULLY",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33393,
+                "barrio": "L' Abad\u00eda Cenero",
+                "numero": 1
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Peque\u00f1o",
+                "codigo_postal": 33211,
+                "barrio": "Roces",
+                "numero": 1
+            },
+            {
+                "descripcion": "MESTIZO",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33211,
+                "barrio": "Trema\u00f1es",
+                "numero": 1
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33691,
+                "barrio": "Puao",
+                "numero": 1
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33290,
+                "barrio": "Jove\/Xove",
+                "numero": 2
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33213,
+                "barrio": "Jove\/Xove",
+                "numero": 3
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33392,
+                "barrio": "Porceyo",
+                "numero": 3
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33392,
+                "barrio": "Ruedes",
+                "numero": 1
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33392,
+                "barrio": "La Pedrera",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN BULLY",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33213,
+                "barrio": "La Calzada",
+                "numero": 7
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33213,
+                "barrio": "La Calzada",
+                "numero": 16
+            },
+            {
+                "descripcion": "AKITA INU",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33201,
+                "barrio": "Centro",
+                "numero": 1
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33211,
+                "barrio": "Nuevo Gij\u00f3n\/La Peral",
+                "numero": 5
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33210,
+                "barrio": "Pumar\u00edn",
+                "numero": 41
+            },
+            {
+                "descripcion": "AMERICAN PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33210,
+                "barrio": "El Llano",
+                "numero": 1
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33204,
+                "barrio": "L' Arena",
+                "numero": 1
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33205,
+                "barrio": "El Coto",
+                "numero": 15
+            },
+            {
+                "descripcion": "GALGO ESPA\u00d1OL",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33205,
+                "barrio": "El Coto",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33205,
+                "barrio": "El Coto",
+                "numero": 5
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33207,
+                "barrio": "El Pol\u00edgono",
+                "numero": 14
+            },
+            {
+                "descripcion": "AMERICAN PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33207,
+                "barrio": "El Pol\u00edgono",
+                "numero": 1
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33211,
+                "barrio": "Montevil",
+                "numero": 15
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33204,
+                "barrio": "El Coto",
+                "numero": 7
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33204,
+                "barrio": "El Coto",
+                "numero": 9
+            },
+            {
+                "descripcion": "MESTIZO",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33210,
+                "barrio": "Contrueces",
+                "numero": 1
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33208,
+                "barrio": "El Llano",
+                "numero": 10
+            },
+            {
+                "descripcion": "DOGO ARGENTINO",
+                "tama\u00d1o": "Grande",
+                "codigo_postal": 33205,
+                "barrio": "Centro",
+                "numero": 2
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Grande",
+                "codigo_postal": 33203,
+                "barrio": "L' Arena",
+                "numero": 2
+            },
+            {
+                "descripcion": "AMERICAN BULLY",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33212,
+                "barrio": "El Natahoyo",
+                "numero": 2
+            },
+            {
+                "descripcion": "AMERICAN BULLY",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33210,
+                "barrio": "Pumar\u00edn",
+                "numero": 5
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Grande",
+                "codigo_postal": 33210,
+                "barrio": "Pumar\u00edn",
+                "numero": 1
+            },
+            {
+                "descripcion": "AKITA INU",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33212,
+                "barrio": "El Natahoyo",
+                "numero": 1
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Peque\u00f1o",
+                "codigo_postal": 33210,
+                "barrio": "El Llano",
+                "numero": 1
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33209,
+                "barrio": "Viesques",
+                "numero": 1
+            },
+            {
+                "descripcion": "AKITA INU",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33208,
+                "barrio": "El Llano",
+                "numero": 1
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33208,
+                "barrio": "Pumar\u00edn",
+                "numero": 4
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Grande",
+                "codigo_postal": 33211,
+                "barrio": "Santa B\u00e1rbara",
+                "numero": 1
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Grande",
+                "codigo_postal": 33202,
+                "barrio": "L' Arena",
+                "numero": 1
+            },
+            {
+                "descripcion": "DOGO ARGENTINO",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33203,
+                "barrio": "Somi\u00f3",
+                "numero": 1
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33206,
+                "barrio": "Centro",
+                "numero": 1
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33205,
+                "barrio": "El Llano",
+                "numero": 4
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33393,
+                "barrio": "L' Abad\u00eda Cenero",
+                "numero": 2
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33201,
+                "barrio": "Cimavilla",
+                "numero": 2
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33212,
+                "barrio": "El Natahoyo",
+                "numero": 3
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33212,
+                "barrio": "La Calzada",
+                "numero": 2
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33211,
+                "barrio": "Trema\u00f1es",
+                "numero": 3
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33394,
+                "barrio": "Deva",
+                "numero": 3
+            },
+            {
+                "descripcion": "DOGO ARGENTINO",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33202,
+                "barrio": "Centro",
+                "numero": 1
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Grande",
+                "codigo_postal": 33211,
+                "barrio": "Perchera\/La Bra\u00f1a",
+                "numero": 1
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33204,
+                "barrio": "Ceares\/Ciares",
+                "numero": 3
+            },
+            {
+                "descripcion": "AKITA INU",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33203,
+                "barrio": "El Bibio",
+                "numero": 1
+            },
+            {
+                "descripcion": "PRESA CANARIO",
+                "tama\u00d1o": "Peque\u00f1o",
+                "codigo_postal": 33390,
+                "barrio": "La Pedrera",
+                "numero": 1
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33390,
+                "barrio": "Leorio\/Llorio",
+                "numero": 3
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33391,
+                "barrio": "Fano",
+                "numero": 2
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33391,
+                "barrio": "Caldones",
+                "numero": 3
+            },
+            {
+                "descripcion": "AMERICAN PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33350,
+                "barrio": "Llavandera",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33209,
+                "barrio": "Ceares\/Ciares",
+                "numero": 1
+            },
+            {
+                "descripcion": "AKITA INU",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33205,
+                "barrio": "El Llano",
+                "numero": 1
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33390,
+                "barrio": "Leorio\/Llorio",
+                "numero": 1
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33391,
+                "barrio": "Valdorn\u00f3n",
+                "numero": 1
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33391,
+                "barrio": "Valdorn\u00f3n",
+                "numero": 2
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Peque\u00f1o",
+                "codigo_postal": 33210,
+                "barrio": "El Llano",
+                "numero": 1
+            },
+            {
+                "descripcion": "DOGO ARGENTINO",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33392,
+                "barrio": "L' Abad\u00eda Cenero",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33393,
+                "barrio": "L' Abad\u00eda Cenero",
+                "numero": 1
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33206,
+                "barrio": "Centro",
+                "numero": 6
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33201,
+                "barrio": "Centro",
+                "numero": 4
+            },
+            {
+                "descripcion": "AMERICAN PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33211,
+                "barrio": "Nuevo Gij\u00f3n\/La Peral",
+                "numero": 1
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Grande",
+                "codigo_postal": 33211,
+                "barrio": "Perchera\/La Bra\u00f1a",
+                "numero": 1
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33212,
+                "barrio": "Jove\/Xove",
+                "numero": 13
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33212,
+                "barrio": "Jove\/Xove",
+                "numero": 2
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33204,
+                "barrio": "L' Arena",
+                "numero": 1
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33205,
+                "barrio": "El Coto",
+                "numero": 5
+            },
+            {
+                "descripcion": "MESTIZO",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33207,
+                "barrio": "Laviada",
+                "numero": 1
+            },
+            {
+                "descripcion": "AKITA INU",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33207,
+                "barrio": "Laviada",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN BULLY",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33207,
+                "barrio": "Laviada",
+                "numero": 2
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33211,
+                "barrio": "Montevil",
+                "numero": 5
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33205,
+                "barrio": "Centro",
+                "numero": 4
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33205,
+                "barrio": "El Coto",
+                "numero": 4
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33210,
+                "barrio": "Pumar\u00edn",
+                "numero": 16
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33202,
+                "barrio": "Centro",
+                "numero": 2
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Grande",
+                "codigo_postal": 33392,
+                "barrio": "Ruedes",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33205,
+                "barrio": "El Coto",
+                "numero": 2
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33208,
+                "barrio": "Centro",
+                "numero": 1
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Peque\u00f1o",
+                "codigo_postal": 33201,
+                "barrio": "Cimavilla",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33211,
+                "barrio": "Roces",
+                "numero": 6
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33211,
+                "barrio": "Roces",
+                "numero": 12
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33392,
+                "barrio": "L' Abad\u00eda Cenero",
+                "numero": 1
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33392,
+                "barrio": "L' Abad\u00eda Cenero",
+                "numero": 1
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Grande",
+                "codigo_postal": 33203,
+                "barrio": "Somi\u00f3",
+                "numero": 3
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33204,
+                "barrio": "Viesques",
+                "numero": 4
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33212,
+                "barrio": "Moreda",
+                "numero": 1
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33212,
+                "barrio": "Moreda",
+                "numero": 1
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33209,
+                "barrio": "Ceares\/Ciares",
+                "numero": 1
+            },
+            {
+                "descripcion": "MESTIZO",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33210,
+                "barrio": "Pumar\u00edn",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33207,
+                "barrio": "Centro",
+                "numero": 1
+            },
+            {
+                "descripcion": "FILA BRASILEIRO",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33213,
+                "barrio": "La Calzada",
+                "numero": 1
+            },
+            {
+                "descripcion": "AKITA INU",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33394,
+                "barrio": "Cabue\u00f1es",
+                "numero": 1
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33394,
+                "barrio": "Santurio",
+                "numero": 7
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33697,
+                "barrio": "Serin",
+                "numero": 2
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33392,
+                "barrio": "Porceyo",
+                "numero": 2
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33391,
+                "barrio": "Vega",
+                "numero": 1
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Grande",
+                "codigo_postal": 33205,
+                "barrio": "El Llano",
+                "numero": 1
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33203,
+                "barrio": "Cabue\u00f1es",
+                "numero": 1
+            },
+            {
+                "descripcion": "AKITA INU",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33350,
+                "barrio": "Vega",
+                "numero": 1
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Grande",
+                "codigo_postal": 33209,
+                "barrio": "Nuevo Roces",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN BULLY",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33213,
+                "barrio": "Jove\/Xove",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33392,
+                "barrio": "Ruedes",
+                "numero": 1
+            },
+            {
+                "descripcion": "MESTIZO",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33392,
+                "barrio": "Porceyo",
+                "numero": 1
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33212,
+                "barrio": "El Natahoyo",
+                "numero": 32
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33204,
+                "barrio": "Les Mestes",
+                "numero": 2
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33208,
+                "barrio": "Centro",
+                "numero": 5
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33211,
+                "barrio": "Nuevo Gij\u00f3n\/La Peral",
+                "numero": 4
+            },
+            {
+                "descripcion": "DOGO ARGENTINO",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33212,
+                "barrio": "Jove\/Xove",
+                "numero": 1
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33211,
+                "barrio": "Nuevo Gij\u00f3n\/La Peral",
+                "numero": 2
+            },
+            {
+                "descripcion": "DOGO ARGENTINO",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33213,
+                "barrio": "La Calzada",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33210,
+                "barrio": "Contrueces",
+                "numero": 4
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33205,
+                "barrio": "Centro",
+                "numero": 2
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33208,
+                "barrio": "El Llano",
+                "numero": 27
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33207,
+                "barrio": "Laviada",
+                "numero": 8
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33207,
+                "barrio": "Laviada",
+                "numero": 2
+            },
+            {
+                "descripcion": "DOGO ARGENTINO",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33205,
+                "barrio": "El Coto",
+                "numero": 1
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33211,
+                "barrio": "Trema\u00f1es",
+                "numero": 9
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33212,
+                "barrio": "Centro",
+                "numero": 1
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33207,
+                "barrio": "El Pol\u00edgono",
+                "numero": 5
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33207,
+                "barrio": "El Pol\u00edgono",
+                "numero": 8
+            },
+            {
+                "descripcion": "MESTIZO",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33211,
+                "barrio": "Montevil",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33210,
+                "barrio": "El Llano",
+                "numero": 14
+            },
+            {
+                "descripcion": "MESTIZO",
+                "tama\u00d1o": "Grande",
+                "codigo_postal": 33210,
+                "barrio": "Contrueces",
+                "numero": 1
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33211,
+                "barrio": "Pumar\u00edn",
+                "numero": 1
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33208,
+                "barrio": "Pumar\u00edn",
+                "numero": 3
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33209,
+                "barrio": "El Coto",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33204,
+                "barrio": "Les Mestes",
+                "numero": 1
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33211,
+                "barrio": "Perchera\/La Bra\u00f1a",
+                "numero": 2
+            },
+            {
+                "descripcion": "AMERICAN PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33209,
+                "barrio": "Contrueces",
+                "numero": 1
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Grande",
+                "codigo_postal": 33394,
+                "barrio": "Santurio",
+                "numero": 1
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Peque\u00f1o",
+                "codigo_postal": 33211,
+                "barrio": "Santa B\u00e1rbara",
+                "numero": 2
+            },
+            {
+                "descripcion": "AKITA INU",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33211,
+                "barrio": "Santa B\u00e1rbara",
+                "numero": 1
+            },
+            {
+                "descripcion": "DOGO ARGENTINO",
+                "tama\u00d1o": "Grande",
+                "codigo_postal": 33211,
+                "barrio": "Trema\u00f1es",
+                "numero": 1
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33203,
+                "barrio": "El Bibio",
+                "numero": 4
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33393,
+                "barrio": "L' Abad\u00eda Cenero",
+                "numero": 2
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Grande",
+                "codigo_postal": 33208,
+                "barrio": "El Llano",
+                "numero": 1
+            },
+            {
+                "descripcion": "BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33212,
+                "barrio": "La Calzada",
+                "numero": 2
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33203,
+                "barrio": "El Bibio",
+                "numero": 1
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33211,
+                "barrio": "Perchera\/La Bra\u00f1a",
+                "numero": 1
+            },
+            {
+                "descripcion": "PODENCO",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33212,
+                "barrio": "La Calzada",
+                "numero": 1
+            },
+            {
+                "descripcion": "AKITA INU",
+                "tama\u00d1o": "Grande",
+                "codigo_postal": 33208,
+                "barrio": "El Llano",
+                "numero": 1
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33201,
+                "barrio": "Cimavilla",
+                "numero": 2
+            },
+            {
+                "descripcion": "MESTIZO",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33212,
+                "barrio": "Moreda",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33211,
+                "barrio": "Trema\u00f1es",
+                "numero": 1
+            },
+            {
+                "descripcion": "AKITA INU",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33202,
+                "barrio": "Centro",
+                "numero": 1
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Grande",
+                "codigo_postal": 33207,
+                "barrio": "El Pol\u00edgono",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Grande",
+                "codigo_postal": 33211,
+                "barrio": "Montevil",
+                "numero": 2
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33691,
+                "barrio": "Fresno",
+                "numero": 4
+            },
+            {
+                "descripcion": "MESTIZO",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33202,
+                "barrio": "Centro",
+                "numero": 1
+            },
+            {
+                "descripcion": "AKITA INU",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33211,
+                "barrio": "Roces",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33211,
+                "barrio": "Roces",
+                "numero": 1
+            },
+            {
+                "descripcion": "POMERANIA",
+                "tama\u00d1o": "Peque\u00f1o",
+                "codigo_postal": 33204,
+                "barrio": "Ceares\/Ciares",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN BULLY",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33290,
+                "barrio": "Jove\/Xove",
+                "numero": 1
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33299,
+                "barrio": "Jove\/Xove",
+                "numero": 4
+            },
+            {
+                "descripcion": "AMERICAN PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33212,
+                "barrio": "El Natahoyo",
+                "numero": 1
+            },
+            {
+                "descripcion": "DOGO DE BURDEOS",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33212,
+                "barrio": "El Natahoyo",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33210,
+                "barrio": "Pumar\u00edn",
+                "numero": 1
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33394,
+                "barrio": "Cabue\u00f1es",
+                "numero": 3
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33390,
+                "barrio": "La Pedrera",
+                "numero": 2
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33203,
+                "barrio": "Somi\u00f3",
+                "numero": 6
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33202,
+                "barrio": "L' Arena",
+                "numero": 10
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33201,
+                "barrio": "Centro",
+                "numero": 3
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33201,
+                "barrio": "Centro",
+                "numero": 4
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Grande",
+                "codigo_postal": 33212,
+                "barrio": "Jove\/Xove",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33212,
+                "barrio": "Jove\/Xove",
+                "numero": 9
+            },
+            {
+                "descripcion": "AMERICAN BULLY",
+                "tama\u00d1o": "Grande",
+                "codigo_postal": 33213,
+                "barrio": "La Calzada",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33209,
+                "barrio": "Contrueces",
+                "numero": 3
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33209,
+                "barrio": "Contrueces",
+                "numero": 9
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33204,
+                "barrio": "L' Arena",
+                "numero": 1
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Grande",
+                "codigo_postal": 33392,
+                "barrio": "Porceyo",
+                "numero": 1
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33202,
+                "barrio": "L' Arena",
+                "numero": 3
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33209,
+                "barrio": "El Coto",
+                "numero": 9
+            },
+            {
+                "descripcion": "AMERICAN BULLY",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33205,
+                "barrio": "Centro",
+                "numero": 1
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Grande",
+                "codigo_postal": 33213,
+                "barrio": "La Calzada",
+                "numero": 1
+            },
+            {
+                "descripcion": "FILA BRASILEIRO",
+                "tama\u00d1o": "Grande",
+                "codigo_postal": 33392,
+                "barrio": "Ruedes",
+                "numero": 1
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33204,
+                "barrio": "Les Mestes",
+                "numero": 2
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33204,
+                "barrio": "Les Mestes",
+                "numero": 3
+            },
+            {
+                "descripcion": "AMERICAN BULLY",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33211,
+                "barrio": "Montevil",
+                "numero": 2
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33208,
+                "barrio": "Centro",
+                "numero": 3
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33208,
+                "barrio": "Pumar\u00edn",
+                "numero": 2
+            },
+            {
+                "descripcion": "DOGO ARGENTINO",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33209,
+                "barrio": "El Llano",
+                "numero": 1
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33212,
+                "barrio": "La Calzada",
+                "numero": 8
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33203,
+                "barrio": "El Bibio",
+                "numero": 3
+            },
+            {
+                "descripcion": "AMERICAN BULLY",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33206,
+                "barrio": "Centro",
+                "numero": 1
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33212,
+                "barrio": "Moreda",
+                "numero": 3
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Grande",
+                "codigo_postal": 33204,
+                "barrio": "El Coto",
+                "numero": 2
+            },
+            {
+                "descripcion": "MESTIZO",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33204,
+                "barrio": "El Coto",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN BULLY",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33209,
+                "barrio": "Contrueces",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33209,
+                "barrio": "El Llano",
+                "numero": 2
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33391,
+                "barrio": "Granda",
+                "numero": 3
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Grande",
+                "codigo_postal": 33210,
+                "barrio": "Pumar\u00edn",
+                "numero": 2
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33391,
+                "barrio": "Fano",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33212,
+                "barrio": "Veri\u00f1a",
+                "numero": 1
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33394,
+                "barrio": "Castiello Bernueces",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33211,
+                "barrio": "Santa B\u00e1rbara",
+                "numero": 1
+            },
+            {
+                "descripcion": "FILA BRASILEIRO",
+                "tama\u00d1o": "Grande",
+                "codigo_postal": 33392,
+                "barrio": "L' Abad\u00eda Cenero",
+                "numero": 1
+            },
+            {
+                "descripcion": "MESTIZO",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33211,
+                "barrio": "Roces",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33213,
+                "barrio": "Veri\u00f1a",
+                "numero": 2
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33394,
+                "barrio": "Castiello Bernueces",
+                "numero": 1
+            },
+            {
+                "descripcion": "BODEGUERO ANDALUZ",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33211,
+                "barrio": "Roces",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33211,
+                "barrio": "Nuevo Gij\u00f3n\/La Peral",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN BULLY",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33209,
+                "barrio": "Nuevo Roces",
+                "numero": 3
+            },
+            {
+                "descripcion": "AMERICAN PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33209,
+                "barrio": "Nuevo Roces",
+                "numero": 3
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33209,
+                "barrio": "Roces",
+                "numero": 1
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33210,
+                "barrio": "El Llano",
+                "numero": 4
+            },
+            {
+                "descripcion": "DOGO ARGENTINO",
+                "tama\u00d1o": "Grande",
+                "codigo_postal": 33204,
+                "barrio": "Les Mestes",
+                "numero": 1
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33208,
+                "barrio": "El Llano",
+                "numero": 50
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33205,
+                "barrio": "Centro",
+                "numero": 3
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33205,
+                "barrio": "Centro",
+                "numero": 5
+            },
+            {
+                "descripcion": "DOGO ARGENTINO",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33210,
+                "barrio": "Pumar\u00edn",
+                "numero": 3
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33210,
+                "barrio": "Contrueces",
+                "numero": 1
+            },
+            {
+                "descripcion": "MAST\u00cdN",
+                "tama\u00d1o": "Grande",
+                "codigo_postal": 33201,
+                "barrio": "Cimavilla",
+                "numero": 1
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33210,
+                "barrio": "El Llano",
+                "numero": 8
+            },
+            {
+                "descripcion": "DOGO ARGENTINO",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33203,
+                "barrio": "L' Arena",
+                "numero": 1
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33211,
+                "barrio": "Montevil",
+                "numero": 7
+            },
+            {
+                "descripcion": "AMERICAN BULLY",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33210,
+                "barrio": "El Llano",
+                "numero": 1
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Grande",
+                "codigo_postal": 33350,
+                "barrio": "Vega",
+                "numero": 1
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Grande",
+                "codigo_postal": 33205,
+                "barrio": "El Coto",
+                "numero": 1
+            },
+            {
+                "descripcion": "PASTOR ALEM\u00c1N",
+                "tama\u00d1o": "Grande",
+                "codigo_postal": 33203,
+                "barrio": "Somi\u00f3",
+                "numero": 1
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33350,
+                "barrio": "Vega",
+                "numero": 1
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Grande",
+                "codigo_postal": 33212,
+                "barrio": "La Calzada",
+                "numero": 1
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Peque\u00f1o",
+                "codigo_postal": 33203,
+                "barrio": "El Bibio",
+                "numero": 1
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Grande",
+                "codigo_postal": 33211,
+                "barrio": "Roces",
+                "numero": 1
+            },
+            {
+                "descripcion": "AKITA INU",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33211,
+                "barrio": "Nuevo Gij\u00f3n\/La Peral",
+                "numero": 1
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33204,
+                "barrio": "El Coto",
+                "numero": 3
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33290,
+                "barrio": "Jove\/Xove",
+                "numero": 3
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Grande",
+                "codigo_postal": 33211,
+                "barrio": "Montevil",
+                "numero": 2
+            },
+            {
+                "descripcion": "FILA BRASILEIRO",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33204,
+                "barrio": "Viesques",
+                "numero": 1
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33203,
+                "barrio": "El Bibio",
+                "numero": 3
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33208,
+                "barrio": "Centro",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33391,
+                "barrio": "Granda",
+                "numero": 1
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33391,
+                "barrio": "Vega",
+                "numero": 1
+            },
+            {
+                "descripcion": "CA DE BOU",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33391,
+                "barrio": "Caldones",
+                "numero": 1
+            },
+            {
+                "descripcion": "DOGO ARGENTINO",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33211,
+                "barrio": "Montevil",
+                "numero": 2
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33209,
+                "barrio": "Ceares\/Ciares",
+                "numero": 3
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Peque\u00f1o",
+                "codigo_postal": 33208,
+                "barrio": "El Llano",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33697,
+                "barrio": "San Andr\u00e9s de los Tacones",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33203,
+                "barrio": "Cabue\u00f1es",
+                "numero": 3
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33209,
+                "barrio": "Nuevo Roces",
+                "numero": 4
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33213,
+                "barrio": "Jove\/Xove",
+                "numero": 5
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33290,
+                "barrio": "Jove\/Xove",
+                "numero": 1
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Peque\u00f1o",
+                "codigo_postal": 33212,
+                "barrio": "El Natahoyo",
+                "numero": 2
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33213,
+                "barrio": "La Calzada",
+                "numero": 57
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33213,
+                "barrio": "La Calzada",
+                "numero": 13
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33202,
+                "barrio": "L' Arena",
+                "numero": 9
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33202,
+                "barrio": "L' Arena",
+                "numero": 3
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Grande",
+                "codigo_postal": 33210,
+                "barrio": "Pumar\u00edn",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN BULLY",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33211,
+                "barrio": "Nuevo Gij\u00f3n\/La Peral",
+                "numero": 1
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33210,
+                "barrio": "Contrueces",
+                "numero": 8
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33211,
+                "barrio": "Perchera\/La Bra\u00f1a",
+                "numero": 5
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Grande",
+                "codigo_postal": 33213,
+                "barrio": "La Calzada",
+                "numero": 5
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Peque\u00f1o",
+                "codigo_postal": 33209,
+                "barrio": "El Llano",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33209,
+                "barrio": "El Llano",
+                "numero": 18
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33209,
+                "barrio": "El Llano",
+                "numero": 14
+            },
+            {
+                "descripcion": "MESTIZO",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33209,
+                "barrio": "El Llano",
+                "numero": 4
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33209,
+                "barrio": "Ceares\/Ciares",
+                "numero": 6
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33392,
+                "barrio": "Porceyo",
+                "numero": 3
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33209,
+                "barrio": "El Coto",
+                "numero": 8
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33290,
+                "barrio": "Jove\/Xove",
+                "numero": 8
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Peque\u00f1o",
+                "codigo_postal": 33207,
+                "barrio": "El Pol\u00edgono",
+                "numero": 1
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33204,
+                "barrio": "El Coto",
+                "numero": 10
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33210,
+                "barrio": "Pumar\u00edn",
+                "numero": 7
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33203,
+                "barrio": "Somi\u00f3",
+                "numero": 7
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33201,
+                "barrio": "Cimavilla",
+                "numero": 8
+            },
+            {
+                "descripcion": "AMERICAN BULLY",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33208,
+                "barrio": "Centro",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN BULLY",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33210,
+                "barrio": "Contrueces",
+                "numero": 2
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33202,
+                "barrio": "Centro",
+                "numero": 4
+            },
+            {
+                "descripcion": "AKITA INU",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33209,
+                "barrio": "Contrueces",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33209,
+                "barrio": "Viesques",
+                "numero": 2
+            },
+            {
+                "descripcion": "DOGO ARGENTINO",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33208,
+                "barrio": "El Llano",
+                "numero": 2
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33211,
+                "barrio": "Santa B\u00e1rbara",
+                "numero": 2
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33211,
+                "barrio": "Roces",
+                "numero": 4
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Grande",
+                "codigo_postal": 33210,
+                "barrio": "El Llano",
+                "numero": 1
+            },
+            {
+                "descripcion": "DOGO ARGENTINO",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33208,
+                "barrio": "Pumar\u00edn",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33350,
+                "barrio": "Vega",
+                "numero": 1
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33350,
+                "barrio": "Vega",
+                "numero": 5
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33202,
+                "barrio": "Centro",
+                "numero": 4
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Grande",
+                "codigo_postal": 33211,
+                "barrio": "Montevil",
+                "numero": 1
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Grande",
+                "codigo_postal": 33212,
+                "barrio": "El Natahoyo",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33204,
+                "barrio": "Ceares\/Ciares",
+                "numero": 1
+            },
+            {
+                "descripcion": "MESTIZO",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33212,
+                "barrio": "El Natahoyo",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33208,
+                "barrio": "Centro",
+                "numero": 1
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33691,
+                "barrio": "Fresno",
+                "numero": 1
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33691,
+                "barrio": "Fresno",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN BULLY",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33204,
+                "barrio": "El Coto",
+                "numero": 3
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33201,
+                "barrio": "Cimavilla",
+                "numero": 1
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33350,
+                "barrio": "Samartin de G\u00fcerces",
+                "numero": 6
+            },
+            {
+                "descripcion": "DOGO ARGENTINO",
+                "tama\u00d1o": "Grande",
+                "codigo_postal": 33207,
+                "barrio": "Laviada",
+                "numero": 1
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33394,
+                "barrio": "Deva",
+                "numero": 1
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33209,
+                "barrio": "Roces",
+                "numero": 1
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33204,
+                "barrio": "Viesques",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN BULLY",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33394,
+                "barrio": "Deva",
+                "numero": 3
+            },
+            {
+                "descripcion": "AKITA INU",
+                "tama\u00d1o": "Grande",
+                "codigo_postal": 33209,
+                "barrio": "Ceares\/Ciares",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33350,
+                "barrio": "Samartin de G\u00fcerces",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33691,
+                "barrio": "Veri\u00f1a",
+                "numero": 2
+            },
+            {
+                "descripcion": "MAST\u00cdN",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33350,
+                "barrio": "Llavandera",
+                "numero": 1
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33209,
+                "barrio": "Nuevo Roces",
+                "numero": 17
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33209,
+                "barrio": "Nuevo Roces",
+                "numero": 14
+            },
+            {
+                "descripcion": "MESTIZO",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33213,
+                "barrio": "Jove\/Xove",
+                "numero": 1
+            },
+            {
+                "descripcion": "MESTIZO",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33211,
+                "barrio": "Roces (rural)",
+                "numero": 1
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33206,
+                "barrio": "Centro",
+                "numero": 8
+            },
+            {
+                "descripcion": "BORDER COLLIE",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33203,
+                "barrio": "L' Arena",
+                "numero": 1
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33201,
+                "barrio": "Centro",
+                "numero": 1
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33210,
+                "barrio": "El Llano",
+                "numero": 19
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Grande",
+                "codigo_postal": 33211,
+                "barrio": "Nuevo Gij\u00f3n\/La Peral",
+                "numero": 1
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33212,
+                "barrio": "El Natahoyo",
+                "numero": 7
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33212,
+                "barrio": "El Natahoyo",
+                "numero": 16
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33211,
+                "barrio": "Perchera\/La Bra\u00f1a",
+                "numero": 7
+            },
+            {
+                "descripcion": "MESTIZO",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33213,
+                "barrio": "La Calzada",
+                "numero": 3
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33209,
+                "barrio": "Contrueces",
+                "numero": 2
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33207,
+                "barrio": "Laviada",
+                "numero": 11
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33209,
+                "barrio": "El Llano",
+                "numero": 27
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33209,
+                "barrio": "El Llano",
+                "numero": 9
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33207,
+                "barrio": "El Pol\u00edgono",
+                "numero": 19
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33203,
+                "barrio": "Somi\u00f3",
+                "numero": 15
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33209,
+                "barrio": "El Coto",
+                "numero": 4
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33211,
+                "barrio": "Trema\u00f1es",
+                "numero": 7
+            },
+            {
+                "descripcion": "PODENCO",
+                "tama\u00d1o": "Peque\u00f1o",
+                "codigo_postal": 33204,
+                "barrio": "El Coto",
+                "numero": 1
+            },
+            {
+                "descripcion": "MESTIZO",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33209,
+                "barrio": "El Coto",
+                "numero": 2
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33210,
+                "barrio": "Pumar\u00edn",
+                "numero": 9
+            },
+            {
+                "descripcion": "MAST\u00cdN ESPA\u00d1OL",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33210,
+                "barrio": "Contrueces",
+                "numero": 1
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Grande",
+                "codigo_postal": 33210,
+                "barrio": "Contrueces",
+                "numero": 1
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33691,
+                "barrio": "Veri\u00f1a",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33213,
+                "barrio": "La Calzada",
+                "numero": 2
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Grande",
+                "codigo_postal": 33209,
+                "barrio": "Roces",
+                "numero": 1
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33203,
+                "barrio": "L' Arena",
+                "numero": 5
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Grande",
+                "codigo_postal": 33208,
+                "barrio": "Centro",
+                "numero": 1
+            },
+            {
+                "descripcion": "PASTOR ALEM\u00c1N",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33213,
+                "barrio": "La Calzada",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33208,
+                "barrio": "Pumar\u00edn",
+                "numero": 2
+            },
+            {
+                "descripcion": "AMERICAN BULLY",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33209,
+                "barrio": "El Coto",
+                "numero": 2
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33211,
+                "barrio": "Santa B\u00e1rbara",
+                "numero": 2
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33350,
+                "barrio": "Vega",
+                "numero": 5
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33350,
+                "barrio": "Vega",
+                "numero": 4
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33203,
+                "barrio": "Somi\u00f3",
+                "numero": 4
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33211,
+                "barrio": "Roces",
+                "numero": 8
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33203,
+                "barrio": "L' Arena",
+                "numero": 1
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33205,
+                "barrio": "El Llano",
+                "numero": 3
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33212,
+                "barrio": "La Calzada",
+                "numero": 5
+            },
+            {
+                "descripcion": "DOGO ARGENTINO",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33204,
+                "barrio": "El Coto",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33204,
+                "barrio": "Ceares\/Ciares",
+                "numero": 3
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33299,
+                "barrio": "Jove\/Xove",
+                "numero": 2
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33350,
+                "barrio": "Llavandera",
+                "numero": 2
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33350,
+                "barrio": "Llavandera",
+                "numero": 2
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33350,
+                "barrio": "Llavandera",
+                "numero": 2
+            },
+            {
+                "descripcion": "STAFFORDSHIRE BULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33391,
+                "barrio": "Vega",
+                "numero": 1
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Peque\u00f1o",
+                "codigo_postal": 33391,
+                "barrio": "Fano",
+                "numero": 1
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33394,
+                "barrio": "Deva",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN BULLY",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33299,
+                "barrio": "Jove\/Xove",
+                "numero": 2
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33299,
+                "barrio": "Jove\/Xove",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33390,
+                "barrio": "Leorio\/Llorio",
+                "numero": 2
+            },
+            {
+                "descripcion": "ROTTWEILER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33392,
+                "barrio": "L' Abad\u00eda Cenero",
+                "numero": 2
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33391,
+                "barrio": "Caldones",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33691,
+                "barrio": "Puao",
+                "numero": 3
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33209,
+                "barrio": "Nuevo Roces",
+                "numero": 11
+            },
+            {
+                "descripcion": "PITBULL TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33211,
+                "barrio": "Roces (rural)",
+                "numero": 1
+            },
+            {
+                "descripcion": "AMERICAN STAFFORDSHIRE TERRIER",
+                "tama\u00d1o": "Mediano",
+                "codigo_postal": 33211,
+                "barrio": "Roces (rural)",
+                "numero": 1
+            }
+        ]
+    }
+}
