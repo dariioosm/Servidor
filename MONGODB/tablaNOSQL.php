@@ -3,7 +3,7 @@
 require 'vendor/autoload.php'; 
 
 // Configura la conexión a MongoDB
-$uri = "mongodb://localhost:27017";  // Cambia si tu servidor de MongoDB tiene otro puerto o requiere autenticación
+$uri = "mongodb://localhost:27017"; 
 $client = new MongoDB\Client($uri);
 
 // Selecciona la base de datos

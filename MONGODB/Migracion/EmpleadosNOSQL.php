@@ -11,7 +11,7 @@ if ($conn_sql->connect_error) {
     die('Conexión fallida a MySQL: ' . $conn_sql->connect_error);
 }
 
-require '../vendor/autoload.php'; // Asegúrate de tener MongoDB Driver instalado con Composer
+require '../vendor/autoload.php';
 
 $clienteMongo = new MongoDB\Client('mongodb://localhost:27017');
 $bd_mongo = $clienteMongo->empresa;

@@ -12,6 +12,8 @@ if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }
 
+//! esto lo hace un administrador de la base de datos
+
 // Seleccionar la base de datos
 $nombre_bd = 'empresa';
 $conn->select_db($nombre_bd); // Aquí seleccionamos la base de datos

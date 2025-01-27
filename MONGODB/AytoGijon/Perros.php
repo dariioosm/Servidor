@@ -7,7 +7,7 @@ $coleccion_perros = $bdMongo->peligrosos;
 
 $file = 'perros.json';
 $jsonData = file_get_contents($file);
-
+//? convierte el json en un array asociativo
 $data = json_decode($jsonData, true);
 if ($data == null) {
     die('Error al leer el archivo JSON');
