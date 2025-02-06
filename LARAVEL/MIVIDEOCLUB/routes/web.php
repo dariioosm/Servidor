@@ -12,6 +12,7 @@ Route::get('pagina1',function() {
 });
 
 Route::get('pagina2/{id}',function($id){
+    
     return 'Usuario '.$id;
 });
 
