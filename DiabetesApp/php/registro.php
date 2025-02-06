@@ -21,18 +21,20 @@ if($_SERVER["REQUEST_METHOD"]=="post"){
     if(empty($nombre)||empty($apellidos)||empty($fecha_nacimiento)||empty($user)||empty($pass)){
         echo "Faltan datos por rellenar";
     }else{
-        $inserta=$sql->prepare("INSERT INTO USUARIOS (nombre,apellidos,fecha_nacimiento,login,pass)
+        
+        $inserta=$sql->prepare("INSERT INTO usuarios (nombre,apellidos,fecha_nacimiento,login,pass)
             VALUES (?,?,?,?,?)");
 
         $inserta->bind_param("sssss", $nombre, $apellidos, $fecha_nacimiento, $user, $pass);
-        $inserta->close();
+        
         if ($inserta->execute()) {
             echo "Registro exitoso";
+            
         } else {
             echo "Error: " . $inserta->error;
         }
     }
-
+    $inserta->close();
 }
 
 $conn->close();

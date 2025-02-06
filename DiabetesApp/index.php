@@ -11,7 +11,7 @@
 <!--Formulario de registro-->
         <div class="row">
             <div class="col-4 mt-2 border border-primary-subtle rounded">
-                <form action="./php/registro.php"action="post">
+                <form action="./php/registro.php" method="post">
                 <div class="mb-3">
                 <label for="" class="form-label">Nombre</label>
                 <input type="text" name="nombre" id="" class="form-control">
