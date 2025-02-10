@@ -1,6 +1,6 @@
 <?php 
 //TODO conexion a bbdd
-
+session_start();
 $conn= new mysqli('localhost','root','','diabetesdb');
 
 if ($conn->connect_error) {
@@ -37,6 +37,9 @@ if(isset($_POST)){
     $inserta->bind_param("sssss", $nombre, $apellidos, $fecha_nacimiento, $user, $pass);
         if ($inserta->execute()) {
         echo "Registro exitoso";
+        $_SESSION['usuario']=$user;
+        header('./home.php');
+        exit();
         
          } else {
         echo "Error: " . $inserta->error;

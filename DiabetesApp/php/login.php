@@ -31,6 +31,8 @@
 </html>
 
 <?php
+
+session_start();
     //TODO conexion a bbdd
 
 $conn= new mysqli('localhost','root','','diabetesdb');
@@ -56,7 +58,9 @@ if ($conn->connect_error) {
             if($resultado ->num_rows <1){
                 echo 'Este nombre de usuario no existe <a href="../index.php">registrate  aqui </a>';
             }else{
-                
+                $_SESSION['usuario']=$user;
+                header('Location: home.php');
+                exit();
             }
         }
     }
