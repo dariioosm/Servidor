@@ -21,20 +21,31 @@ if(isset($_POST)){
     if(empty($nombre)||empty($apellidos)||empty($fecha_nacimiento)||empty($user)||empty($pass)){
         echo "Faltan datos por rellenar";
     }else{
+        //TODO comprobacion que no existe el alias del usuario
+        $existeuser= $conn -> prepare('SELECT * FROM usuarios WHERE login=?');
+        $existeuser->bind_param('s',$user);
+        $existeuser->execute();
+        $resultado=$existeuser->get_result();
+        if($resultado ->num_rows>0){
+            echo 'El nombre de usuario ya esta registrado';
+        }else{
+            
         //? $conn es el parametro de conexion a la bbdd y si no se usa, no se ejecutan sentencias
         $inserta=$conn->prepare("INSERT INTO usuarios (nombre,apellidos,fecha_nacimiento,login,pass)
-            VALUES (?,?,?,?,?)");
+        VALUES (?,?,?,?,?)");
 
-        $inserta->bind_param("sssss", $nombre, $apellidos, $fecha_nacimiento, $user, $pass);
-        
+    $inserta->bind_param("sssss", $nombre, $apellidos, $fecha_nacimiento, $user, $pass);
         if ($inserta->execute()) {
-            echo "Registro exitoso";
-            
-        } else {
-            echo "Error: " . $inserta->error;
+        echo "Registro exitoso";
+        
+         } else {
+        echo "Error: " . $inserta->error;
+             }
+             $inserta->close();
         }
+        $existeuser->close();
+        
     }
-    $inserta->close();
 }
 
 $conn->close();

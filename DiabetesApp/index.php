@@ -34,7 +34,7 @@
                 </div>
                 <div class="mb-3">
                     <button type="submit">Enviar</button>
-                    <a href="">¿Ya estas registrado?</a>
+                    <a href="./php/login.php">¿Ya estas registrado?</a>
                 </div>
                 </form>
             </div>
