@@ -10,7 +10,7 @@ if ($conn->connect_error) {
 
 //TODO pillar datos del form
 
-if($_SERVER["REQUEST_METHOD"]=="post"){
+if(isset($_POST)){
     $nombre=$_POST['nombre'];
     $apellidos=$_POST['apellidos'];
     $fecha_nacimiento=$_POST['fecha_nacimiento'];
@@ -21,8 +21,8 @@ if($_SERVER["REQUEST_METHOD"]=="post"){
     if(empty($nombre)||empty($apellidos)||empty($fecha_nacimiento)||empty($user)||empty($pass)){
         echo "Faltan datos por rellenar";
     }else{
-        
-        $inserta=$sql->prepare("INSERT INTO usuarios (nombre,apellidos,fecha_nacimiento,login,pass)
+        //? $conn es el parametro de conexion a la bbdd y si no se usa, no se ejecutan sentencias
+        $inserta=$conn->prepare("INSERT INTO usuarios (nombre,apellidos,fecha_nacimiento,login,pass)
             VALUES (?,?,?,?,?)");
 
         $inserta->bind_param("sssss", $nombre, $apellidos, $fecha_nacimiento, $user, $pass);
