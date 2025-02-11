@@ -7,6 +7,7 @@
     <title>Inicio</title>
 </head>
 <body>
+    //!poner segundo campo para comprobar contraseña y, hacer las comprobaciones pertinentes en el modulo registro.php
     <div class="container-fluid">
 <!--Formulario de registro-->
         <div class="row">

@@ -14,9 +14,10 @@
         <div class="row">
             <div class="col-4 mt-2 border border-primary-subtle rounded">
                 <form action="#" method="post">
+                    <h3>Introduce los datos del dia</h3>
                 <div class="mb-3">
                 <label for="" class="form-label">Fecha de control</label>
-                <input type="text" name="fecha_control" id="" class="form-control">
+                <input type="date" name="fecha_control" id="" class="form-control">
                 </div>
                 <div class="mb-3">
                 <label for="" class="form-label">Unidades de glucosa lenta</label>
@@ -30,6 +31,47 @@
                 <label><input type="radio" name="indice_actividad"value="3">Moderado – Realizas al menos 30 minutos de actividad como caminar rápido.</label><br>
                 <label><input type="radio" name="indice_actividad"value="4">Activo – Pasas varias horas en movimiento o haciendo ejercicio intenso.</label><br>
                 <label><input type="radio" name="indice_actividad"value="5">Muy activo – Tienes una actividad física intensa la mayor parte del día.</label><br>
+                </div>
+                <div class="mb-3">
+                    <button type="submit">Enviar</button>
+                </div>
+                </form>
+            </div>
+<!--Formulario de comidas-->
+            <div class="row">
+            <div class="col-4 mt-2 border border-primary-subtle rounded">
+                <form action="#" method="post">
+                    <h3>Introduce los datos de la comida realizada</h3>
+                <div class="mb-3">
+                <label for="" class="form-label">Fecha de control</label>
+                <input type="date" name="fecha_control" id="" class="form-control">
+                </div>
+                <div class="mb-3">
+                <label for="" class="form-label">Indice de actividad</label>
+                <br>
+                <label><input type="radio" name="tipo_comida" value="Desayuno">Desayuno</label><br>
+                <label><input type="radio" name="tipo_comida"value="Aperitivo">Aperitivo</label><br>
+                <label><input type="radio" name="tipo_comida"value="Comida">Comida</label><br>
+                <label><input type="radio" name="tipo_comida"value="Merienda">Merienda</label><br>
+                <label><input type="radio" name="tipo_comida"value="Cena">Cena</label><br>
+                </div>
+                <div class="mb-3">
+                <label for="" class="form-label">Raciones</label>
+                <input type="number" name="raciones" id="" class="form-control" min=0>
+                </div>
+                
+                <div class="mb-3">
+                <label for="" class="form-label">Nivel de glucosa antes de la ingesta</label>
+                <input type="number" name="glucosa_preingesta" id="" class="form-control" min=0>
+                </div>
+                
+                <div class="mb-3">
+                <label for="" class="form-label">Unidades de insulina inyectada</label>
+                <input type="number" name="insulina" id="" class="form-control" min=0>
+                </div>
+                <div class="mb-3">
+                <label for="" class="form-label">Nivel de glucosa después de la ingesta</label>
+                <input type="number" name="glucosa_postingesta" id="" class="form-control" min=0>
                 </div>
                 <div class="mb-3">
                     <button type="submit">Enviar</button>

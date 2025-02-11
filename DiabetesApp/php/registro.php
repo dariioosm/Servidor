@@ -38,7 +38,7 @@ if(isset($_POST)){
         if ($inserta->execute()) {
         echo "Registro exitoso";
         $_SESSION['usuario']=$user;
-        header('./home.php');
+        header('Location: home.php');
         exit();
         
          } else {
