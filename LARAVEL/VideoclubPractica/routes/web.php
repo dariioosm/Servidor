@@ -22,5 +22,5 @@ Route::get('catalog/create',function(){
     return view('catalog.create');
 });
 Route::get('catalog/edit/{id}',function($id){
-    return view('catalog.edit');
+    return view('catalog.edit',array('id'=>$id));
 });
