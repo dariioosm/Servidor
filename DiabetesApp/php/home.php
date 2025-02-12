@@ -11,10 +11,10 @@
     <h2>Welcome <?php session_start(); echo $_SESSION['usuario'] ?></h2>
     <div class="container-fluid">
 <!--Formulario de control_glucosa-->
-//! en el formulario de inserccion tiene que coger por defecto la fecha del sistema
-//TODO poner un valor fijo en la insulina lenta y ponerle un boton que se pueda modificar
-//TODO control de glucosa con fecha de sistema que no se modifica 
-//TODO hiper e hipoglucosa comparten formulario y si se elige hiper, se muestra la correccion de insulina, si no, no se muestra la correccion de insulina
+<!--//! en el formulario de inserccion tiene que coger por defecto la fecha del sistema-->
+<!--//TODO poner un valor fijo en la insulina lenta y ponerle un boton que se pueda modificar-->
+<!--//TODO control de glucosa con fecha de sistema que no se modifica -->
+<!--//TODO hiper e hipoglucosa comparten formulario y si se elige hiper, se muestra la correccion de insulina, si no, no se muestra la correccion de insulina-->
         <div class="row">
             <div class="col-4 mt-2 border border-primary-subtle rounded">
                 <form action="#" method="post">
