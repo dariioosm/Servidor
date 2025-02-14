@@ -1,26 +1,37 @@
 <?php 
-//TODO conexion a bbdd
-session_start();
-$conn= new mysqli('localhost','root','','diabetesdb');
-
-if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
-}
+require 'conexion.php';
 
 
 //TODO pillar datos del form
 
-if(isset($_POST)){
+if($_SERVER["REQUEST_METHOD"] == "POST"){
     $nombre=$_POST['nombre'];
     $apellidos=$_POST['apellidos'];
     $fecha_nacimiento=$_POST['fecha_nacimiento'];
     $user=$_POST['usuario'];
     $pass=$_POST['pass'];
-
+    $pass2=$_POST['pass2'];
+   
     //TODO comprobacion de datos cumplimentados
-    if(empty($nombre)||empty($apellidos)||empty($fecha_nacimiento)||empty($user)||empty($pass)){
+    if(empty($nombre)||empty($apellidos)||empty($fecha_nacimiento)||empty($user)||empty($pass)||empty($pass2)){
         echo "Faltan datos por rellenar";
     }else{
+            //TODO confirmacion de contraseña
+            if ($pass !== $pass2) {
+                echo "Las contraseñas no coinciden";
+                exit();
+            }
+            
+            //TODO comprobacion de fecha
+            date_default_timezone_set("Europe/Madrid");
+            $fecha_hoy= new DateTime();
+            $fecha_nacimiento_obj = DateTime::createFromFormat("d-m-Y",$fecha_nacimiento);
+
+            if(!$fecha_nacimiento_obj|| $fecha_nacimiento_obj>$fecha_hoy){
+                echo "La fecha de nacimiento no puede ser posterior a la del sistema";
+                exit();
+            }
+
         //TODO comprobacion que no existe el alias del usuario
         $existeuser= $conn -> prepare('SELECT * FROM usuarios WHERE login=?');
         $existeuser->bind_param('s',$user);
@@ -50,6 +61,5 @@ if(isset($_POST)){
         
     }
 }
-
 $conn->close();
 ?>
