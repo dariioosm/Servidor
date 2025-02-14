@@ -3,7 +3,7 @@
 require 'conexion.php';
 
 //TODO pillar datos de formulario
-    if(isset($_POST)){
+    if($_SERVER["REQUEST_METHOD"] == "POST"){
         $user=$_POST['usuario'];
         $pass=$_POST['pass'];
 
@@ -13,7 +13,7 @@ require 'conexion.php';
         }else{
 
             //TODO hacer comprobacion inversa (comprobar si no existe en bbdd)
-            $existeuser =$conn -> prepare('SELECT * FROM usuarios where login=?');
+            $existeuser =$conn -> prepare('SELECT login, pass FROM usuarios WHERE login = ?');
             $existeuser->bind_param('s',$user);
             $existeuser ->execute();
             $resultado=$existeuser->get_result();
@@ -22,16 +22,19 @@ require 'conexion.php';
             if($resultado ->num_rows <1){
                 echo 'Este nombre de usuario no existe <a href="../index.php">registrate  aqui </a>';
             }else{ 
-                //TODO hacer comprobacion de la combinacion de login y passwd correcta 
                 
-                
-                
-                $_SESSION['usuario']=$user;
-                header('Location: home.php');
-                exit();
+                $usuario = $resultado->fetch_assoc();//* Obtener la contraseña encriptada desde la base de datos
+                $hash_db = $usuario['pass']; //* Contraseña hash
+
+        //TODO Comparar la contraseña ingresada con la almacenada (usando password_verify)
+        if (password_verify($pass, $hash_db)) {
+            $_SESSION['usuario'] = $user;
+            header('../pages/insertadatos.html');
+            exit();
+        } else {
+            echo "Usuario o contraseña incorrectos.";
+        }
             }
         }
     }
-
-
 ?>
