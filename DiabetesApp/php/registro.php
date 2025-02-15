@@ -26,22 +26,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     date_default_timezone_set("Europe/Madrid");
     $fecha_hoy = new DateTime();
 
-    // Convertir la fecha de nacimiento al formato correcto (d/m/Y)
-    $fecha_nacimiento_obj = DateTime::createFromFormat("d/m/Y", $fecha_nacimiento);
-    
-    if (!$fecha_nacimiento_obj) {
-        echo "Formato de fecha incorrecto. Use DD/MM/YYYY.";
-        exit(); 
-    }
-
-    // Convertir la fecha al formato MySQL (YYYY-MM-DD)
-    $fecha_nacimiento_mysql = $fecha_nacimiento_obj->format("Y-m-d");
-
-    // Verificar que la fecha no sea posterior a la fecha actual
-    if ($fecha_nacimiento_obj > $fecha_hoy) {
-        echo "La fecha de nacimiento no puede ser posterior a la del sistema.";
+    $fecha_nacimiento_guardar = new DateTime($fecha_nacimiento);
+    if($fecha_nacimiento>$fecha_hoy){
+        echo 'La fecha de nacimiento no puede ser posterior a la de sitema';
         exit();
     }
+
+    
 
     //TODO comprobacion que no existe el alias del usuario
     $existeuser = $conn->prepare('SELECT * FROM usuarios WHERE login=?');
@@ -58,7 +49,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     //TODO inserción en la base de datos con la fecha corregida
     $inserta = $conn->prepare("INSERT INTO usuarios (nombre, apellidos, fecha_nacimiento, login, pass) VALUES (?, ?, ?, ?, ?)");
 
-    $inserta->bind_param("sssss", $nombre, $apellidos, $fecha_nacimiento_mysql, $user, $pass);
+    $inserta->bind_param("sssss", $nombre, $apellidos, $fecha_nacimiento, $user, $pass);
     
     if ($inserta->execute()) {
         echo "Registro exitoso";
