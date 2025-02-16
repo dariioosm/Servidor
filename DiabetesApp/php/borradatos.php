@@ -1,6 +1,8 @@
 <?php
 require 'conexion.php';
-session_start(); // Asegúrate de iniciar la sesión para acceder a $_SESSION['usuario']
+
+//? Solo se necesitan fecha_control y tipo comida del formulario, porque el id lo cogemos por la sesion 
+
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $fecha_control = $_POST['fecha_control'];
