@@ -23,13 +23,20 @@ require 'conexion.php';
                 echo 'Este nombre de usuario no existe <a href="../index.php">registrate  aqui </a>';
             }else{ 
                 
+                $hash_pass = $usuario['pass']; //* Contraseña hash
+                //TODO metodo para hacer hash a la contraseña 
+                password_hash($hash_pass,PASSWORD_DEFAULT);
+                
+
+
+
                 $usuario = $resultado->fetch_assoc();//* Obtener la contraseña encriptada desde la base de datos
-                $hash_db = $usuario['pass']; //* Contraseña hash
+                
 
         //TODO Comparar la contraseña ingresada con la almacenada (usando password_verify)
         if (password_verify($pass, $hash_db)) {
             $_SESSION['usuario'] = $user;
-            header('../pages/insertadatos.html');
+            header('Location:../pages/insertadatos.html');
             exit();
         } else {
             echo "Usuario o contraseña incorrectos.";
