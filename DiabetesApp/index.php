@@ -28,7 +28,7 @@
                     <div class="row">
                         <div class="col-6">
                             <button type="submit" class="btn btn-primary">Enviar</button>
-                            <a href="./pages/altausuario.html" class=" btn btn-success" role="button">Registrate aqui</a>
+                            <a href="./pages/altausuario.php" class=" btn btn-success" role="button">Registrate aqui</a>
                         </div>
                     </div>
                   </form>

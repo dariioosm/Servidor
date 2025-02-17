@@ -49,12 +49,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     //TODO inserción en la base de datos con la fecha corregida
     $inserta = $conn->prepare("INSERT INTO usuarios (nombre, apellidos, fecha_nacimiento, login, pass) VALUES (?, ?, ?, ?, ?)");
 
-    $inserta->bind_param("sssss", $nombre, $apellidos, $fecha_nacimiento, $user, $pass);
+    //TODO encriptar contraseña e introducirla
+    $hash=password_hash($pass2,PASSWORD_DEFAULT);
+
+    $inserta->bind_param("sssss", $nombre, $apellidos, $fecha_nacimiento, $user, $hash);
     
     if ($inserta->execute()) {
         echo "Registro exitoso";
         $_SESSION['usuario'] = $user;
-        header('Location: ../pages/insertadatos.html');
+        header('Location: ../pages/control.php');
         exit();
     } else {
         echo "Error: " . $inserta->error;

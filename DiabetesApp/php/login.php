@@ -27,14 +27,10 @@ require 'conexion.php';
                 //TODO metodo para hacer hash a la contraseña 
                 password_hash($hash_pass,PASSWORD_DEFAULT);
                 
-
-
-
-                $usuario = $resultado->fetch_assoc();//* Obtener la contraseña encriptada desde la base de datos
                 
 
         //TODO Comparar la contraseña ingresada con la almacenada (usando password_verify)
-        if (password_verify($pass, $hash_db)) {
+        if (password_verify($pass, $hash_pass)) {
             $_SESSION['usuario'] = $user;
             header('Location:../pages/insertadatos.html');
             exit();
