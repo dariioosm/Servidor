@@ -23,9 +23,9 @@ require 'conexion.php';
                 echo 'Este nombre de usuario no existe <a href="../index.php">registrate  aqui </a>';
             }else{ 
                 
-                $hash_pass = $usuario['pass']; //* Contraseña hash
+                 //* Contraseña hash
                 //TODO metodo para hacer hash a la contraseña 
-                password_hash($hash_pass,PASSWORD_DEFAULT);
+                $hash_pass = password_hash($pass,PASSWORD_DEFAULT);
                 
                 
 
