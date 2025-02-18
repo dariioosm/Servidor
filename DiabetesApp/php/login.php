@@ -13,7 +13,7 @@ require 'conexion.php';
         }else{
 
             //TODO hacer comprobacion inversa (comprobar si no existe en bbdd)
-            $existeuser =$conn -> prepare('SELECT login, pass FROM usuarios WHERE login = ?');
+            $existeuser =$conn -> prepare('SELECT login FROM usuarios WHERE login = ?');
             $existeuser->bind_param('s',$user);
             $existeuser ->execute();
             $resultado=$existeuser->get_result();
@@ -25,14 +25,16 @@ require 'conexion.php';
                 
                  //* Contraseña hash
                 //TODO metodo para hacer hash a la contraseña 
-                $hash_pass = password_hash($pass,PASSWORD_DEFAULT);
-                
+                $existepass = $conn ->prepare('SELECT pass from USUARIOS where login LIKE ?');
+                $existepass ->bind_param('s',$user);
+                $existepass ->execute();
+                $existepass -> bind_result($hash);
                 
 
         //TODO Comparar la contraseña ingresada con la almacenada (usando password_verify)
-        if (password_verify($pass, $hash_pass)) {
+        if ($existepass->fetch() && password_verify($pass,$hash)) {
             $_SESSION['usuario'] = $user;
-            header('Location:../pages/insertadatos.html');
+            header('Location:../pages/insertadatos.php');
             exit();
         } else {
             echo "Usuario o contraseña incorrectos.";
