@@ -34,6 +34,3 @@
     <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
-@extends('layouts.master')
-@section('content')Pantalla principal
-@stop
