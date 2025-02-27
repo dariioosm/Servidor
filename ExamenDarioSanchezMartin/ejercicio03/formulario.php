@@ -51,6 +51,9 @@ $select_imagen -> close();
 
 echo" <img src='' />";
 
+//TODO seleccionar ruta del archivo
+
+$select_ruta = $conn -> prepare('SELECT imagen FROM imagenes ')
 
 }
 ?>

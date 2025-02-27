@@ -11,7 +11,7 @@ $conn = new mysqli($hn, $un, $pw, $db);
 
 //TODO hacer consulta de las imagenes a bbdd
 
-$sql= 'SELECT * FROM imagenes';
+$sql= 'SELECT idimagen , COUNT(*) AS numeroimagenes FROM imagenes';
 $imagenes = $conn->query($sql);
 
 
@@ -41,8 +41,9 @@ $imagenes = $conn->query($sql);
             $filas = $imagenes ->num_rows;
             for($j=0;$j<$filas;$j++){
                 echo "<tr>";
-                $resultado->data_seek($j);
-                echo '<td>'.'<img src= '$imagenes->fetch_assoc()['imagen']'/>' .'</td>';
+                //$resultado->data_seek($j);
+               // echo '<td>'.'<img src= '$imagenes->fetch_assoc()['imagen']'/>' .'</td>';
+                echo  $imagenes;
             };
             echo '</tr>';
         ?>
