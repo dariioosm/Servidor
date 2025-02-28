@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     //TODO obtención del id_usuario
 
-    $select_id = $conn->prepare('SELECT id_usuario FROM USUARIOS WHERE login = ?');
+    $select_id = $conn->prepare('SELECT id_usuario FROM usuarios WHERE login = ?');
     $select_id->bind_param('s', $_SESSION['usuario']);
     $select_id->execute();
     $select_id->bind_result($id_usuario); //* el resultado de la busqueda se guarda en la variable id_usuario
@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     //TODO inserción en tabla comida
 
-    $insert_comida = $conn->prepare('INSERT INTO COMIDA (id_usuario, fecha_control, tipo_comida, raciones, glucosa_preingesta, insulina, glucosa_postingesta) VALUES (?, ?, ?, ?, ?, ?, ?)');
+    $insert_comida = $conn->prepare('INSERT INTO comida (id_usuario, fecha_control, tipo_comida, raciones, glucosa_preingesta, insulina, glucosa_postingesta) VALUES (?, ?, ?, ?, ?, ?, ?)');
     $insert_comida->bind_param('issiiii', $id_usuario, $fecha_control, $tipo_comida, $raciones, $glucosa_pre, $insulina, $glucosa_pos);
 
     if ($insert_comida->execute()) {
@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     //TODO insertar en tabla hiperglucemia
 
     if ($glucosa_estado == 'hiperglucemia' && !empty($glucosa_hiper) && !empty($hora_hiper) && !empty($unidades_correccion)) {
-        $insert_hiper = $conn->prepare('INSERT INTO HIPERGLUCEMIA (id_usuario, fecha_control, tipo_comida, glucosa_hiper, hora_hiper, unidades_correccion) VALUES (?, ?, ?, ?, ?, ?)');
+        $insert_hiper = $conn->prepare('INSERT INTO hiperglucemia (id_usuario, fecha_control, tipo_comida, glucosa_hiper, hora_hiper, unidades_correccion) VALUES (?, ?, ?, ?, ?, ?)');
         $insert_hiper->bind_param('issisi', $id_usuario, $fecha_control, $tipo_comida, $glucosa_hiper, $hora_hiper, $unidades_correccion);
         
         if ($insert_hiper->execute()) {
@@ -84,7 +84,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     //TODO insertar en tabla hipoglucemia
 
     if ($glucosa_estado == 'hipoglucemia' && !empty($glucosa_hipo) && !empty($hora_hipo)) {
-        $insert_hipo = $conn->prepare('INSERT INTO HIPOGLUCEMIA (id_usuario, fecha_control, tipo_comida, glucosa_hipo, hora_hipo) VALUES (?, ?, ?, ?, ?)');
+        $insert_hipo = $conn->prepare('INSERT INTO hipoglucemia (id_usuario, fecha_control, tipo_comida, glucosa_hipo, hora_hipo) VALUES (?, ?, ?, ?, ?)');
         $insert_hipo->bind_param('issis', $id_usuario, $fecha_control, $tipo_comida, $glucosa_hipo, $hora_hipo);
 
         if ($insert_hipo->execute()) {

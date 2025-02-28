@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     // Obtención del id_usuario
-    $select_id = $conn->prepare('SELECT id_usuario FROM USUARIOS WHERE login LIKE ?');
+    $select_id = $conn->prepare('SELECT id_usuario FROM usuarios WHERE login LIKE ?');
     $select_id->bind_param('s', $_SESSION['usuario']);
     $select_id->execute();
     $select_id->bind_result($id_usuario); //* el resultado de la búsqueda se guarda en la variable id_usuario
@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     // Eliminar datos de la tabla COMIDA
-    $delete_comida = $conn->prepare('DELETE FROM COMIDA WHERE id_usuario = ? AND fecha_control = ? AND tipo_comida = ?');
+    $delete_comida = $conn->prepare('DELETE FROM comida WHERE id_usuario = ? AND fecha_control = ? AND tipo_comida = ?');
     $delete_comida->bind_param('iss', $id_usuario, $fecha_control, $tipo_comida);
 
     if ($delete_comida->execute()) {
@@ -49,8 +49,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
     $delete_comida->close();
 
-    // Eliminar datos de la tabla HIPERGLUCEMIA
-    $delete_hiper = $conn->prepare('DELETE FROM HIPERGLUCEMIA WHERE id_usuario = ? AND fecha_control = ? AND tipo_comida = ?');
+    //TODO Eliminar datos de la tabla HIPERGLUCEMIA
+    $delete_hiper = $conn->prepare('DELETE FROM hiperglucemia WHERE id_usuario = ? AND fecha_control = ? AND tipo_comida = ?');
     $delete_hiper->bind_param('iss', $id_usuario, $fecha_control, $tipo_comida);
 
     if ($delete_hiper->execute()) {
@@ -61,8 +61,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
     $delete_hiper->close();
 
-    // Eliminar datos de la tabla HIPOGLUCEMIA
-    $delete_hipo = $conn->prepare('DELETE FROM HIPOGLUCEMIA WHERE id_usuario = ? AND fecha_control = ? AND tipo_comida = ?');
+    //TODO Eliminar datos de la tabla HIPOGLUCEMIA
+    $delete_hipo = $conn->prepare('DELETE FROM hipoglucemia WHERE id_usuario = ? AND fecha_control = ? AND tipo_comida = ?');
     $delete_hipo->bind_param('iss', $id_usuario, $fecha_control, $tipo_comida);
 
     if ($delete_hipo->execute()) {

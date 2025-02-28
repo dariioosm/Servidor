@@ -41,7 +41,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 
     //TODO obtención del id_usuario
 
-    $select_id = $conn->prepare('SELECT id_usuario FROM USUARIOS WHERE login LIKE ?');
+    $select_id = $conn->prepare('SELECT id_usuario FROM usuarios WHERE login LIKE ?');
     $select_id->bind_param('s', $_SESSION['usuario']);
     $select_id->execute();
     $select_id->bind_result($id_usuario); //* el resultado de la busqueda se guarda en la variable id_usuario
@@ -55,7 +55,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 
     //TODO update en la tabla comida
 
-    $update_comida = $conn->prepare('UPDATE COMIDA SET tipo_comida = ?, raciones = ?, glucosa_preingesta = ?, insulina = ?, glucosa_postingesta = ? WHERE id_usuario = ? AND fecha_control = ?');
+    $update_comida = $conn->prepare('UPDATE comida SET tipo_comida = ?, raciones = ?, glucosa_preingesta = ?, insulina = ?, glucosa_postingesta = ? WHERE id_usuario = ? AND fecha_control = ?');
     $update_comida->bind_param('issiiii', $id_usuario, $fecha_control, $tipo_comida, $raciones, $glucosa_pre, $insulina, $glucosa_pos);
 
 
@@ -70,7 +70,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     //TODO update en tabla hiperglucemia
 
     if($glucosa_estado =='hiperglucemia' && !empty($glucosa_hiper) && !empty($hora_hiper) && !empty($unidades_correccion)){
-        $update_hiper = $conn->prepare('UPDATE HIPERGLUCEMIA SET glucosa_hiper = ? , hora_hiper = ? , unidades_correccion = ?  WHERE id_usuario = ? AND fecha_control = ? AND tipo_comida = ?');
+        $update_hiper = $conn->prepare('UPDATE hiperglucemia SET glucosa_hiper = ? , hora_hiper = ? , unidades_correccion = ?  WHERE id_usuario = ? AND fecha_control = ? AND tipo_comida = ?');
         $update_hiper->bind_param('isisss', $glucosa_hiper, $hora_hiper, $unidades_correccion, $id_usuario, $fecha_control,$tipo_comida);
 
         if($update_hiper->execute()){
@@ -85,7 +85,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     //TODO update en tabla hipoglucemia
 
     if($glucosa_estado == 'hipoglucemia' && !empty($glucosa_hipo) && !empty($hora_hipo)){
-        $update_hipo = $conn->prepare('UPDATE HIPOGLUCEMIA SET glucosa_hipo = ?, hora_hipo = ? WHERE id_usuario = ? AND fecha_control = ? AND tipo_comida = ?');
+        $update_hipo = $conn->prepare('UPDATE hipoglucemia SET glucosa_hipo = ?, hora_hipo = ? WHERE id_usuario = ? AND fecha_control = ? AND tipo_comida = ?');
         $update_hipo->bind_param('isiss', $glucosa_hipo, $hora_hipo, $id_usuario, $fecha_control,$tipo_comida);
 
         if($update_hipo->execute()){
