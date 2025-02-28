@@ -21,7 +21,7 @@
         <div class="row">
             <div class="col-lg-8 mx-auto border border-primary-subtle rounded p-4">
                 <form action="../../php/comidas/delete.php" method="post">
-                    <h3>Introduce los datos de la comida realizada</h3>
+                    <h3>Introduce los datos de la comida a borrar</h3>
                     <div class="row">
                         <div class="mb-3 col-md-4">
                             <label class="form-label">Fecha de control</label>

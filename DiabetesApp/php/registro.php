@@ -57,7 +57,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if ($inserta->execute()) {
         echo "Registro exitoso";
         $_SESSION['usuario'] = $user;
-        header('Location: ../pages/panel.html');
+        header('Location: ../pages/panel.php');
         exit();
     } else {
         echo "Error: " . $inserta->error;

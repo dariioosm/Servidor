@@ -44,7 +44,7 @@
             </div>
             <div class="col-md-3">
                 <h3>Listado de Registros</h3>
-                <a href="#" class="btn btn-secondary d-block mb-2">Ver Listado</a>
+                <a href="../php/tabla.php" class="btn btn-secondary d-block mb-2">Ver Listado</a>
             </div>
         </div>
     </div>

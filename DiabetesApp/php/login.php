@@ -36,7 +36,7 @@ require 'conexion.php';
            
            //? guaradarlo en session para poder cogerlo en otros metodos
             $_SESSION['usuario'] = $user;
-            header('Location: ../pages/panel.html');
+            header('Location: ../pages/panel.php');
             exit();
         } else {
             echo "Usuario o contraseña incorrectos.";
