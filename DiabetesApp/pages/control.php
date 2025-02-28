@@ -14,7 +14,7 @@
 <!--//TODO control de glucosa con fecha de sistema que no se modifica--> 
         <div class="row">
             <div class="col-4 mt-2 border border-primary-subtle rounded">
-                <form action="../php/controlglucosa/insercioncontrol.php" method="post">
+                <form action="../php/controlglucosa/insert.php" method="post">
                     <h3>Introduce los datos del dia</h3>
                 <div class="mb-3">
                 <label for="" class="form-label">Fecha de control</label>
