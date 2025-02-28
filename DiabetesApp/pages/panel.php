@@ -1,3 +1,12 @@
+<?php
+require '../php/conexion.php';
+if (isset($_POST['logout'])) {
+    session_destroy(); // Cierra la sesión
+    header("Location: login.php"); // Redirige al login
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -47,6 +56,17 @@
                 <a href="../php/tabla.php" class="btn btn-secondary d-block mb-2">Ver Listado</a>
             </div>
         </div>
+
+        <!-- Botón de Cerrar Sesión -->
+        <div class="row mt-4">
+            <div class="col-md-3">
+                <h3>Sesión</h3>
+                <form method="post">
+                    <button type="submit" name="logout" class="btn btn-warning d-block">Cerrar Sesión</button>
+                </form>
+            </div>
+        </div>
+
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
