@@ -14,7 +14,7 @@
 <!--//TODO control de glucosa con fecha de sistema que no se modifica--> 
         <div class="row">
             <div class="col-4 mt-2 border border-primary-subtle rounded">
-                <form action="#" method="post">
+                <form action="../php/controlglucosa/insercioncontrol.php" method="post">
                     <h3>Introduce los datos del dia</h3>
                 <div class="mb-3">
                 <label for="" class="form-label">Fecha de control</label>
@@ -26,7 +26,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="indice_actividad" class="form-label">Selecciona tu índice de actividad</label>
-                    <select class="form-select" id="indice_actividad" name="indice_actividad" aria-label="Selecciona tu índice de actividad">
+                    <select class="form-select" id="indice_actividad" name="indice_actividad" aria-label="Selecciona tu índice de actividad" required>
                       <option selected>Elige tu nivel de actividad...</option>
                       <option value="1">Sedentario – Pasas la mayor parte del día sentado o acostado.</option>
                       <option value="2">Ligero – Caminas o te mueves ocasionalmente, pero sin esfuerzo significativo.</option>

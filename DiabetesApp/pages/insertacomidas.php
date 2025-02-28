@@ -20,7 +20,7 @@
     <div class="container mt-4">
         <div class="row">
             <div class="col-lg-8 mx-auto border border-primary-subtle rounded p-4">
-                <form action="../php/update.php" method="post">
+                <form action="../php/comidas/insercion.php" method="post">
                     <h3>Introduce los datos de la comida realizada</h3>
                     <div class="row">
                         <div class="mb-3 col-md-4">

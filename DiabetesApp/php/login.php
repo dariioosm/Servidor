@@ -33,6 +33,8 @@ require 'conexion.php';
 
         //TODO Comparar la contraseña ingresada con la almacenada (usando password_verify)
         if ($existepass->fetch() && password_verify($pass,$hash)) {
+           
+           //? guaradarlo en session para poder cogerlo en otros metodos
             $_SESSION['usuario'] = $user;
             header('Location: ../pages/control.php');
             exit();
