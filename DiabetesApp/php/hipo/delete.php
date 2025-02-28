@@ -1,7 +1,6 @@
 <?php
 require '../conexion.php';
 
-
 $id_usuario = $_SESSION['usuario_id'];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -17,14 +16,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
      $select_id->fetch();
      $select_id->close();
 
-    $stmt_check = $conn->prepare("SELECT * FROM hiperglucemia WHERE id_usuario = ? AND fecha_control = ? AND tipo_comida = ?");
+    $stmt_check = $conn->prepare("SELECT * FROM hipoglucemia WHERE id_usuario = ? AND fecha_control = ? AND tipo_comida = ?");
     $stmt_check->bind_param("iss", $id_usuario, $fecha_control, $tipo_comida);
     $stmt_check->execute();
     $result = $stmt_check->get_result();
     
     $stmt_check->close();
 
-    $stmt_delete = $conn->prepare("DELETE FROM hiperglucemia WHERE id_usuario = ? AND fecha_control = ? AND tipo_comida = ?");
+    $stmt_delete = $conn->prepare("DELETE FROM hipoglucemia WHERE id_usuario = ? AND fecha_control = ? AND tipo_comida = ?");
     $stmt_delete->bind_param("iss", $id_usuario, $fecha_control, $tipo_comida);
 
     if ($stmt_delete->execute()) {
