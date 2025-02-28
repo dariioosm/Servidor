@@ -51,5 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
    $delete_comida -> close();
 
     $conn->close();
+
+    header('Location: ../../../../pages/panel.php');
 }
 ?>
