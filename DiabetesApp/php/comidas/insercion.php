@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     //TODO obtención del id_usuario
 
-    $select_id = $conn->prepare('SELECT id_usuario FROM USUARIOS WHERE login LIKE ?');
+    $select_id = $conn->prepare('SELECT id_usuario FROM USUARIOS WHERE login = ?');
     $select_id->bind_param('s', $_SESSION['usuario']);
     $select_id->execute();
     $select_id->bind_result($id_usuario); //* el resultado de la busqueda se guarda en la variable id_usuario

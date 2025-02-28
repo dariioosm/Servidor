@@ -30,6 +30,8 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     $insert_control ->bind_param('isii',$id_usuario,$fecha_control,$glucosa_lenta,$indice_actividad);
     $insert_control -> execute();
     $insert_control ->close();
+
+    $conn->close();
     header('Location: ../../../../pages/insertacomidas.php');
 }
 
