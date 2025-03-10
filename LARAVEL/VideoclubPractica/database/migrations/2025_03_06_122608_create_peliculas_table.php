@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('year',8);
             $table->string('director',40);
-            $table->string('poster');
+            $table->string('poster',255);
             $table->boolean('rented')->default(false);
             $table->text('synopsis');
             $table->timestamps();
