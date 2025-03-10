@@ -187,7 +187,7 @@ class DatabaseSeeder extends Seeder
 
 
     private function seedCatalog():void{
-       
+        DB::table('peliculas')->delete();
         foreach($this->arrayPeliculas as $pelicula){
             $p = new Pelicula;
             $p->title=$pelicula['title'];
