@@ -4,8 +4,8 @@
     @extends('layouts.master')
     @section('content')
     <div class="row">
-        <form method="post" action="{{ route('catalogo.store') }}">
-            {{crsf_field()}} <!--Tambien se puede poner @crsf-->
+        <form method="post" action="{{ route('catalog.store') }}">
+            @csrf
             <div class="mb-3">
                 <label class="form-label">Título de la película</label>
                 <input type="text" class="form-control" name="title" required>
@@ -25,14 +25,16 @@
                 <label class="form-label">Poster</label>
                 <input type="text" class="form-control" name="poster">
             </div>
-            
+
             <div class="mb-3">
-                <label for="" class="form-label">Sinopsis</label>
-                <input type="text" name="synopsos" id="">
+                <label for="" class="form-label">Sinopsis
+                    <textarea name="synopsis" id="" cols="30" rows="10"></textarea>
+                </label>
+                
             </div>
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
             </div>
-        
+        @endsection
     </body>
 </html>

@@ -38,6 +38,13 @@ class CatalogController extends Controller
     }
 
     public function edit(Request $request, $id){
-        
+        $p = Pelicula::findOrFail($id);
+        $p->title = $request->input('title');
+        $p->year = $request->input('year');
+        $p->director =$request->input('director');
+        $p->poster = $request->input('poster');
+        $p->synopsis =$request->input('synopsis');
+        $p->save();
+        return redirect('catalog/show'.$id);
     }
 }
