@@ -12,7 +12,7 @@ Route::get('login',function(){
 Route::get('logout',function(){
     return view('');
 });
-
+Route::post('catalog',[CatalogController::class,'store'])->name('catalog.store');
 
 Route::get('catalog',[CatalogController::class,'getIndex']);
 Route::get('catalog/show/{id}',[CatalogController::class,'getShow']);

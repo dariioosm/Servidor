@@ -9,7 +9,8 @@ class CatalogController extends Controller
     //? ::all() coge todos los campos del array asociativo que se ha seleccionado
 
     public function getIndex(){
-        return view('catalog.index',array('arrayPeliculas'=>Pelicula::all()));
+        $peliculas = Pelicula::all();
+        return view('catalog.index',array('arrayPeliculas'=>$peliculas));
     }
 
     public function getShow($id){
@@ -17,10 +18,26 @@ class CatalogController extends Controller
     }
 
     public function getCreate(){
-        return view('catalog.view');
+        return view('catalog.create');
     }
 
     public function getEdit($id){
         return view('catalog.edit', array('id'=>$id));
+    }
+
+    public function store(Request $request){
+        if(!empty($request->title) && !empty($request->year) && !empty($request->director) && !empty($request->poster) && !empty($request->synopsis)){
+                $p = new Pelicula;
+                $p->title = $request->post('title');
+                $p->year = $request->post('year');
+                $p->director =$request->post('director');
+                $p->poster = $request->post('poster');
+                $p->synopsis =$request->post('synopsis');
+                $p->save();
+               }
+    }
+
+    public function edit(Request $request, $id){
+        
     }
 }
