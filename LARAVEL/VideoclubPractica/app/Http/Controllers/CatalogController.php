@@ -34,6 +34,7 @@ class CatalogController extends Controller
                 $p->poster = $request->post('poster');
                 $p->synopsis =$request->post('synopsis');
                 $p->save();
+                return redirect(('catalog'));
                }
     }
 
