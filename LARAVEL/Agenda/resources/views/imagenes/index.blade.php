@@ -10,6 +10,9 @@
 <body>
     <div class="container">
         <h2>Listado Pictogramas</h2>
+        @if($imagenes->isEmpty())
+        <p>No hay imagenes en la BD</p>
+        @else
         <div class="row">
             @foreach ($imagenes as $imagen)
                 <div class="col-md-3">
@@ -21,6 +24,7 @@
                 </div>
             @endforeach
         </div>
+        @endif
     </div>
 </body>
 </html>
