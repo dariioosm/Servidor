@@ -13,7 +13,19 @@ return new class extends Migration
     {
         Schema::create('agenda', function (Blueprint $table) {
             $table->id();
+            $table->date('fecha');
+            $table->time('hora');
+
+            //claves foraneas
+
+            $table->integer('idpersona');
+            $table->integer('idimagen');
             $table->timestamps();
+
+            //referencias y cascadas
+
+            $table->foreign('idpersona')->references('idpersona')->on('personas')->onDelete('cascade');
+            $table->foreign('idmagen')->references('idimagen')->on('imagenes')->onDelete('cascade');
         });
     }
 
