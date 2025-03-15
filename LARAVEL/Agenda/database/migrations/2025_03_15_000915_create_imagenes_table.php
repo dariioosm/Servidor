@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id('idimagen');
             $table->string('categoria',30);
             $table->string('imagen',80);
-            $table->string('descripcion',30);
+            $table->string('descripcion',255); //? asegurarse de poner una longitud de campo coherente con la informacion
             $table->timestamps();
         });
     }
