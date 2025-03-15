@@ -1,7 +1,8 @@
 <?php
 
+use App\Http\Controllers\ImagenController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/imagen',[ImagenController::class,'index'])->name('imagen.index');
+
+

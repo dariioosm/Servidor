@@ -10,17 +10,18 @@
 <body>
     <div class="container">
         <h2>Listado Pictogramas</h2>
-        @if($imagenes->isEmpty())
+        @if(isset($imagenes)&&$imagenes->isEmpty())
         <p>No hay imagenes en la BD</p>
         @else
         <div class="row">
             @foreach ($imagenes as $imagen)
-                <div class="col-md-3">
-                    <img src="{{ asset('imagenes/' . $imagen['imagen']) }}" alt="{{ $imagen['descripcion'] }}" class="img-fluid">
+                <div class="col-md-3 mt-4">
+                    <img src="{{ asset($imagen['imagen']) }}" alt="{{ $imagen['descripcion'] }}" class="img-fluid" style="height: 100px" style="width: 100px">
+                    <br>
                     <p>{{ $imagen['descripcion'] }}</p>
-                    <div>
-                        {{ asset('imagenes/' . $imagen['imagen']) }}
-                    </div>
+
+                    <br>
+                        {{ asset( $imagen['imagen']) }}
                 </div>
             @endforeach
         </div>
