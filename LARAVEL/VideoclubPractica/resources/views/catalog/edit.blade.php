@@ -5,7 +5,7 @@
 <div class="col-sm-4">
 <img src="{{$arrayPeliculas[$id]['poster']}}" style="height:200px"/>
 
-<h1><?php $arrayPeliculas['titulo']  ?></h1>
+<h1><?php $arrayPeliculas['title']  ?></h1>
 </div>
 <div class="col-sm-8">
 <h1>{{$arrayPeliculas[$id]['title']}}</h1>
