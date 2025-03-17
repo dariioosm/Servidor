@@ -1,9 +1,20 @@
 <?php
 require '../php/conexion.php';
+session_start();
 if (isset($_POST['logout'])) {
     session_destroy(); // Cierra la sesión
-    header("Location: login.php"); // Redirige al login
+    header("Location: ../"); // Redirige al login
     exit();
+}
+//? Controla si hay un error cualquiera lo asigna a una variable y 
+//?borra contenido para reutilizar ese indice de la session
+if(isset($_SESSION['error'])){
+    $fallo=$_SESSION['error'];
+    unset($_SESSION['error']);
+}
+if(isset($_SESSION['mensaje'])){
+    $mensaje=$_SESSION['mensaje'];
+    unset($_SESSION['mensaje']);
 }
 ?>
 
@@ -18,7 +29,18 @@ if (isset($_POST['logout'])) {
 <body>
     <div class="container mt-5">
         <h1 class="text-center mb-4">Gestión de Controles</h1>
-        
+<!-- Alerta del fallo  -->
+        <?php if(isset($fallo)):?>
+            <div class="alert alert-danger" role="alert">
+                <?=$fallo?>
+            </div>
+        <?php endif;?>
+        <!-- Mensaje-->
+        <?php if(isset($mensaje)):?>
+            <div class="alert alert-info" role="alert">
+                <?=$mensaje?>
+            </div>
+        <?php endif;?>
         <div class="row">
             <div class="col-md-3">
                 <h3>Control</h3>
@@ -29,7 +51,7 @@ if (isset($_POST['logout'])) {
             <div class="col-md-3">
                 <h3>Comida</h3>
                 <a href="./comidas/insertacomidas.php" class="btn btn-primary d-block mb-2">Insertar Comida</a>
-                <a href="./comidas/" class="btn btn-success d-block mb-2">Actualizar Comida</a>
+                <a href="./comidas/updatecomidas.php" class="btn btn-success d-block mb-2">Actualizar Comida</a>
                 <a href="./comidas/deletecomidas.php" class="btn btn-danger d-block mb-2">Eliminar Comida</a>
             </div>
             <div class="col-md-3">
@@ -49,7 +71,7 @@ if (isset($_POST['logout'])) {
         <div class="row mt-4">
             <div class="col-md-3">
                 <h3>Estadísticas</h3>
-                <a href="#" class="btn btn-info d-block mb-2">Ver Estadísticas</a>
+                <a href="./stats.php" class="btn btn-info d-block mb-2">Ver Estadísticas</a>
             </div>
             <div class="col-md-3">
                 <h3>Listado de Registros</h3>

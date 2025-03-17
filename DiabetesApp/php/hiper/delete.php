@@ -28,14 +28,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt_delete->bind_param("iss", $id_usuario, $fecha_control, $tipo_comida);
 
     if ($stmt_delete->execute()) {
-        echo "<script>alert('Registro eliminado correctamente.');</script>";
-        header('Location:../../../../pages/panel.php');
+        $_SESSION['mensaje']='Datos eliminados correctamente en la tabla hiperglucemia.';
     } else {
-        echo "<script>alert('Error al eliminar el registro.');</script>";
-        header('Location:../../../../pages/panel.php');
+        $_SESSION['error']='Error al eliminar datos en hiperglucemia';
     }
 
     $stmt_delete->close();
     $conn->close();
+    header('Location:../../pages/panel.php');
+    exit;
 }
 ?>

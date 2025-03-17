@@ -1,6 +1,7 @@
 <?php
-require 'conexion.php';
-
+require __DIR__ .'/../conexion.php';
+require_once __DIR__ . '/../controlglucosa/select.php';
+session_start();
 //TODO recoger los datos del formulario
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -42,17 +43,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     //TODO obtención del id_usuario
 
-    $select_id = $conn->prepare('SELECT id_usuario FROM usuarios WHERE login = ?');
-    $select_id->bind_param('s', $_SESSION['usuario']);
-    $select_id->execute();
-    $select_id->bind_result($id_usuario); //* el resultado de la busqueda se guarda en la variable id_usuario
-    $select_id->fetch();
-    $select_id->close();
+    // $select_id = $conn->prepare('SELECT id_usuario FROM usuarios WHERE login = ?');
+    // $select_id->bind_param('s', $_SESSION['usuario']);
+    // $select_id->execute();
+    // $select_id->bind_result($id_usuario); //* el resultado de la busqueda se guarda en la variable id_usuario
+    // $select_id->fetch();
+    // $select_id->close();
 
-    if (!$id_usuario) {
-        echo 'Error: Usuario no encontrado';
-        exit;
-    }
+    // if (!$id_usuario) {
+    //     echo 'Error: Usuario no encontrado';
+    //     exit;
+    // }
+    $id_usuario = $_SESSION['id_usuario'];
+    
+    comprobarControl($id_usuario,$fecha_control);
 
     //TODO inserción en tabla comida
 
@@ -88,11 +92,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $insert_hipo->bind_param('issis', $id_usuario, $fecha_control, $tipo_comida, $glucosa_hipo, $hora_hipo);
 
         if ($insert_hipo->execute()) {
-            echo 'Datos insertados correctamente en la tabla HIPOGLUCEMIA.<br>';
+            $_SESSION['mensaje']='Datos insertados correctamente en la tabla HIPOGLUCEMIA.';
         } else {
-            echo 'Error al insertar datos en HIPOGLUCEMIA: ' . $insert_hipo->error;
+            $_SESSION['error']='Error al insertar datos en HIPOGLUCEMIA';
         }
         $insert_hipo->close();
+        header('Location:../../pages/panel.php');
+        exit;
     }
 
     $conn->close();

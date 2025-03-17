@@ -1,5 +1,6 @@
 <?php
-require 'conexion.php';
+require __DIR__ . '/../conexion.php';
+session_start();
 
 //TODO recoger datos de formulario
 
@@ -41,29 +42,28 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 
     //TODO obtención del id_usuario
 
-    $select_id = $conn->prepare('SELECT id_usuario FROM usuarios WHERE login LIKE ?');
-    $select_id->bind_param('s', $_SESSION['usuario']);
-    $select_id->execute();
-    $select_id->bind_result($id_usuario); //* el resultado de la busqueda se guarda en la variable id_usuario
-    $select_id->fetch();
-    $select_id->close();
+    // $select_id = $conn->prepare('SELECT id_usuario FROM usuarios WHERE login LIKE ?');
+    // $select_id->bind_param('s', $_SESSION['usuario']);
+    // $select_id->execute();
+    // $select_id->bind_result($id_usuario); //* el resultado de la busqueda se guarda en la variable id_usuario
+    // $select_id->fetch();
+    // $select_id->close();
 
-    if (!$id_usuario) {
-        echo 'Error: Usuario no encontrado';
-        exit;
-    }
-
+    // if (!$id_usuario) {
+    //     echo 'Error: Usuario no encontrado';
+    //     exit;
+    // }
+    $id_usuario = $_SESSION['id_usuario'];
     //TODO update en la tabla comida
 
     $update_comida = $conn->prepare('UPDATE comida SET tipo_comida = ?, raciones = ?, glucosa_preingesta = ?, insulina = ?, glucosa_postingesta = ? WHERE id_usuario = ? AND fecha_control = ?');
-    $update_comida->bind_param('issiiii', $id_usuario, $fecha_control, $tipo_comida, $raciones, $glucosa_pre, $insulina, $glucosa_pos);
+    $update_comida->bind_param('siiiiis', $tipo_comida,$raciones,$glucosa_pre,$insulina, $glucosa_pos,$id_usuario,$fecha_control,);
 
 
-    if($update_comida->execute()){
-        echo 'Datos actualizados correctamente en tabla comida';
-    }else{
-        echo 'Error al actualizar datos en tabla comida'. $update_comida->error;
-        exit();
+    if ($update_comida->execute()) {
+        $_SESSION['mensaje']='Datos actualizados correctamente en tabla comida';
+    } else {
+        $_SESSION['error']='Error al actualizar datos en tabla comida';
     }
     $update_comida ->close();
 
@@ -73,11 +73,10 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
         $update_hiper = $conn->prepare('UPDATE hiperglucemia SET glucosa_hiper = ? , hora_hiper = ? , unidades_correccion = ?  WHERE id_usuario = ? AND fecha_control = ? AND tipo_comida = ?');
         $update_hiper->bind_param('isisss', $glucosa_hiper, $hora_hiper, $unidades_correccion, $id_usuario, $fecha_control,$tipo_comida);
 
-        if($update_hiper->execute()){
-            echo 'Datos actualizados correctamente en tabla hiperglucemia';
-        }else{
-            echo 'Error al actualizar datos en tabla hiperglucemia: ' . $update_hiper->error;
-            exit();
+        if ($update_hiper->execute()) {
+            $_SESSION['mensaje']='Datos actualizados correctamente en tabla hiperglucemia';
+        } else {
+            $_SESSION['error']='Error al actualizar datos en tabla hiperglucemia';
         }
         $update_hiper->close();
     }
@@ -88,14 +87,16 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
         $update_hipo = $conn->prepare('UPDATE hipoglucemia SET glucosa_hipo = ?, hora_hipo = ? WHERE id_usuario = ? AND fecha_control = ? AND tipo_comida = ?');
         $update_hipo->bind_param('isiss', $glucosa_hipo, $hora_hipo, $id_usuario, $fecha_control,$tipo_comida);
 
-        if($update_hipo->execute()){
-            echo 'Datos actualizados correctamente en tabla hipoglucemia';
-        }else{
-            echo 'Error al actualizar datos en tabla hipoglucemia: ' . $update_hipo->error;
-            exit();
+        if ($update_hipo->execute()) {
+            $_SESSION['mensaje']='Datos actualizados correctamente en tabla hipoglucemia';
+        } else {
+            $_SESSION['error']='Error al actualizar datos en tabla hipoglucemia';
         }
         $update_hipo->close();
     }
+    header('Location:../../pages/panel.php');
+    exit;
+    
 }
 
 $conn->close();

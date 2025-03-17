@@ -38,6 +38,7 @@
                                 <option value="Cena">Cena</option>
                             </select>
                         </div>
+                        <button type="submit">Eliminar Comida</button>
                 </form>
             </div>
         </div>

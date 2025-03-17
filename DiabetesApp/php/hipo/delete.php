@@ -1,6 +1,6 @@
 <?php
 require '../conexion.php';
-
+session_start();
 $id_usuario = $_SESSION['usuario_id'];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -27,14 +27,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt_delete->bind_param("iss", $id_usuario, $fecha_control, $tipo_comida);
 
     if ($stmt_delete->execute()) {
-        echo "<script>alert('Registro eliminado correctamente.');</script>";
-        header('Location:../../../../pages/panel.php');
+        $_SESSION['mensaje']='Datos eliminados correctamente en la tabla HIPOGLUCEMIA.';
     } else {
-        echo "<script>alert('Error al eliminar el registro.');</script>";
-        header('Location:../../../../pages/panel.php');
+        $_SESSION['error']='Error al eliminar datos en HIPOGLUCEMIA';
     }
 
     $stmt_delete->close();
     $conn->close();
+    header('Location:../../pages/panel.php');
+    exit;
 }
 ?>

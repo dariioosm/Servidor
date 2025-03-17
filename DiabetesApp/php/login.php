@@ -1,11 +1,13 @@
 <?php
-
-require 'conexion.php';
-
+//? hace llamada con la ruta absoluta al archivo, para que no hay problema en futuras llamadas
+require_once __DIR__ . '/conexion.php';
+require_once __DIR__ . '/controlglucosa/select.php';
+session_start();
 //TODO pillar datos de formulario
     if($_SERVER["REQUEST_METHOD"] == "POST"){
         $user=$_POST['usuario'];
         $pass=$_POST['pass'];
+        $fecha_hoy= date("Y-m-d");
 
         //TODO comprobacion de cumplimentacion de datos
         if(empty($user)||empty($pass)){
@@ -25,18 +27,19 @@ require 'conexion.php';
                 
                  //* Contraseña hash
                 //TODO metodo para hacer hash a la contraseña 
-                $existepass = $conn ->prepare('SELECT pass from USUARIOS where login LIKE ?');
+                $existepass = $conn ->prepare('SELECT pass,id_usuario from USUARIOS where login LIKE ?');
                 $existepass ->bind_param('s',$user);
                 $existepass ->execute();
-                $existepass -> bind_result($hash);
+                $existepass -> bind_result($hash,$id_usuario);
                 
 
         //TODO Comparar la contraseña ingresada con la almacenada (usando password_verify)
         if ($existepass->fetch() && password_verify($pass,$hash)) {
-           
+           $existepass->close();
            //? guaradarlo en session para poder cogerlo en otros metodos
-            $_SESSION['usuario'] = $user;
-            header('Location: ../pages/panel.php');
+            $_SESSION['id_usuario'] = $id_usuario;
+            comprobarControl($id_usuario,$fecha_hoy);
+            header('Location: /../pages/panel.php');
             exit();
         } else {
             echo "Usuario o contraseña incorrectos.";

@@ -1,55 +1,59 @@
 <?php
-require '../conexion.php';
-$fecha_control = $_POST['fecha_control'];
-$login = $_SESSION['usuario'];
+require __DIR__ . '/../conexion.php';
+session_start();
+if(isset($_POST['fecha_control'])){
+    $fecha_control = $_POST['fecha_control'];
+}
+//$login = $_SESSION['id_usuario'];
 
 // Buscar el id_usuario en la base de datos
-$select_id = $conn->prepare('SELECT id_usuario FROM USUARIOS WHERE login = ?');
-$select_id->bind_param('s', $login);
-$select_id->execute();
-$select_id->bind_result($id_usuario);
-$select_id->fetch();
-$select_id->close();
-
+// $select_id = $conn->prepare('SELECT id_usuario FROM usuarios WHERE id_usuario = ?');
+// $select_id->bind_param('s', $login);
+// $select_id->execute();
+// $select_id->bind_result($id_usuario);
+// $select_id->fetch();
+// $select_id->close();
+$id_usuario = $_SESSION['id_usuario'];
 if (!$id_usuario) {
     die("Error: Usuario no encontrado.");
 }
 
 
 
-if (!$fecha_control) {
+if (isset($fecha_control) && !$fecha_control) {
     die("Error: No se proporcionó una fecha.");
 }
 
 // Buscar los datos actuales en CONTROL_GLUCOSA
-$query = $conn->prepare('SELECT glucosa_lenta, indice_actividad FROM CONTROL_GLUCOSA WHERE id_usuario = ? AND fecha_control = ?');
+$query = $conn->prepare('SELECT fecha_control,glucosa_lenta, indice_actividad FROM control_glucosa WHERE id_usuario = ? AND fecha_control = ?');
 $query->bind_param('is', $id_usuario, $fecha_control);
 $query->execute();
-$query->bind_result($glucosa_lenta, $indice_actividad);
+$query->bind_result($fecha_control,$glucosa_lenta, $indice_actividad);
 $query->fetch();
 $query->close();
 
-if (!$glucosa_lenta) {
+if (isset($fecha_control)&& !$fecha_control ) {
     die("Error: No hay datos para esta fecha.");
 }
 
 // Si el formulario se envió, actualizar los datos
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+if (isset($_POST['updateControl'])) {
     $nueva_glucosa_lenta = $_POST['glucosa_lenta'];
     $nuevo_indice_actividad = $_POST['indice_actividad'];
 
-    $update = $conn->prepare('UPDATE CONTROL_GLUCOSA SET glucosa_lenta = ?, indice_actividad = ? WHERE id_usuario = ? AND fecha_control = ?');
+    $update = $conn->prepare('UPDATE control_glucosa SET glucosa_lenta = ?, indice_actividad = ? WHERE id_usuario = ? AND fecha_control = ?');
     $update->bind_param('iiis', $nueva_glucosa_lenta, $nuevo_indice_actividad, $id_usuario, $fecha_control);
 
     if ($update->execute()) {
-        echo "<p style='color:green;'>Datos actualizados correctamente.</p>";
+        $_SESSION['mensaje']="Datos actualizados correctamente.";
     } else {
-        echo "<p style='color:red;'>Error al actualizar los datos.</p>";
+        $_SESSION['mensaje']='Error al actualizar los datos.';
     }
 
     $update->close();
+    header('Location: ../../pages/panel.php');
+    exit;
 }
-
 $conn->close();
 ?>
 
@@ -81,8 +85,9 @@ $conn->close();
                     <option value="5" <?php if ($indice_actividad == 5) echo "selected"; ?>>Muy activo</option>
                 </select>
             </div>
-            <button type="submit" class="btn btn-primary">Actualizar</button>
-            <a href="control_glucosa.php" class="btn btn-secondary">Volver</a>
+            <input type="hidden" name="fecha_control" value="<?=isset($fecha_control)?$fecha_control:""?>">
+            <button name="updateControl" type="submit" class="btn btn-primary">Actualizar</button>
+            <a href="../../pages/panel.php" class="btn btn-secondary">Volver</a>
         </form>
     </div>
 </body>

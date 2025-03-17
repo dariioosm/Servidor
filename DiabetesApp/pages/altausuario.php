@@ -1,3 +1,7 @@
+<?php
+//?guarda fecha en la variable para marcar limite en el registro
+$fecha_hoy=date('Y-m-d');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +29,7 @@
                       <div class="row">
                           <div class="mb-3 col-6 align-conten left">
                               <label for="login" class="form-label">Fecha de nacimiento</label>
-                              <input type="date" class="form-control" id="fecha_nacimiento" name="fecha_nacimiento">
+                              <input type="date" class="form-control" id="fecha_nacimiento" name="fecha_nacimiento" max="<?= $fecha_hoy;?>"">
                             </div>  
                           <div class="mb-3 col-6">
                             <label for="login" class="form-label">Nombre de usuario</label>
