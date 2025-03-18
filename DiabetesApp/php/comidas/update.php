@@ -42,17 +42,6 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 
     //TODO obtención del id_usuario
 
-    // $select_id = $conn->prepare('SELECT id_usuario FROM usuarios WHERE login LIKE ?');
-    // $select_id->bind_param('s', $_SESSION['usuario']);
-    // $select_id->execute();
-    // $select_id->bind_result($id_usuario); //* el resultado de la busqueda se guarda en la variable id_usuario
-    // $select_id->fetch();
-    // $select_id->close();
-
-    // if (!$id_usuario) {
-    //     echo 'Error: Usuario no encontrado';
-    //     exit;
-    // }
     $id_usuario = $_SESSION['id_usuario'];
     //TODO update en la tabla comida
 
@@ -95,7 +84,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
         $update_hipo->close();
     }
     header('Location:../../pages/panel.php');
-    exit;
+    exit();
     
 }
 

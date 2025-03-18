@@ -43,17 +43,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     //TODO obtención del id_usuario
 
-    // $select_id = $conn->prepare('SELECT id_usuario FROM usuarios WHERE login = ?');
-    // $select_id->bind_param('s', $_SESSION['usuario']);
-    // $select_id->execute();
-    // $select_id->bind_result($id_usuario); //* el resultado de la busqueda se guarda en la variable id_usuario
-    // $select_id->fetch();
-    // $select_id->close();
-
-    // if (!$id_usuario) {
-    //     echo 'Error: Usuario no encontrado';
-    //     exit;
-    // }
     $id_usuario = $_SESSION['id_usuario'];
     
     comprobarControl($id_usuario,$fecha_control);
@@ -64,10 +53,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $insert_comida->bind_param('issiiii', $id_usuario, $fecha_control, $tipo_comida, $raciones, $glucosa_pre, $insulina, $glucosa_pos);
 
     if ($insert_comida->execute()) {
-        echo 'Datos insertados correctamente en la tabla COMIDA.<br>';
+        $_SESSION['mensaje']='Datos insertados correctamente en la tabla comida.';
     } else {
-        echo 'Error al insertar datos en COMIDA: ' . $insert_comida->error;
-        exit;
+        $_SESSION['error']='Error al insertar datos en comida';
     }
     $insert_comida->close();
 
@@ -78,9 +66,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $insert_hiper->bind_param('issisi', $id_usuario, $fecha_control, $tipo_comida, $glucosa_hiper, $hora_hiper, $unidades_correccion);
         
         if ($insert_hiper->execute()) {
-            echo 'Datos insertados correctamente en la tabla HIPERGLUCEMIA.<br>';
+            $_SESSION['mensaje']='Datos insertados correctamente en la tabla hiperglucemia.';
         } else {
-            echo 'Error al insertar datos en HIPERGLUCEMIA: ' . $insert_hiper->error;
+            $_SESSION['error']='Error al insertar datos en hiperglucemia';
         }
         $insert_hiper->close();
     }

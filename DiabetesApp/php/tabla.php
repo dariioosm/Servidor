@@ -1,6 +1,6 @@
 <?php
 require 'conexion.php'; 
-
+session_start();
 $id_usuario = $_SESSION['id_usuario']; // Obtener el ID del usuario en sesión
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

@@ -2,8 +2,8 @@
 //session_start();
 $host="localhost";
 $dbname="diabetesdb";
-$user="cliente";
-$pass="fA2AtIovlGvW]1Rb";
+$user="root";
+$pass="";
 
 $conn = new mysqli($host, $user, $pass, $dbname);
 

@@ -11,26 +11,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $unidades_correccion = $_POST["unidades_correccion"];
 
      //TODO obtención del id_usuario
-
+/*
      $select_id = $conn->prepare('SELECT id_usuario FROM usuarios WHERE login = ?');
      $select_id->bind_param('s', $_SESSION['usuario']);
      $select_id->execute();
      $select_id->bind_result($id_usuario); //* el resultado de la busqueda se guarda en la variable id_usuario
      $select_id->fetch();
-     $select_id->close();
+     $select_id->close();*/
 
     $stmt = $conn->prepare("UPDATE hiperglucemia  SET glucosa_hiper = ?, hora_hiper = ?, unidades_correccion = ? WHERE id_usuario = ? AND fecha_control = ? AND tipo_comida = ?");
     $stmt->bind_param("isisss", $glucosa_hiper, $hora_hiper, $unidades_correccion, $id_usuario, $fecha_control, $tipo_comida);
     
     if ($stmt->execute()) {
-        echo "<script>alert('Registro actualizado correctamente');";
-        header('Location: ../../../../pages/panel.php');
+        $_SESSION['mensaje']="Datos actualizados correctamente";
     } else {
-        echo "<script>alert('Error al actualizar el registro');</script>";
-        header('Location: ../../../../pages/panel.php');
+        $_SESSION['mensaje']="Error actualizados correctamente";
     }
 
     $stmt->close();
     $conn->close();
+    header('Location: ../../../../pages/panel.php');
+    exit();
 }
 ?>

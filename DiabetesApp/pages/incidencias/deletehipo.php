@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eliminar Control de Glucosa</title>
+    <title>Eliminar Registro de Hipoglucemia</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -19,13 +19,13 @@
             border-radius: 12px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
             width: 100%;
-            max-width: 450px;
+            max-width: 500px;
         }
         .btn {
             font-weight: 600;
             border-radius: 8px;
         }
-        h3 {
+        h2 {
             text-align: center;
             color: #dc3545;
             font-weight: bold;
@@ -36,12 +36,24 @@
 <body>
 
     <div class="form-container">
-        <h3>¿Qué fecha de control quieres eliminar?</h3>
+        <h2>Eliminar Registro de Hipoglucemia</h2>
         
-        <form action="../../php/controlglucosa/delete.php" method="post">
+        <form action="../../php/hipo/delete.php" method="POST">
             <div class="mb-3">
-                <label class="form-label">Fecha de control</label>
+                <label class="form-label">Fecha de Control</label>
                 <input type="date" name="fecha_control" id="fecha_control" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Tipo de Comida</label>
+                <select name="tipo_comida" class="form-select" required>
+                    <option value="" disabled selected>Elige el tipo de comida...</option>
+                    <option value="Desayuno">Desayuno</option>
+                    <option value="Aperitivo">Aperitivo</option>
+                    <option value="Comida">Comida</option>
+                    <option value="Merienda">Merienda</option>
+                    <option value="Cena">Cena</option>
+                </select>
             </div>
 
             <div class="text-center mt-4">
@@ -49,6 +61,12 @@
             </div>
         </form>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("fecha_control").valueAsDate = new Date();
+        });
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

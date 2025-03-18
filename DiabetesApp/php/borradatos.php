@@ -1,5 +1,5 @@
 <?php
-require 'conexion.php';
+require __DIR__ . '/../conexion.php';
 
 //? Solo se necesitan fecha_control y tipo comida del formulario, porque el id lo cogemos por la sesion 
 

@@ -1,7 +1,5 @@
 <?php
 require '../conexion.php';
-
-
 $id_usuario = $_SESSION['usuario_id'];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -9,13 +7,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $tipo_comida = $_POST["tipo_comida"];
 
      //TODO obtención del id_usuario
-
+/*
      $select_id = $conn->prepare('SELECT id_usuario FROM usuarios WHERE login = ?');
      $select_id->bind_param('s', $_SESSION['usuario']);
      $select_id->execute();
      $select_id->bind_result($id_usuario); //* el resultado de la busqueda se guarda en la variable id_usuario
      $select_id->fetch();
-     $select_id->close();
+     $select_id->close();*/
 
     $stmt_check = $conn->prepare("SELECT * FROM hiperglucemia WHERE id_usuario = ? AND fecha_control = ? AND tipo_comida = ?");
     $stmt_check->bind_param("iss", $id_usuario, $fecha_control, $tipo_comida);

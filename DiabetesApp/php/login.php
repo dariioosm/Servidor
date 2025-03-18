@@ -2,6 +2,7 @@
 //? hace llamada con la ruta absoluta al archivo, para que no hay problema en futuras llamadas
 require_once __DIR__ . '/conexion.php';
 require_once __DIR__ . '/controlglucosa/select.php';
+session_destroy();
 session_start();
 //TODO pillar datos de formulario
     if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -23,11 +24,11 @@ session_start();
 
             if($resultado ->num_rows <1){
                 echo 'Este nombre de usuario no existe <a href="../index.php">registrate  aqui </a>';
+               
             }else{ 
-                
                  //* Contraseña hash
                 //TODO metodo para hacer hash a la contraseña 
-                $existepass = $conn ->prepare('SELECT pass,id_usuario from USUARIOS where login LIKE ?');
+                $existepass = $conn ->prepare('SELECT pass,id_usuario from usuarios where login LIKE ?');
                 $existepass ->bind_param('s',$user);
                 $existepass ->execute();
                 $existepass -> bind_result($hash,$id_usuario);
@@ -37,10 +38,9 @@ session_start();
         if ($existepass->fetch() && password_verify($pass,$hash)) {
            $existepass->close();
            //? guaradarlo en session para poder cogerlo en otros metodos
-            $_SESSION['id_usuario'] = $id_usuario;
             comprobarControl($id_usuario,$fecha_hoy);
-            header('Location: /../pages/panel.php');
-            exit();
+            header('Location: ../pages/panel.php');
+            exit;
         } else {
             echo "Usuario o contraseña incorrectos.";
         }

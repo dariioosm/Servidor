@@ -4,15 +4,6 @@ session_start();
 if(isset($_POST['fecha_control'])){
     $fecha_control = $_POST['fecha_control'];
 }
-//$login = $_SESSION['id_usuario'];
-
-// Buscar el id_usuario en la base de datos
-// $select_id = $conn->prepare('SELECT id_usuario FROM usuarios WHERE id_usuario = ?');
-// $select_id->bind_param('s', $login);
-// $select_id->execute();
-// $select_id->bind_result($id_usuario);
-// $select_id->fetch();
-// $select_id->close();
 $id_usuario = $_SESSION['id_usuario'];
 if (!$id_usuario) {
     die("Error: Usuario no encontrado.");
@@ -24,7 +15,7 @@ if (isset($fecha_control) && !$fecha_control) {
     die("Error: No se proporcionó una fecha.");
 }
 
-// Buscar los datos actuales en CONTROL_GLUCOSA
+// TODO Buscar los datos actuales en CONTROL_GLUCOSA
 $query = $conn->prepare('SELECT fecha_control,glucosa_lenta, indice_actividad FROM control_glucosa WHERE id_usuario = ? AND fecha_control = ?');
 $query->bind_param('is', $id_usuario, $fecha_control);
 $query->execute();
@@ -36,7 +27,7 @@ if (isset($fecha_control)&& !$fecha_control ) {
     die("Error: No hay datos para esta fecha.");
 }
 
-// Si el formulario se envió, actualizar los datos
+// TODO Si el formulario se envió, actualizar los datos
 if (isset($_POST['updateControl'])) {
     $nueva_glucosa_lenta = $_POST['glucosa_lenta'];
     $nuevo_indice_actividad = $_POST['indice_actividad'];
