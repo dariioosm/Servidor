@@ -1,3 +1,7 @@
+<?php
+//? Guarda fecha en la variable para marcar límite en el registro
+$fecha_hoy = date('Y-m-d');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +19,7 @@
                 <form action="../../php/controlglucosa/update.php" method="post">
                     <div class="mb-3">
                         <label for="fecha_control" class="form-label">Fecha de control</label>
-                        <input type="date" name="fecha_control" id="fecha_control" class="form-control" required>
+                        <input type="date" name="fecha_control" id="fecha_control"  max="<?= $fecha_hoy;?>" class="form-control" required>
                     </div>
                     <div class="text-center">
                         <button type="submit" class="btn btn-primary">Buscar Registro</button>

@@ -1,6 +1,6 @@
 <?php
 require __DIR__ . '/../conexion.php';
-
+session_start();
 //? Solo se necesitan fecha_control y tipo comida del formulario, porque el id lo cogemos por la sesion 
 
 
@@ -25,17 +25,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     // Obtención del id_usuario
-    $select_id = $conn->prepare('SELECT id_usuario FROM usuarios WHERE login LIKE ?');
+  /*  $select_id = $conn->prepare('SELECT id_usuario FROM usuarios WHERE login LIKE ?');
     $select_id->bind_param('s', $_SESSION['usuario']);
     $select_id->execute();
     $select_id->bind_result($id_usuario); //* el resultado de la búsqueda se guarda en la variable id_usuario
     $select_id->fetch();
     $select_id->close();
-
-    if (!$id_usuario) {
-        echo 'Error: Usuario no encontrado';
-        exit;
-    }
+*/
+$id_usuario = $_SESSION['id_usuario'];
+    
+comprobarControl($id_usuario,$fecha_control);
+   
 
     // Eliminar datos de la tabla COMIDA
     $delete_comida = $conn->prepare('DELETE FROM comida WHERE id_usuario = ? AND fecha_control = ? AND tipo_comida = ?');
@@ -66,13 +66,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $delete_hipo->bind_param('iss', $id_usuario, $fecha_control, $tipo_comida);
 
     if ($delete_hipo->execute()) {
-        echo 'Datos eliminados correctamente de la tabla HIPOGLUCEMIA';
+        $_SESSION['mensaje']='Datos eliminados correctamente';
     } else {
-        echo 'Error al eliminar datos de la tabla HIPOGLUCEMIA: ' . $delete_hipo->error;
-        exit();
+        $_SESSION['error']= 'Error al elimiar datos de la tabla hipoglucemia';
     }
+    
     $delete_hipo->close();
+    $conn->close();
+    header('Location:../../../pages/panel.php');
 }
 
-$conn->close();
+
 ?>

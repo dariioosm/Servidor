@@ -1,6 +1,6 @@
 <?php
-require '../conexion.php';
-
+require __DIR__.'/../../conexion.php';
+session_start();
 $id_usuario = $_SESSION['usuario_id'];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -18,18 +18,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
      $select_id->fetch();
      $select_id->close();*/
 
-    $stmt = $conn->prepare("UPDATE hipoglucemia  SET glucosa_hiper = ?, hora_hiper = ?, unidades_correccion = ? WHERE id_usuario = ? AND fecha_control = ? AND tipo_comida = ?");
-    $stmt->bind_param("isiss", $glucosa_hiper, $hora_hiper, $id_usuario, $fecha_control, $tipo_comida);
+     $stmt = $conn->prepare("UPDATE hipoglucemia SET glucosa_hipo = ?, hora_hipo = ?, unidades_correccion = ? WHERE id_usuario = ? AND fecha_control = ? AND tipo_comida = ?");
+     $stmt->bind_param("ississ", $glucosa_hipo, $hora_hipo, $unidades_correccion, $id_usuario, $fecha_control, $tipo_comida);
     
-    if ($stmt->execute()) {
-        echo "<script>alert('Registro actualizado correctamente');";
-        header('Location: ../../../../pages/panel.php');
+     if ($stmt->execute()) {
+        $_SESSION['mensaje'] = "Registro actualizado correctamente";
     } else {
-        echo "<script>alert('Error al actualizar el registro');</script>";
-        header('Location: ../../../../pages/panel.php');
+        $_SESSION['error'] = "Error al actualizar el registro";
     }
 
     $stmt->close();
     $conn->close();
+
+    header('Location: ../../pages/panel.php');
+    exit();
 }
 ?>

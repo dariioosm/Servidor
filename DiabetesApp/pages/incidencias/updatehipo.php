@@ -1,3 +1,7 @@
+<?php
+//? Guarda fecha en la variable para marcar límite en el registro
+$fecha_hoy = date('Y-m-d');
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -13,17 +17,12 @@
         
         <form action="../../php/hipo/update.php" method="POST">
             <div class="mb-3">
-                <label class="form-label">ID del Registro</label>
-                <input type="number" name="id_hiperglucemia" class="form-control" required placeholder="Ingrese el ID del registro">
+                <label class="form-label">Fecha de Control</label>
+                <input type="date" name="fecha_control" max="<?=$fecha_hoy;?>" class="form-control" required>
             </div>
 
             <div class="mb-3">
-                <label class="form-label">Nueva Fecha de Control</label>
-                <input type="date" name="fecha_control" class="form-control" required>
-            </div>
-
-            <div class="mb-3">
-                <label class="form-label">Nuevo Tipo de Comida</label>
+                <label class="form-label">Tipo de Comida</label>
                 <select name="tipo_comida" class="form-select" required>
                     <option value="" disabled selected>Selecciona...</option>
                     <option value="Desayuno">Desayuno</option>
