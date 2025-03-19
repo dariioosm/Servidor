@@ -1,6 +1,6 @@
 <?php
 require __DIR__ . '/../conexion.php';
-require __DIR__.'/../controlglucosa/select.php';
+//require __DIR__.'/../controlglucosa/select.php';
 session_start();
 
 $id_usuario = $_SESSION['id_usuario'];
@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         exit();
     }
 
-    comprobarControl($id_usuario, $fecha_control);
+    //comprobarControl($id_usuario, $fecha_control);
 
     $insert_hipo = $conn->prepare('INSERT INTO hipoglucemia (id_usuario, fecha_control, tipo_comida, glucosa_hipo, hora_hipo) VALUES (?, ?, ?, ?, ?)');
     $insert_hipo->bind_param('issis', $id_usuario, $fecha_control, $tipo_comida, $glucosa_hipo, $hora_hipo);

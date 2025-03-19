@@ -1,6 +1,6 @@
 <?php
 $host = 'localhost';
-$dbname = 'pictogramasphp';
+$dbname = 'pictogramaphp';
 $user = 'root'; // Cambiar si es necesario
 $pass = ''; // Cambiar si es necesario
 
