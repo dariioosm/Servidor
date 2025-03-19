@@ -1,7 +1,7 @@
 <?php
 require __DIR__ .'/../conexion.php';
 require_once __DIR__ . '/../controlglucosa/select.php';
-session_start();
+//session_start();
 //TODO recoger los datos del formulario
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -85,10 +85,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_SESSION['error']='Error al insertar datos en HIPOGLUCEMIA';
         }
         $insert_hipo->close();
-        header('Location:../../pages/panel.php');
-        exit;
+       
     }
-
+    header('Location:../../pages/panel.php');
+    exit();
     $conn->close();
 }
 ?>

@@ -54,9 +54,9 @@ comprobarControl($id_usuario,$fecha_control);
     $delete_hiper->bind_param('iss', $id_usuario, $fecha_control, $tipo_comida);
 
     if ($delete_hiper->execute()) {
-        echo 'Datos eliminados correctamente de la tabla HIPERGLUCEMIA';
+        $_SESSION['mensaje']='Datos eliminados correctamente de la tabla HIPERGLUCEMIA';
     } else {
-        echo 'Error al eliminar datos de la tabla HIPERGLUCEMIA: ' . $delete_hiper->error;
+        $_SESSION['error']='Error al eliminar datos de la tabla HIPERGLUCEMIA';
         exit();
     }
     $delete_hiper->close();

@@ -2,6 +2,7 @@
 require __DIR__ .'/../conexion.php';
 require_once __DIR__ . '/../controlglucosa/select.php';
 session_start();
+$id_usuario = $_SESSION['id_usuario'];
 
 if($_SERVER['REQUEST_METHOD']=='POST'){
     $fecha_control = $_POST['fecha_control'];
@@ -10,8 +11,6 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     $hora_hiper = $_POST['hora_hiper'] ?? null;
     $unidades_correccion = $_POST['unidades_correccion'] ?? null;
 
-
-    $id_usuario = $_SESSION['id_usuario'];
     
     comprobarControl($id_usuario,$fecha_control);
 
@@ -29,8 +28,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 $conn->close();
 
 //! comprobar rutas luego
-header('Location: ../pages/panel.php');
-
+header('Location: /../pages/panel.php');
 exit();
 
 ?>

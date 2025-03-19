@@ -1,7 +1,7 @@
 <?php
 require '../conexion.php';
 session_start();
-$id_usuario = $_SESSION['usuario_id'];
+$id_usuario = $_SESSION['id_usuario'];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $fecha_control = $_POST["fecha_control"];

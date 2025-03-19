@@ -1,5 +1,5 @@
 <?php 
-session_start();
+//session_start();
 require __DIR__ . '/../conexion.php';
 //TODO recoger los datos del formulario
 
@@ -33,7 +33,6 @@ require __DIR__ . '/../conexion.php';
             header('Location: ../../pages/panel.php');
             exit();
     }
-
 }
     if(isset($_POST['insertForm'])){
         insertarControl($_POST);

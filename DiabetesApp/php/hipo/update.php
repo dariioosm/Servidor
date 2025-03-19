@@ -1,7 +1,8 @@
 <?php
-require __DIR__.'/../../conexion.php';
+require __DIR__.'/../conexion.php';
+
 session_start();
-$id_usuario = $_SESSION['usuario_id'];
+$id_usuario = $_SESSION['id_usuario'];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $fecha_control = $_POST["fecha_control"];
@@ -18,8 +19,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
      $select_id->fetch();
      $select_id->close();*/
 
-     $stmt = $conn->prepare("UPDATE hipoglucemia SET glucosa_hipo = ?, hora_hipo = ?, unidades_correccion = ? WHERE id_usuario = ? AND fecha_control = ? AND tipo_comida = ?");
-     $stmt->bind_param("ississ", $glucosa_hipo, $hora_hipo, $unidades_correccion, $id_usuario, $fecha_control, $tipo_comida);
+     $stmt = $conn->prepare("UPDATE hipoglucemia SET glucosa_hipo = ?, hora_hipo = ? WHERE id_usuario = ? AND fecha_control = ? AND tipo_comida = ?");
+     $stmt->bind_param("isiss", $glucosa_hipo, $hora_hipo, $id_usuario, $fecha_control, $tipo_comida);
     
      if ($stmt->execute()) {
         $_SESSION['mensaje'] = "Registro actualizado correctamente";

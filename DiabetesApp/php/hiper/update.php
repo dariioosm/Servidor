@@ -1,6 +1,6 @@
 <?php
-require '../conexion.php';
-
+require __DIR__ . '/../conexion.php';
+session_start();
 $id_usuario = $_SESSION['usuario_id'];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
      $select_id->close();*/
 
     $stmt = $conn->prepare("UPDATE hiperglucemia  SET glucosa_hiper = ?, hora_hiper = ?, unidades_correccion = ? WHERE id_usuario = ? AND fecha_control = ? AND tipo_comida = ?");
-    $stmt->bind_param("isisss", $glucosa_hiper, $hora_hiper, $unidades_correccion, $id_usuario, $fecha_control, $tipo_comida);
+    $stmt->bind_param("isiiss", $glucosa_hiper, $hora_hiper, $unidades_correccion, $id_usuario, $fecha_control, $tipo_comida);
     
     if ($stmt->execute()) {
         $_SESSION['mensaje']="Datos actualizados correctamente";

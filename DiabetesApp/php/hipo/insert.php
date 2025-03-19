@@ -1,13 +1,14 @@
 <?php
 require __DIR__ . '/../conexion.php';
+require __DIR__.'/../controlglucosa/select.php';
 session_start();
 
 $id_usuario = $_SESSION['id_usuario'];
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $fecha_control = $_POST['fecha_control'] ?? null;
-    $tipo_comida = $_POST['tipo_comida'] ?? null;
-    $glucosa_hipo = isset($_POST['glucosa_hipo']) ? (int) $_POST['glucosa_hipo'] : null;
-    $hora_hipo = isset($_POST['hora_hipo']) ? (int) $_POST['hora_hipo'] : null;
+    $fecha_control = $_POST['fecha_control'];
+    $tipo_comida = $_POST['tipo_comida'];
+    $glucosa_hipo = isset($_POST['glucosa_hipo']);
+    $hora_hipo = isset($_POST['hora_hipo']);
 
     
 
@@ -20,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     comprobarControl($id_usuario, $fecha_control);
 
     $insert_hipo = $conn->prepare('INSERT INTO hipoglucemia (id_usuario, fecha_control, tipo_comida, glucosa_hipo, hora_hipo) VALUES (?, ?, ?, ?, ?)');
-    $insert_hipo->bind_param('issii', $id_usuario, $fecha_control, $tipo_comida, $glucosa_hipo, $hora_hipo);
+    $insert_hipo->bind_param('issis', $id_usuario, $fecha_control, $tipo_comida, $glucosa_hipo, $hora_hipo);
 
     if ($insert_hipo->execute()) {
         $_SESSION['mensaje'] = 'Datos insertados correctamente en la tabla HIPOGLUCEMIA.';

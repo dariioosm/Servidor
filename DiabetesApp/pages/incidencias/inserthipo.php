@@ -15,7 +15,7 @@ $fecha_hoy = date('Y-m-d');
     <div class="form-container bg-white p-4 rounded shadow" style="max-width: 500px; width: 100%;">
         <h2 class="text-center text-info mb-4">Insertar Hipoglucemia</h2>
         
-        <form action="../php/hipo/insert.php" method="POST">
+        <form action="../../php/hipo/insert.php" method="POST">
             <div class="mb-3">
                 <label class="form-label">Fecha de Control</label>
                 <input type="date" name="fecha_control"  max="<?=$fecha_hoy;?>" class="form-control" required>
