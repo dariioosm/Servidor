@@ -19,12 +19,14 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
         $_SESSION['error']='Error al insertar datos en hiperglucemia';
     }
     $insert_hiper->close();
-}
-
-$conn->close();
+    $conn->close();
 
 //! comprobar rutas luego
-header('Location: ../../pages/panel.php');
+//header('Location: ../../../../pages/panel.php');
+header('Location: /../../../pages/panel.php');
 exit();
+}
+
+
 
 ?>
