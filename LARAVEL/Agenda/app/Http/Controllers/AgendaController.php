@@ -17,31 +17,46 @@ class AgendaController extends Controller
 
     public function store(Request $request)
     {
+        // Validación de los datos recibidos del formulario
         $request->validate([
-            'persona' => 'required',
+            'persona' => 'required|exists:personas,idpersona',
             'fecha' => 'required|date',
             'hora' => 'required|date_format:H:i',
-            'imagen' => 'required'
+            'imagen' => 'required|exists:imagenes,idimagen'
         ]);
-
+    
+        // Guardar la nueva entrada en la tabla agenda
         Agenda::create([
             'idpersona' => $request->persona,
             'idimagen' => $request->imagen,
             'fecha' => $request->fecha,
             'hora' => $request->hora
         ]);
-
+    
+        // Redireccionar de nuevo al formulario con mensaje de éxito
         return redirect()->route('agenda.create')->with('success', 'Entrada añadida correctamente');
     }
+    
 
     public function show(Request $request)
-    {
-        $agenda = Agenda::select('pictogramas.imagen', 'agenda.fecha', 'agenda.hora')
-            ->join('pictogramas', 'pictogramas.id', '=', 'agenda.idimagen')
-            ->where('agenda.idpersona', $request->persona)
-            ->where('agenda.fecha', $request->fecha)
-            ->get();
+{
+    $personas = Persona::all();
 
-        return view('agenda.show', compact('agenda'));
-    }
+    $agenda = Agenda::select(
+            'imagenes.imagen',
+            'agenda.fecha',
+            'agenda.hora',
+            'personas.nombre',
+            'personas.apellidos'
+        )
+        ->join('imagenes', 'imagenes.idimagen', '=', 'agenda.idimagen')
+        ->join('personas', 'personas.idpersona', '=', 'agenda.idpersona')
+        ->where('agenda.idpersona', $request->persona)
+        ->where('agenda.fecha', $request->fecha)
+        ->get();
+
+    return view('agenda.show', compact('agenda', 'personas'));
+}
+
+
 }
