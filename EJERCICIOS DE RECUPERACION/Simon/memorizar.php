@@ -9,6 +9,7 @@
     <h5>Memoriza la combinacion</h5>
     <?php
     session_start();
+    require('pintacirculo.php');
     $paleta_colores=['red','green','yellow','blue'];
     
     //? hacer array para meter n colores
@@ -22,13 +23,6 @@
 
     //? guardo la combinacion creada en un session
     $_SESSION['combinacion']=$colores;
-    function rellenaCirculo($colores){
-            for($i=0;$i<count($colores);$i++){
-        echo'<svg width="100" height="100">';
-        echo'<circle cx="50" cy="50" r="40" fill="'.$colores[$i].'"></circle>';
-        echo'</svg>';
-        }
-    }
     rellenaCirculo($colores);
     ?>
     <form action ="jugar.php" method='post'>
