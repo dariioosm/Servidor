@@ -27,7 +27,7 @@ if(isset($_POST['usuario']) && isset($_POST['pass'])){
 if(isset($_SESSION['usuario'])&& isset($_SESSION['pass'])){
     $usuario=$_POST['usuario'];
     $pass = $_POST['pass'];
-
+    $_SESSION['usuario']=$usuario;
     $seleccion = $conn->prepare('SELECT Nombre,Clave FROM usuarios WHERE Nombre LIKE ? AND Clave LIKE ?');
     $seleccion->bind_param('ss',$usuario,$pass);
     $seleccion->execute();
