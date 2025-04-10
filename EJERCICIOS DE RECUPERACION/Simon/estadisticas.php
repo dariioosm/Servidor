@@ -1,6 +1,5 @@
 <?php
 require('conexion.php');
-session_start();
 $datos=$conn->prepare("SELECT u.Codigo, u.Nombre, j.aciertos AS aciertos FROM usuarios u LEFT JOIN 
                                     (SELECT codigousu, COUNT(*) AS aciertos FROM jugadas WHERE acierto = 1 GROUP BY codigousu) j ON u.Codigo = j.codigousu");
 
@@ -32,7 +31,6 @@ $resultado = $datos->get_result();
     <h2>Las estadisticas de los usuarios son</h2>
     <table>
         <tr>
-            <th>codigo de usuario</th>
             <th>Nombre usuario</th>
             <th>Aciertos</th>
             <th>Barra</th>
@@ -40,20 +38,21 @@ $resultado = $datos->get_result();
         <?php
             $filas = $resultado->num_rows;
             for($i =0; $i<$filas;$i++){
-                echo '<tr>';
                 $resultado->data_seek($i);
-                echo'<td>'.htmlspecialchars($resultado->fetch_assoc()['Codigo']).'</td>';
-                echo'<td>'.htmlspecialchars($resultado->fetch_assoc()['Nombre']).'</td>';
-                echo'<td>'.htmlspecialchars($resultado->fetch_assoc()['aciertos']).'</td>';
-                echo "<td><div class='barra' style='width: " . (htmlspecialchars($resultado->fetch_assoc()['aciertos']) * 10) . "px;'></div></td>";
-                echo '</tr>';
-
-                var_dump($resultado->fetch_all());
+                $dato=$resultado->fetch_assoc();
+                $nombre = htmlspecialchars($dato['Nombre']);
+                $aciertos = intval($dato['aciertos']); 
+                echo '<tr>';
+            echo "<td>{$nombre}</td>";
+            echo "<td>{$aciertos}</td>";
+            echo "<td><div class='barra' style='width: " . ($aciertos * 10) . "px;'></div></td>";
+            echo '</tr>';
             }
             
 
         ?>
     </table>
+    <a href="index.php">Salir del juego</a>
 </body>
 </html>
 <?php
