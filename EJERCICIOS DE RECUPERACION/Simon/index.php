@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>¡Vamos a jugar al simon!</h1>
-    <form action="memorizar.php" method="POST" >
+    <form action="#" method="POST" >
     <label for="">Usuario</label>
     <input type="text" id="usuario" name="usuario" required>
     <label for="">Password</label>
@@ -23,19 +23,20 @@ session_start();
 if(isset($_POST['usuario']) && isset($_POST['pass'])){
     $_SESSION['usuario'] = $_POST['usuario'];
     $_SESSION['pass'] = $_POST['pass'];
-}
-if(isset($_SESSION['usuario'])&& isset($_SESSION['pass'])){
-    $usuario=$_POST['usuario'];
-    $pass = $_POST['pass'];
-    $_SESSION['usuario']=$usuario;
-    $seleccion = $conn->prepare('SELECT Nombre,Clave FROM usuarios WHERE Nombre LIKE ? AND Clave LIKE ?');
-    $seleccion->bind_param('ss',$usuario,$pass);
+
+    $seleccion = $conn->prepare('SELECT Nombre,Clave,Rol FROM usuarios WHERE Nombre LIKE ? AND Clave LIKE ?');
+    $seleccion->bind_param('ss',$_SESSION['usuario'],$_SESSION['pass']);
     $seleccion->execute();
     $resultado = $seleccion ->get_result();
 
     if($resultado && $resultado -> num_rows>0){
         $fila = $resultado -> fetch_assoc();
+        if(htmlspecialchars($fila['Rol'])==0){
         echo "Bienvenido, " . htmlspecialchars($fila['Nombre']) . "!<br>"; 
+        header('Location: memorizar.php');
+        }else if(htmlspecialchars($fila['Rol'])==1){
+            header('Location: dificultad.php');
+        }
     }else{
         echo "Usuario o contraseña incorrectos.<br>";
     }

@@ -6,25 +6,33 @@
     <title>Document</title>
 </head>
 <body>
-    <h5>Memoriza la combinacion</h5>
     <?php
+    require 'conexion.php';
     session_start();
     require('pintacirculo.php');
+    //TODO sentencia sql para recoger el numero de circulos que hay por dificultad
+
+    $dificultad= $conn->prepare('SELECT dificultad FROM nivel');
+    $dificultad->execute();
+    $resultadoDificultad=$dificultad->get_result();
+    $resultado=$resultadoDificultad->fetch_assoc();
+    $nivel=$resultado['dificultad'];
     
+    $_SESSION['nivel']=$nivel;
+
+    echo '<h1>Memoriza la combinacion '.$_SESSION['usuario'].'</h1>';
+    //? limpio el contenido de respuesta y de contador
+    unset($_SESSION['respuesta']);
+    unset($_SESSION['contador']);
     
     $paleta_colores=['red','green','yellow','blue'];
 
 
-    for($i=0;$i<4;$i++){
+    for($i=0;$i<$_SESSION['nivel'];$i++){
         $indice=rand(0,3);
         $relleno=$paleta_colores[$indice];
         $colores[]=$relleno;
     }
-
-/*  variable relleno es la que se utiliza para sacar el color de los circulos */
-//! session combinacion no recoge los colores de relleno
-//! array respuesta coge todos los valores negros y coge las respuestas del formulario y no las elimina
-//! la session con la respuesta correcta no tiene los mismo valores que los que se generan en primer lugar
 
     //? guardo la combinacion creada en un session
     $_SESSION['combinacion']=$colores;
