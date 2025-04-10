@@ -1,10 +1,4 @@
-<?php /*
-$cartas=[2,2,3,3,5,5];
-shuffle($cartas);
-for($i=0;$i<6;$i++){
-    echo $cartas[$i];
-}*/
-?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -33,6 +27,17 @@ if(isset($_POST['usuario'])&&isset($_POST['pass'])){
     
     $resultado= $usuario->get_result();
     if($resultado && $resultado -> num_rows>0){
+
+        //TODO generar el array con el shuffle de las cartas
+        $cartas=[2,2,3,3,5,5];
+        $solucion=[];
+        $baraja=shuffle($cartas);
+        for($i=0;$i<count($cartas);$i++){
+            $solucion[$i]=$cartas[$i];
+        }
+        //? guardo el resultado de la combinacion solucion en sesion para poder llamarla en el juego
+        $_SESSION['solucion']=$solucion;
+
         header('Location: juego.php');
     }else{
         echo'Usuario o contraseña incorrectos';
