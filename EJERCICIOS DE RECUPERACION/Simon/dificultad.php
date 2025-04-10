@@ -6,9 +6,9 @@ if(isset($_POST['dificultad'])){
         $update->bind_param("i", $dificultad);
         $update->execute();
 
-        $result = $conn->query("SELECT dificultad FROM nivel");
+        /*$result = $conn->query("SELECT dificultad FROM nivel");
 $row = $result->fetch_assoc();
-$dificultad_actual = $row['dificultad'];
+$dificultad_actual = $row['dificultad'];*/
 
 }
 if(isset($_POST['logout'])){
