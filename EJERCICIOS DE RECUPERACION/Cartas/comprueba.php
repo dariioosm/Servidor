@@ -39,28 +39,54 @@ $update->execute();
 
 
 if($respuestax==$respuestay){
-    $puntos=$conn->prepare('SELECT puntos FROM jugador WHERE jugador = ?');
+  
+    /* $puntos=$conn->prepare('SELECT puntos FROM jugador WHERE jugador = ?');
     $puntos->bind_param('s',$_SESSION['usuario']);
     $puntos->execute();
     $resultadopuntos=$puntos->get_result();
     $filapuntos = $resultadopuntos->fetch_assoc();
     $totalpuntos=intval($filapuntos['puntos']);
-    $nuevospuntos = $totalpuntos+1;
+    $nuevospuntos = $totalpuntos+1;*/
 
-    $updatepuntos= $conn->prepare('UPDATE jugador SET puntos = ? WHERE login = ?');
-    $updatepuntos->bind_param('is',$nuevospuntos,$_SESSION['usuario']);
+    $updatepuntos= $conn->prepare('UPDATE jugador SET puntos = puntos + 1 WHERE login = ?');
+    $updatepuntos->bind_param('s',$_SESSION['usuario']);
     $updatepuntos->execute();
+
+    $mensaje= 'Has acertado posiciones '.$respuestax.' y '.$respuestay.' despues de '.$_SESSION['levantadas'].' intentos';
+    $mensaje2='Se te sumará un punto y se sumarán '.$_SESSION['levantadas'].' intentos';
 }else{
+    /*
     $fallos=$conn->prepare('SELECT puntos FROM jugador WHERE jugador = ?');
     $fallos->bind_param('s',$_SESSION['usuario']);
     $fallos->execute();
     $resultadofallos=$fallos->get_result();
     $filafallos = $resultadofallos->fetch_assoc();
     $totalfallos=intval($filafallos['puntos']);
-    $nuevosfallos = $totalfallos-1;
+    $nuevosfallos = $totalfallos-1;*/
 
-    $updatefallos= $conn->prepare('UPDATE jugador SET puntos = ? WHERE login = ?');
-    $updatefallos->bind_param('is',$nuevosfallos,$_SESSION['usuario']);
+    $updatefallos= $conn->prepare('UPDATE jugador SET puntos = puntos -1 WHERE login = ?');
+    $updatefallos->bind_param('s',$_SESSION['usuario']);
     $updatefallos->execute();
+    $mensaje= 'Has fallado posiciones '.$respuestax.' y '.$respuestay.' despues de '.$_SESSION['levantadas'].' intentos.';
+    $mensaje2='Se te restará un punto y se sumarán '.$_SESSION['levantadas'].' intentos';
 }
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Bienvenido <?php echo $_SESSION['usuario'];?> </h2>
+    <br>
+    <p> <?php echo $mensaje?> </p>
+    <br>
+    <p> <?php echo $mensaje2?> </p>
+    <br>
+    <table>
+        
+    </table>
+</body>
+</html>
