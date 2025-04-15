@@ -59,7 +59,7 @@ if($cartalevantada!==null){
             var_dump($_POST['levanta']);
                 for($i=1;$i<6;$i++){
                     if($cartalevantada==($i)){
-                        switch($respuesta[$i-1]){
+                        switch($respuesta[$i]){
                             case 2:
                                 echo'<img src="2.jpg" width="150px" height="200px">';
                                 break;

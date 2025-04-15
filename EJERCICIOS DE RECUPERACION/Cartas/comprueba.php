@@ -16,8 +16,8 @@ $solucion=$_SESSION['solucion'];
 $respuestax=$_SESSION['solucion'][$x];
 $respuestay =$_SESSION['solucion'][$y];
  var_dump($solucion);
-echo 'Valor del primer valor'.$respuestax;
-echo 'Valor del segundo valor'.$respuestay;
+echo 'Valor del primer indice'.$respuestax;
+echo 'Valor del segundo indice'.$respuestay;
 
 //TODO hacer la suma de los intentos a la tupla extra (es requerido independientemente del aciero o fallo)
 
@@ -33,6 +33,12 @@ $nuevosintentos=$totalintentos+$_SESSION['levantadas'];
 
 //?update de la tupla con el nuevo resultado
 
+/*
+* Se podria hacer UPDATE jugador SET extra = extra + ? WHERE login = ?
+* para luego pasarle la variable de sesion con n intentos y sumarlo en la sentencia SQL
+* y ahorrame todas las lineas del SELECT
+*/
+
 $update= $conn->prepare('UPDATE jugador SET extra = ? WHERE login = ?');
 $update->bind_param('is',$intentos,$_SESSION['usuario']);
 $update->execute();
@@ -47,6 +53,9 @@ if($respuestax==$respuestay){
     $filapuntos = $resultadopuntos->fetch_assoc();
     $totalpuntos=intval($filapuntos['puntos']);
     $nuevospuntos = $totalpuntos+1;*/
+
+    //?con el update puntos=puntos +/-1 nos ahorramos hacer un select del valor y luego hacer la suma en PHP
+
 
     $updatepuntos= $conn->prepare('UPDATE jugador SET puntos = puntos + 1 WHERE login = ?');
     $updatepuntos->bind_param('s',$_SESSION['usuario']);
@@ -64,12 +73,17 @@ if($respuestax==$respuestay){
     $totalfallos=intval($filafallos['puntos']);
     $nuevosfallos = $totalfallos-1;*/
 
+
     $updatefallos= $conn->prepare('UPDATE jugador SET puntos = puntos -1 WHERE login = ?');
     $updatefallos->bind_param('s',$_SESSION['usuario']);
     $updatefallos->execute();
     $mensaje= 'Has fallado posiciones '.$respuestax.' y '.$respuestay.' despues de '.$_SESSION['levantadas'].' intentos.';
     $mensaje2='Se te restará un punto y se sumarán '.$_SESSION['levantadas'].' intentos';
 }
+//TODO hacer la seleccion de las tuplas login, aciertos y extra para meter los datos en tabla
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -86,7 +100,7 @@ if($respuestax==$respuestay){
     <p> <?php echo $mensaje2?> </p>
     <br>
     <table>
-        
+
     </table>
 </body>
 </html>
