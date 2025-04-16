@@ -60,6 +60,7 @@ if($respuestax==$respuestay){
     $updatepuntos= $conn->prepare('UPDATE jugador SET puntos = puntos + 1 WHERE login = ?');
     $updatepuntos->bind_param('s',$_SESSION['usuario']);
     $updatepuntos->execute();
+    $updatepuntos->close();
 
     $mensaje= 'Has acertado posiciones '.$respuestax.' y '.$respuestay.' despues de '.$_SESSION['levantadas'].' intentos';
     $mensaje2='Se te sumará un punto y se sumarán '.$_SESSION['levantadas'].' intentos';
@@ -77,12 +78,15 @@ if($respuestax==$respuestay){
     $updatefallos= $conn->prepare('UPDATE jugador SET puntos = puntos -1 WHERE login = ?');
     $updatefallos->bind_param('s',$_SESSION['usuario']);
     $updatefallos->execute();
+    $updatefallos->close();
     $mensaje= 'Has fallado posiciones '.$respuestax.' y '.$respuestay.' despues de '.$_SESSION['levantadas'].' intentos.';
     $mensaje2='Se te restará un punto y se sumarán '.$_SESSION['levantadas'].' intentos';
 }
 //TODO hacer la seleccion de las tuplas login, aciertos y extra para meter los datos en tabla
 
-
+$datos = $conn-> prepare('SELECT nombre,login,puntos,extra FROM jugador');
+$datos -> execute();
+$resultado = $datos ->get_result();
 
 ?>
 <!DOCTYPE html>
@@ -92,6 +96,15 @@ if($respuestax==$respuestay){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+     table {
+            border: 1px solid black;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+</style>
 <body>
     <h2>Bienvenido <?php echo $_SESSION['usuario'];?> </h2>
     <br>
@@ -100,7 +113,34 @@ if($respuestax==$respuestay){
     <p> <?php echo $mensaje2?> </p>
     <br>
     <table>
+        <h3>Puntuacion de los jugadores</h3>
+        <th>
+            
+            <!-- <td>Login</td> -->
+            <td>Puntos</td>
+            <td>Extra</td>
+        </th>
+        <?php
+            $filas= $resultado->num_rows;
+            for($i=0;$i<$filas;$i++){
+                $resultado-> data_seek($i);
+                $dato = $resultado->fetch_assoc();
+                $nombre=htmlspecialchars( $dato['nombre']);
+                $alias=htmlspecialchars($dato['login']);
+                $puntuacion=intval($dato['puntos']);
+                $numerointentos=intval($dato['extra']);
 
+                echo '';
+              //  echo "<td>{$nombre}</td>";
+                echo '<tr><td>'.$alias.'</td>';
+                echo '<td>'.$puntuacion.'</td>';
+                echo '<td>'.$numerointentos.'</td> </tr>';
+              //  echo'';
+            }
+        ?>
     </table>
 </body>
 </html>
+<?php
+$conn->close();
+?>
