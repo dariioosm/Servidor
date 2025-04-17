@@ -56,7 +56,7 @@ if($cartalevantada!==null){
 
         <div class="">
             <?php
-            var_dump($_POST['levanta']);
+           // var_dump($_POST['levanta']);
                 for($i=1;$i<6;$i++){
                     if($cartalevantada==($i)){
                         switch($respuesta[$i]){

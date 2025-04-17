@@ -10,14 +10,16 @@ session_start();
 $x=$_POST['x']-1;
 $y=$_POST['y']-1;
 
+$usuario=$_SESSION['usuario'];
+
 $intentos=$_SESSION['levantadas'];
 $solucion=$_SESSION['solucion'];
 
 $respuestax=$_SESSION['solucion'][$x];
 $respuestay =$_SESSION['solucion'][$y];
- var_dump($solucion);
-echo 'Valor del primer indice'.$respuestax;
-echo 'Valor del segundo indice'.$respuestay;
+// var_dump($solucion);
+//echo 'Valor del primer indice'.$respuestax;
+//echo 'Valor del segundo indice'.$respuestay;
 
 //TODO hacer la suma de los intentos a la tupla extra (es requerido independientemente del aciero o fallo)
 
@@ -58,7 +60,7 @@ if($respuestax==$respuestay){
 
 
     $updatepuntos= $conn->prepare('UPDATE jugador SET puntos = puntos + 1 WHERE login = ?');
-    $updatepuntos->bind_param('s',$_SESSION['usuario']);
+    $updatepuntos->bind_param('s',$usuario);
     $updatepuntos->execute();
     $updatepuntos->close();
 
@@ -76,7 +78,7 @@ if($respuestax==$respuestay){
 
 
     $updatefallos= $conn->prepare('UPDATE jugador SET puntos = puntos -1 WHERE login = ?');
-    $updatefallos->bind_param('s',$_SESSION['usuario']);
+    $updatefallos->bind_param('s',$usuario);
     $updatefallos->execute();
     $updatefallos->close();
     $mensaje= 'Has fallado posiciones '.$respuestax.' y '.$respuestay.' despues de '.$_SESSION['levantadas'].' intentos.';
