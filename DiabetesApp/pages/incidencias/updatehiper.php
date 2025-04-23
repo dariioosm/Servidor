@@ -47,7 +47,7 @@ $fecha_hoy = date('Y-m-d');
                 <label class="form-label">Nuevas Unidades de Corrección</label>
                 <input type="number" name="unidades_correccion" class="form-control" required>
             </div>
-
+            <a href="../panel.php">Cancelar</a> 
             <button type="submit" class="btn btn-success w-100">Actualizar Registro</button>
         </form>
     </div>

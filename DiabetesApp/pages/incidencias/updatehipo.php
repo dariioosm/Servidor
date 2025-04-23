@@ -42,7 +42,7 @@ $fecha_hoy = date('Y-m-d');
                 <label class="form-label">Nueva Hora de la Hipo</label>
                 <input type="time" name="hora_hipo" class="form-control" required>
             </div>
-
+            <a href="../panel.php">Cancelar</a> 
             <button type="submit" class="btn btn-success w-100">Actualizar Registro</button>
         </form>
     </div>

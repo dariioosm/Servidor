@@ -22,6 +22,8 @@ $fecha_hoy = date('Y-m-d');
                         <input type="date" name="fecha_control" id="fecha_control"  max="<?= $fecha_hoy;?>" class="form-control" required>
                     </div>
                     <div class="text-center">
+                    <a href="../panel.php">Cancelar</a> 
+
                         <button type="submit" class="btn btn-primary">Buscar Registro</button>
                     </div>
                 </form>

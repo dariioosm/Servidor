@@ -128,6 +128,7 @@ $fecha_hoy = date('Y-m-d');
             </div>
 
             <div class="text-center mt-4">
+                <a href="../panel.php">Cancelar</a> 
                 <button type="submit" class="btn btn-primary">Actualizar Registro</button>
             </div>
         </form>

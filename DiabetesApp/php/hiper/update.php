@@ -19,8 +19,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
      $select_id->fetch();
      $select_id->close();*/
 
-    $stmt = $conn->prepare("UPDATE hiperglucemia  SET glucosa_hiper = ?, hora_hiper = ?, unidades_correccion = ? WHERE id_usuario = ? AND fecha_control = ? AND tipo_comida = ?");
+    //$stmt = $conn->prepare("UPDATE hiperglucemia  SET glucosa_hiper = ?, hora_hiper = ?, unidades_correccion = ? WHERE id_usuario = ? AND fecha_control = ? AND tipo_comida = ?");
+   
+    $stmt = $conn->prepare("UPDATE hiperglucemia SET glucosa_hiper = ?, hora_hiper = ?, unidades_correccion = ? WHERE id_usuario = ? AND fecha_control = ? AND tipo_comida = ?");
     $stmt->bind_param("isiiss", $glucosa_hiper, $hora_hiper, $unidades_correccion, $id_usuario, $fecha_control, $tipo_comida);
+
     
     if ($stmt->execute()) {
         $_SESSION['mensaje']="Datos actualizados correctamente";
@@ -30,7 +33,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $stmt->close();
     $conn->close();
-    header('Location: ../../../../pages/panel.php');
+    header("Location: ../../pages/panel.php");
     exit();
+
 }
 ?>
+
+

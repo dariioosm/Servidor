@@ -10,7 +10,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     $hora_hiper = $_POST['hora_hiper'] ?? null;
     $unidades_correccion = $_POST['unidades_correccion'] ?? null;
 
-    $insert_hiper = $conn->prepare('INSERT INTO hiperglucemia (id_usuario, fecha_control, tipo_comida, glucosa_hiper, hora_hiper, unidades_correccion) VALUES (?, ?, ?, ?, ?, ?)');
+    $insert_hiper = $conn->prepare('INSERT INTO hiperglucemia id_usuario = ?, fecha_control = ?, tipo_comida = ?, glucosa_hiper = ?, hora_hiper = ?, unidades_correccion = ?');
     $insert_hiper->bind_param('issisi', $id_usuario, $fecha_control, $tipo_comida, $glucosa_hiper, $hora_hiper, $unidades_correccion);
     
     if ($insert_hiper->execute()) {
@@ -23,7 +23,8 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 
 //! comprobar rutas luego
 //header('Location: ../../../../pages/panel.php');
-header('Location: /../../../pages/panel.php');
+//header("Location: ../../pages/panel.php");
+header("Location: /Servidor/DiabetesApp/pages/panel.php");
 exit();
 }
 

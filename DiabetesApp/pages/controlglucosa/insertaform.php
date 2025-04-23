@@ -66,6 +66,8 @@ $fecha_hoy = date('Y-m-d');
             </div>
 
             <div class="d-grid gap-2">
+            <a href="../panel.php">Cancelar</a> 
+
                 <button name="insertForm" type="submit" class="btn btn-primary">Enviar</button>
             </div>
         </form>
