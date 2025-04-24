@@ -1,6 +1,6 @@
 <?php
 
 
-$conn = new mysqli('localhost','root','','bdnotas');
+$conn = new mysqli('localhost:3307','root','','bdnotas');
 
 ?>
