@@ -20,8 +20,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     //comprobarControl($id_usuario, $fecha_control);
 
-    $insert_hipo = $conn->prepare('INSERT INTO hipoglucemia (id_usuario, fecha_control, tipo_comida, glucosa_hipo, hora_hipo) VALUES (?, ?, ?, ?, ?)');
-    $insert_hipo->bind_param('issis', $id_usuario, $fecha_control, $tipo_comida, $glucosa_hipo, $hora_hipo);
+    $check_hipo=$conn->prepare('SELECT 1 FROM COMIDA WHERE id_usuario = ? AND fecha_control = ? AND tipo_comida = ?');
+    $check_hipo=$conn->bind_param('iss',$id_usuario, $fecha_control, $tipo_comida);
+    if($check_hipo->execute()){
+        $insert_hipo = $conn->prepare('INSERT INTO hipoglucemia (id_usuario, fecha_control, tipo_comida, glucosa_hipo, hora_hipo) VALUES (?, ?, ?, ?, ?)');
+        $insert_hipo->bind_param('issis', $id_usuario, $fecha_control, $tipo_comida, $glucosa_hipo, $hora_hipo);
+    
+    }
+
 
     if ($insert_hipo->execute()) {
         $_SESSION['mensaje'] = 'Datos insertados correctamente en la tabla HIPOGLUCEMIA.';
