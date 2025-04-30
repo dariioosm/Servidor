@@ -6,9 +6,9 @@ var_dump($_SESSION['incrementos']);
 //? Recorrer los contactos enviados
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     for ($i = 1; $i <= $_SESSION['incrementos']; $i++) {
-        $nombre = $_POST['Nombre'][$i];
-        $email = $_POST['email'][$i];
-        $numero = $_POST['numero'][$i];
+        $nombre = $_POST['Nombre'.  $i];
+        $email = $_POST['email'.$i];
+        $numero = $_POST['numero'.$i];
 
         if (!empty($nombre) || !empty($email) || !empty($numero)) {
             var_dump($_POST);
@@ -22,6 +22,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     header('Location: grabado.php');
 }
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
