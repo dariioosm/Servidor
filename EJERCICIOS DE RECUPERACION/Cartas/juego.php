@@ -9,12 +9,10 @@ session_start();
 $respuesta=$_SESSION['solucion'];
 if(!isset($_POST['levanta'])){
     $_SESSION['levantadas']=0;
-}elseif(isset($_POST['levanta'])){
-   // $cartalevantada=intval($_POST['levanta']);
 }
 
 $cartalevantada = isset($_POST['levanta']) ? intval($_POST['levanta']) : null;
-var_dump($cartalevantada);
+
 if($cartalevantada!==null){
     $_SESSION['levantadas']++;
 }
@@ -37,7 +35,7 @@ if($cartalevantada!==null){
             <button type="submit" value="2" name="levanta">Levanta la carta 3</button>
             <button type="submit" value="3" name="levanta">Levanta la carta 4</button>
             <button type="submit" value="4" name="levanta">Levanta la carta 5</button>
-            <button type="submit" value="5" name="levanta">Levanta la carta 6</button> -->
+            <button type="submit" value="5" name="levanta">Levanta la carta 6</button>
 
            <!--
             <button type="submit" value="1" name="levanta">Levanta la carta 1</button>
@@ -56,24 +54,29 @@ if($cartalevantada!==null){
 
         <div class="">
             <?php
-           // var_dump($_POST['levanta']);
-                for($i=1;$i<6;$i++){
-                    if($cartalevantada==($i)){
-                        switch($respuesta[$i]){
-                            case 2:
-                                echo'<img src="2.jpg" width="150px" height="200px">';
-                                break;
-                            case 3:
-                                echo'<img src="3.jpg" width="150px" height="200px">';
-                                break;
-                            case 5:
-                                echo'<img src="5.jpg" width="150px" height="200px">';
-                                break;
-                        }
-                    }else{
-                        echo'<img src="boca_abajo.jpg" width="150px" height="200px">';
-                    }
+           if(!isset($_POST['levanta'])){
+                for($i=0;$i<6;$i++){
+                    echo'<img src="boca_abajo.jpg" width="150px" height="200px">';
                 }
+           }else{
+            for($i=0;$i<6;$i++){
+                if($cartalevantada==($i)){
+                    switch($respuesta[$i]){
+                        case 2:
+                            echo'<img src="2.jpg" width="150px" height="200px">';
+                            break;
+                        case 3:
+                            echo'<img src="3.jpg" width="150px" height="200px">';
+                            break;
+                        case 5:
+                            echo'<img src="5.jpg" width="150px" height="200px">';
+                            break;
+                    }
+                }else{
+                    echo'<img src="boca_abajo.jpg" width="150px" height="200px">';
+                }
+            }
+           }
             ?>
 
         </div>

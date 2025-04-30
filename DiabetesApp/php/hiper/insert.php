@@ -24,7 +24,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 //! comprobar rutas luego
 //header('Location: ../../../../pages/panel.php');
 //header("Location: ../../pages/panel.php");
-header("Location: /Servidor/DiabetesApp/pages/panel.php");
+//header("Location: /Servidor/DiabetesApp/pages/panel.php");
 exit();
 }
 
