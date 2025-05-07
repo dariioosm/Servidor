@@ -77,7 +77,7 @@ $resultado = $circulitos->get_result();
     </table>
 
     <br>
-    <a href="index.php"><?php session_destroy(); ?>  Volver a loguearse</a> |
+    <a href="index.php"><?php //session_destroy(); ?>  Volver a loguearse</a> |
     <a href="inicio.php">Añadir más contactos a <?php unset($_SESSION['incrementos']); echo htmlspecialchars($_SESSION['usuario']); ?></a>
 </body>
 </html>

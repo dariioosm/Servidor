@@ -1,6 +1,11 @@
 <?php
 require 'conexion.php';
 session_start();
+if($_SESSION['incrementos'] != null){
+    unset($_SESSION['incrementos']);
+}
+
+
 if (!isset($_SESSION['incrementos'])) {
     unset($_SESSION['incrementos']);
     $_SESSION['incrementos'] = 0;
