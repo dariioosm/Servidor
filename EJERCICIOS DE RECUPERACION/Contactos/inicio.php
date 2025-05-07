@@ -15,7 +15,6 @@ $imagenes = [0, 1, 2, 3, 4];
 $pinta = rand(0, 4);
 
 
-
 if (isset($_POST['incrementar'])) {
     if ($_SESSION['incrementos'] < 5) {
         $_SESSION['incrementos']++;
@@ -51,8 +50,7 @@ if (isset($_POST['grabar'])) {
      </p>   
         <?php
             for($i=0;$i<$_SESSION['incrementos'];$i++){
-                $total_imagenes[$i]= "<img src='{$imagenes[$pinta]}.jfif' width='150px' height='200px' alt=''>"
-                echo $total_imagenes[$i];
+                echo "<img src='{$imagenes[$pinta]}.jfif' width='150px' height='200px' alt=''>";
             }
         
         ?>
