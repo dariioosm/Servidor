@@ -2,7 +2,11 @@
 require 'conexion.php';
 session_start();
 
-$notas= $conn->prepare('SELECT alumno,asignatura,nota from notas');
+$notas= $conn->prepare('
+    SELECT a.nombre AS alumno, n.asignatura, n.nota
+    FROM alumnos a
+    LEFT JOIN notas n ON a.id = n.alumno
+    ');
 $notas->execute();
 $info=$notas->get_result();
 ?>
