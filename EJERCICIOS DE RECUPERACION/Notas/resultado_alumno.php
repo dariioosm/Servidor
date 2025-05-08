@@ -45,5 +45,6 @@ $info = $notas->get_result();
             <?php endwhile; ?>
         </tbody>
     </table>
+    <a href="alumno.php">Volver al menu de alumno</a>
 </body>
 </html>

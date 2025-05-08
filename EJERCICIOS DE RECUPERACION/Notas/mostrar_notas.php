@@ -30,6 +30,7 @@ $info=$notas->get_result();
         }
 </style>
 <body>
+    <a href="director.php">Volver a la pantalla de director</a>
     <table>
         <thead>
             <th>Alumno ID</th>
