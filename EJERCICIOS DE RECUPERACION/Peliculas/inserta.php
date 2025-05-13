@@ -2,7 +2,7 @@
 require 'conexion.php';
 session_start();
 
-// Inicializar puntuación
+
 if (!isset($_SESSION['puntos'])) {
     $_SESSION['puntos'] = 0;
 }
@@ -15,14 +15,12 @@ $poster = $_POST['poster'] ?? '';
 $alquilada = intval($_POST['alq'] ?? '');
 $sinopsis = $_POST['sinop'] ?? '';
 
-// Si se hace clic en "Votar"
 if (isset($_POST['puntos'])) {
     if ($_SESSION['puntos'] < 10) {
         $_SESSION['puntos']++;
     }
 }
 
-// Si se hace clic en "Enviar"
 if (isset($_POST['info'])) {
     if (!empty($titulo) && !empty($anio) && !empty($director) &&
         !empty($poster) && $alquilada !== '' && !empty($sinopsis)) {
@@ -42,7 +40,7 @@ if (isset($_POST['info'])) {
         $_SESSION['puntos'] = 0;
         $titulo = $anio = $director = $poster = $alquilada = $sinopsis = '';
     } else {
-        echo '⚠️ Todos los campos son obligatorios.';
+        echo 'Todos los campos son obligatorios.';
     }
 }
 ?>
