@@ -48,7 +48,7 @@ $f_nalq = $r_nalq -> fetch_assoc();
                 <td>Porcentaje</td>
                 <td></td>
                 <td> <?php $alquiporce = round(intval($f_alq['alquiladas'])/intval($fila_total['totales'])*100,2); echo $alquiporce . '%'?> </td>
-                <td> <?php $noalquiporce round(intval($f_nalq['noalquiladas'])/intval($fila_total['totales'])*100,2); echo $noalquiporce . '%'?></td>
+                <td> <?php $noalquiporce = round(intval($f_nalq['noalquiladas'])/intval($fila_total['totales'])*100,2); echo $noalquiporce . '%'?></td>
             </tr>
         </thead>
     </table>

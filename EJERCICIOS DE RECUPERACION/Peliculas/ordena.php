@@ -8,7 +8,7 @@ $peli_nueva -> execute();
 $resultado_nueva = $peli_nueva -> get_result();
 $fila_nueva = $resultado_nueva -> fetch_assoc();
 
-$peli_antigua = $conn -> prepare('SELECT titulo FROM pelicula WHERE anio = (SELECT MIN( anio )FROM pelicula)');
+$peli_antigua = $conn -> prepare('SELECT titulo FROM pelicula WHERE anio = (SELECT MIN(anio) FROM pelicula)');
 $peli_antigua ->execute();
 
 $resultado_antigua = $peli_antigua -> get_result();

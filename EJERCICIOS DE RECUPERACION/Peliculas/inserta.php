@@ -6,7 +6,7 @@ if (!isset($_SESSION['puntos'])) {
 }
 
 if (isset($_POST['puntos'])) {
-    if ($_SESSION['puntos'] < 11) {
+    if ($_SESSION['puntos'] < 10) {
         $_SESSION['puntos']++;
     }
 }
@@ -24,6 +24,7 @@ if (isset($_POST['info'])) {
     $inserta = $conn->prepare('INSERT INTO pelicula (titulo, anio, director, poster, alquilada, sinopsis, puntuacion) VALUES (?, ?, ?, ?, ?, ?, ?)');
     $inserta->bind_param('sissisi', $titulo, $anio, $director, $poster, $alquilada, $sinopsis, $puntuacion);
     $inserta->execute();
+    $_SESSION['puntos']=0;
 }
 ?>
 
@@ -49,10 +50,11 @@ if (isset($_POST['info'])) {
         <button type="submit" name="puntos">Votar</button>
         <?php 
                 for($i=0; $i<$_SESSION['puntos'];$i++){
-                    echo $i; //? hacer el echo de las estrellas
+                    echo '<img src="estrella.webp" width="50px" height="50px">';
                 }
         ?>
         <button type="submit" name = "info">Enviar</button>
     </form>
+    
 </body>
 </html>
