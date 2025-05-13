@@ -9,10 +9,10 @@ if (!isset($_SESSION['puntos'])) {
 
 // Obtener valores del formulario para mantenerlos
 $titulo = $_POST['titulo'] ?? '';
-$anio = $_POST['anio'] ?? '';
+$anio = intval($_POST['anio'] ?? '');
 $director = $_POST['director'] ?? '';
 $poster = $_POST['poster'] ?? '';
-$alquilada = $_POST['alq'] ?? '';
+$alquilada = intval($_POST['alq'] ?? '');
 $sinopsis = $_POST['sinop'] ?? '';
 
 // Si se hace clic en "Votar"
@@ -30,7 +30,7 @@ if (isset($_POST['info'])) {
         $puntuacion = $_SESSION['puntos'];
 
         $inserta = $conn->prepare('INSERT INTO pelicula (titulo, anio, director, poster, alquilada, sinopsis, puntuacion) VALUES (?, ?, ?, ?, ?, ?, ?)');
-        $inserta->bind_param('sissisi', $titulo, intval($anio), $director, $poster, intval($alquilada), $sinopsis, $puntuacion);
+        $inserta->bind_param('sissisi', $titulo, $anio, $director, $poster, $alquilada, $sinopsis, $puntuacion);
 
         if ($inserta->execute()) {
             echo ' Se ha insertado correctamente la película.';
@@ -55,7 +55,7 @@ if (isset($_POST['info'])) {
 </head>
 <body>
 
-    //? los value htmlspecialchars($variable), se utilizan para que no se borre la info del formulario al actualizar los puntos 
+<!-- //? los value htmlspecialchars($variable), se utilizan para que no se borre la info del formulario al actualizar los puntos --> 
 
     <form action="" method="post">
         <label>Pelicula:
