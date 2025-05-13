@@ -15,6 +15,7 @@ $resultado_antigua = $peli_antigua -> get_result();
 $fila_antigua = $resultado_antigua -> fetch_assoc();
 
 
+
 $peliculas = $conn -> prepare('SELECT titulo , anio FROM pelicula');
 $peliculas -> execute();
 
