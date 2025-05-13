@@ -1,0 +1,56 @@
+<?php
+require 'conexion.php';
+session_start();
+if (!isset($_SESSION['puntos'])) {
+    $_SESSION['puntos'] = 0;
+}
+
+if (isset($_POST['puntos'])) {
+    if ($_SESSION['puntos'] < 11) {
+        $_SESSION['puntos']++;
+    }
+}
+
+if (isset($_POST['info'])) {
+
+    $titulo = $_POST['titulo'];
+    $anio = intval($_POST['anio']);
+    $director = $_POST['director'];
+    $poster = $_POST['poster'];
+    $alquilada = intval($_POST['alq']);
+    $sinopsis = $_POST['sinop'];
+    $puntuacion = intval($_SESSION['puntos']);
+
+    $inserta = $conn->prepare('INSERT INTO pelicula (titulo, anio, director, poster, alquilada, sinopsis, puntuacion) VALUES (?, ?, ?, ?, ?, ?, ?)');
+    $inserta->bind_param('sissisi', $titulo, $anio, $director, $poster, $alquilada, $sinopsis, $puntuacion);
+    $inserta->execute();
+}
+?>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post">
+        <label>Pelicula<input type="text" name='titulo'></label> <br>
+        <label>Año<input type="number" name='anio'></label> <br>
+        <label>Director<input type="text" name='director'></label> <br>
+        <label>Poster<input type="text" name = 'poster'></label> <br>
+        <label>Alquilada<input type="number" min=0 max=1 name = 'alq'></label> <br>
+        <label>Sinopsis<input type="text" name= 'sinop'></label><br>
+        <h3>Puntuacion</h3>
+        <button type="submit" name="puntos">Votar</button>
+        <?php 
+                echo $_SESSION['puntos'];
+        ?>
+        <button type="submit" name = "info">Enviar</button>
+    </form>
+</body>
+</html>
