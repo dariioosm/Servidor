@@ -16,6 +16,10 @@ $fila_antigua = $resultado_antigua -> fetch_assoc();
 
 //? la barra que aparece en azul en el pdf es referente a la antigüedad de la peli cuanto más reciente es la peli mayor es la barra (coger la fecha más antigua de la bbdd)
 
+//? FORMULA DE LA LONGITUD DE LA BARRA
+//? ((select del año de la pelicula - el año de la pelicula mas vieja)/50)*100 '%'
+
+//TODO poner imagen de estrella en el echo del contador y mirar si hay un unset o un =0 para la sesion del contador de la puntuacion de la pelicula
 
 ?>
 
