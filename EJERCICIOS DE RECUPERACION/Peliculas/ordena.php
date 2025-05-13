@@ -13,6 +13,10 @@ $peli_antigua ->execute();
 
 $resultado_antigua = $peli_antigua -> get_result();
 $fila_antigua = $resultado_antigua -> fetch_assoc();
+
+//? la barra que aparece en azul en el pdf es referente a la antigüedad de la peli cuanto más reciente es la peli mayor es la barra (coger la fecha más antigua de la bbdd)
+
+
 ?>
 
 <!DOCTYPE html>

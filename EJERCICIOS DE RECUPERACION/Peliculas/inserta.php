@@ -48,7 +48,9 @@ if (isset($_POST['info'])) {
         <h3>Puntuacion</h3>
         <button type="submit" name="puntos">Votar</button>
         <?php 
-                echo $_SESSION['puntos'];
+                for($i=0; $i<$_SESSION['puntos'];$i++){
+                    echo $i; //? hacer el echo de las estrellas
+                }
         ?>
         <button type="submit" name = "info">Enviar</button>
     </form>
