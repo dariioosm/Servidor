@@ -40,12 +40,12 @@ if (isset($_POST['info'])) {
 </head>
 <body>
     <form action="" method="post">
-        <label>Pelicula<input type="text" name='titulo'></label> <br>
-        <label>Año<input type="number" name='anio'></label> <br>
-        <label>Director<input type="text" name='director'></label> <br>
-        <label>Poster<input type="text" name = 'poster'></label> <br>
+        <label>Pelicula<input type="text" name='titulo' required></label> <br>
+        <label>Año<input type="number" name='anio' required></label> <br>
+        <label>Director<input type="text" name='director' required></label> <br>
+        <label>Poster<input type="text" name = 'poster' required></label> <br>
         <label>Alquilada<input type="number" min=0 max=1 name = 'alq'></label> <br>
-        <label>Sinopsis<input type="text" name= 'sinop'></label><br>
+        <label>Sinopsis<input type="text" name= 'sinop' required></label><br>
         <h3>Puntuacion</h3>
         <button type="submit" name="puntos">Votar</button>
         <?php 
