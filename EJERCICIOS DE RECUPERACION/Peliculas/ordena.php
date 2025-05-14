@@ -20,7 +20,7 @@ $peliculas = $conn -> prepare('SELECT titulo , anio FROM pelicula');
 $peliculas -> execute();
 
 $r_pelis = $peliculas -> get_result();
-//? selecciona todas las peliculas 
+//? selecciona todas las peliculas en bloque
 $lista_peliculas = $r_pelis->fetch_all(MYSQLI_ASSOC);
 
 $anio_min = intval($fila_antigua['anio']);
