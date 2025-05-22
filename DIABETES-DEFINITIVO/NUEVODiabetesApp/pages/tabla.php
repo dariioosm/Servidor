@@ -141,9 +141,7 @@ $conn->close();
                 </tbody>
             </table>
         </div>
-    <?php endif; ?>
-</div>
-  <h2 class="mt-4">Datos de Hiperglucemia</h2>
+          <h2 class="mt-4">Datos de Hiperglucemia</h2>
         <div class="table-responsive">
             <table class="table table-bordered table-hover">
                 <thead class="table-light">
@@ -192,6 +190,9 @@ $conn->close();
                 </tbody>
             </table>
         </div>
+
+    <?php endif; ?>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
