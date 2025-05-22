@@ -35,7 +35,7 @@ $fecha_hoy = date('Y-m-d');
 
             <div class="mb-3">
                 <label class="form-label">Glucosa Hiper</label>
-                <input type="number" name="glucosa_hiper" class="form-control" required>
+                <input type="number" name="glucosa_hiper" class="form-control" min='100' max='400' placeholder='100-400 (mg/dl)' required>
             </div>
 
             <div class="mb-3">
