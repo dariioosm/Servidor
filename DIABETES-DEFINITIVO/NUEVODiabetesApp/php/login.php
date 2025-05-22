@@ -6,8 +6,8 @@ session_destroy();
 session_start();
 //TODO pillar datos de formulario
     if($_SERVER["REQUEST_METHOD"] == "POST"){
-        $user=$_POST['usuario'];
-        $pass=$_POST['pass'];
+        $user=trim($_POST['usuario']);
+        $pass=trim($_POST['pass']);
         $fecha_hoy= date("Y-m-d");
 
         //TODO comprobacion de cumplimentacion de datos

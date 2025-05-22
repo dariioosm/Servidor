@@ -67,6 +67,7 @@ $fecha_hoy = date('Y-m-d');
 
             <div class="d-grid gap-2">
                 <button name="insertForm" type="submit" class="btn btn-primary">Enviar</button>
+                <a href="../panel.php" class="btn btn-light">Volver a Inicio</a>
             </div>
         </form>
     </div>

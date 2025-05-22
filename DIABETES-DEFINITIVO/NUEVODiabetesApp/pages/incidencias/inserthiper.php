@@ -49,6 +49,7 @@ $fecha_hoy = date('Y-m-d');
             </div>
 
             <button type="submit" class="btn btn-info w-100">Insertar Registro</button>
+            <a href="../panel.php" class="btn btn-light">Volver a Inicio</a>
         </form>
     </div>
 

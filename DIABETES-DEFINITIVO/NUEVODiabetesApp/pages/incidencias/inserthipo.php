@@ -35,7 +35,7 @@ $fecha_hoy = date('Y-m-d');
 
             <div class="mb-3">
                 <label class="form-label">Glucosa Hipo</label>
-                <input type="number" name="glucosa_hipo" class="form-control" required>
+                    <input type="number" name="glucosa_hipo" class="form-control" min="40" max="69" placeholder="40-69 mg/dl" required>
             </div>
 
             <div class="mb-3">
@@ -43,6 +43,7 @@ $fecha_hoy = date('Y-m-d');
                 <input type="time" name="hora_hipo" class="form-control" required>
             </div>
             <button type="submit" class="btn btn-info w-100">Insertar Registro</button>
+            <a href="../panel.php" class="btn btn-light">Volver a Inicio</a>
         </form>
     </div>
 

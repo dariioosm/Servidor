@@ -23,6 +23,7 @@ $fecha_hoy = date('Y-m-d');
                     </div>
                     <div class="text-center">
                         <button type="submit" class="btn btn-primary">Buscar Registro</button>
+                        <a href="../panel.php" class="btn btn-light">Volver a Inicio</a>
                     </div>
                 </form>
             </div>

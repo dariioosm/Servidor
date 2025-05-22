@@ -32,7 +32,7 @@ $fecha_control = date('Y-m-d');
             </div>
             <div class="mb-3">
                 <label for="glucosa_hiper" class="form-label">Glucosa</label>
-                <input type="number" class="form-control" id="glucosa_hiper" name="glucosa_hiper" required value="<?=htmlspecialchars($glucosa_hiper)?>">
+                <input type="number" class="form-control" id="glucosa_hiper" name="glucosa_hiper" min="100" max="400" required value="<?=htmlspecialchars($glucosa_hiper)?>">
             </div>
             <div class="mb-3">
                 <label for="hora_hiper" class="form-label">Hora</label>
@@ -43,7 +43,7 @@ $fecha_control = date('Y-m-d');
                 <input type="number" class="form-control" id="unidades_correccion" name="unidades_correccion" required value="<?=htmlspecialchars($unidades_correccion)?>">
             </div>
             <button type="submit" class="btn btn-success">Actualizar</button>
-            <a href="../../pages/panel.php" class="btn btn-secondary">Cancelar</a>
+            <a href="../panel.php" class="btn btn-light">Volver a Inicio</a>
         </form>
     </div>
 </body>

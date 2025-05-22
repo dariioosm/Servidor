@@ -5,7 +5,7 @@ $id_usuario = $_SESSION['id_usuario'];
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $fecha_control = $_POST["fecha_control"];
     $tipo_comida = $_POST["tipo_comida"];
-    $glucosa_hiper = $_POST["glucosa_hiper"];
+    $glucosa_hiper = trim($_POST["glucosa_hiper"]);
     $hora_hiper = $_POST["hora_hiper"];
     $unidades_correccion = $_POST["unidades_correccion"];
     // Preparamos la consulta

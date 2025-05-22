@@ -7,7 +7,7 @@ $id_usuario = $_SESSION['id_usuario'];
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $fecha_control = $_POST['fecha_control'];
     $tipo_comida = $_POST['tipo_comida'];
-    $glucosa_hipo = isset($_POST['glucosa_hipo']);
+    $glucosa_hipo = isset(trim($_POST['glucosa_hipo']));
     $hora_hipo = isset($_POST['hora_hipo']);
 
     
