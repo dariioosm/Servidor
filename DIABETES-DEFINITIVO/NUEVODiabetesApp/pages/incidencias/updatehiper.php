@@ -32,7 +32,7 @@ $fecha_control = date('Y-m-d');
             </div>
             <div class="mb-3">
                 <label for="glucosa_hiper" class="form-label">Glucosa</label>
-                <input type="number" class="form-control" id="glucosa_hiper" name="glucosa_hiper" min="100" max="400" required value="<?=htmlspecialchars($glucosa_hiper)?>">
+                <input type="number" class="form-control" id="glucosa_hiper" name="glucosa_hiper" min="100" max="400" placeholder="100-400 mg/dl" required value="<?=htmlspecialchars($glucosa_hiper)?>">
             </div>
             <div class="mb-3">
                 <label for="hora_hiper" class="form-label">Hora</label>
