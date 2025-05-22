@@ -90,55 +90,7 @@ $conn->close();
     <a href="./panel.php" class="btn btn-secondary mb-3">Volver al Panel</a>
 
     <?php if ($fecha_inicio && $fecha_fin): ?>
-        <h2 class="mt-4">Datos de Hiperglucemia</h2>
-        <div class="table-responsive">
-            <table class="table table-bordered table-hover">
-                <thead class="table-light">
-                    <tr>
-                        <th>Fecha Control</th>
-                        <th>Tipo de Comida</th>
-                        <th>Glucosa Hiper</th>
-                        <th>Hora de la Hiper</th>
-                        <th>Unidades de Corrección</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php foreach ($datos['hiperglucemia'] as $row): ?>
-                        <tr>
-                            <td><?= $row['fecha_control']; ?></td>
-                            <td><?= $row['tipo_comida']; ?></td>
-                            <td><?= $row['glucosa_hiper']; ?></td>
-                            <td><?= $row['hora_hiper']; ?></td>
-                            <td><?= $row['unidades_correccion']; ?></td>
-                        </tr>
-                    <?php endforeach; ?>
-                </tbody>
-            </table>
-        </div>
-
-        <h2 class="mt-4">Datos de Hipoglucemia</h2>
-        <div class="table-responsive">
-            <table class="table table-bordered table-hover">
-                <thead class="table-light">
-                    <tr>
-                        <th>Fecha Control</th>
-                        <th>Tipo de Comida</th>
-                        <th>Glucosa Hipo</th>
-                        <th>Hora de la Hipo</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php foreach ($datos['hipoglucemia'] as $row): ?>
-                        <tr>
-                            <td><?= $row['fecha_control']; ?></td>
-                            <td><?= $row['tipo_comida']; ?></td>
-                            <td><?= $row['glucosa_hipo']; ?></td>
-                            <td><?= $row['hora_hipo']; ?></td>
-                        </tr>
-                    <?php endforeach; ?>
-                </tbody>
-            </table>
-        </div>
+      
 
         <h2 class="mt-4">Datos de Control de Glucosa</h2>
         <div class="table-responsive">
@@ -191,6 +143,55 @@ $conn->close();
         </div>
     <?php endif; ?>
 </div>
+  <h2 class="mt-4">Datos de Hiperglucemia</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover">
+                <thead class="table-light">
+                    <tr>
+                        <th>Fecha Control</th>
+                        <th>Tipo de Comida</th>
+                        <th>Glucosa Hiper</th>
+                        <th>Hora de la Hiper</th>
+                        <th>Unidades de Corrección</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($datos['hiperglucemia'] as $row): ?>
+                        <tr>
+                            <td><?= $row['fecha_control']; ?></td>
+                            <td><?= $row['tipo_comida']; ?></td>
+                            <td><?= $row['glucosa_hiper']; ?></td>
+                            <td><?= $row['hora_hiper']; ?></td>
+                            <td><?= $row['unidades_correccion']; ?></td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
+
+        <h2 class="mt-4">Datos de Hipoglucemia</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover">
+                <thead class="table-light">
+                    <tr>
+                        <th>Fecha Control</th>
+                        <th>Tipo de Comida</th>
+                        <th>Glucosa Hipo</th>
+                        <th>Hora de la Hipo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($datos['hipoglucemia'] as $row): ?>
+                        <tr>
+                            <td><?= $row['fecha_control']; ?></td>
+                            <td><?= $row['tipo_comida']; ?></td>
+                            <td><?= $row['glucosa_hipo']; ?></td>
+                            <td><?= $row['hora_hipo']; ?></td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
