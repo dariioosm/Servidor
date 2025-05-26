@@ -68,7 +68,7 @@ $fecha_hoy = date('Y-m-d');
                 </div>
                 <div class="mb-3 col-md-6">
                     <label class="form-label">Glucosa antes de la ingesta</label>
-                    <input type="number" name="glucosa_preingesta" class="form-control" min="0" required>
+                    <input type="number" name="glucosa_preingesta" class="form-control" min="70" max="99" placeholder="70-99 mg/dl" required>
                 </div>
             </div>
 
@@ -79,7 +79,7 @@ $fecha_hoy = date('Y-m-d');
                 </div>
                 <div class="mb-3 col-md-6">
                     <label class="form-label">Glucosa después de la ingesta</label>
-                    <input type="number" name="glucosa_postingesta" class="form-control" min="0">
+                    <input type="number" name="glucosa_postingesta" class="form-control" placeholder="70-99 mg/dl" required>
                 </div>
             </div>
 
@@ -103,7 +103,7 @@ $fecha_hoy = date('Y-m-d');
                 <h5>Hiperglucemia</h5>
                 <div class="mb-3">
                     <label class="form-label">Medida de glucosa</label>
-                    <input type="number" name="glucosa_hiper" class="form-control">
+                    <input type="number" name="glucosa_hiper" class="form-control" min="100" max="400" placeholder="100-400 mg/dl">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Hora de la medida</label>
@@ -119,7 +119,7 @@ $fecha_hoy = date('Y-m-d');
                 <h5>Hipoglucemia</h5>
                 <div class="mb-3">
                     <label class="form-label">Medida de glucosa</label>
-                    <input type="number" name="glucosa_hipo" class="form-control">
+                    <input type="number" name="glucosa_hipo" class="form-control" min="40" max="69" placeholder="40-69 mg/dl">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Hora de la medida</label>
@@ -128,8 +128,8 @@ $fecha_hoy = date('Y-m-d');
             </div>
 
             <div class="text-center mt-4">
-                <a href="../panel.php">Cancelar</a> 
                 <button type="submit" class="btn btn-primary">Actualizar Registro</button>
+                <a href="../panel.php" class="btn btn-light">Volver a Inicio</a>
             </div>
         </form>
     </div>

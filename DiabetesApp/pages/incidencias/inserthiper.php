@@ -15,7 +15,7 @@ $fecha_hoy = date('Y-m-d');
     <div class="form-container bg-white p-4 rounded shadow" style="max-width: 500px; width: 100%;">
         <h2 class="text-center text-info mb-4">Insertar Hiperglucemia</h2>
         
-        <form action="../php/hiper/insert.php" method="POST">
+        <form action="../../php/hiper/insert.php" method="POST">
             <div class="mb-3">
                 <label class="form-label">Fecha de Control</label>
                 <input type="date" name="fecha_control" max="<?=$fecha_hoy;?>" class="form-control" required>
@@ -35,7 +35,7 @@ $fecha_hoy = date('Y-m-d');
 
             <div class="mb-3">
                 <label class="form-label">Glucosa Hiper</label>
-                <input type="number" name="glucosa_hiper" class="form-control" required>
+                <input type="number" name="glucosa_hiper" class="form-control" min='100' max='400' placeholder='100-400 (mg/dl)' required>
             </div>
 
             <div class="mb-3">
@@ -47,8 +47,9 @@ $fecha_hoy = date('Y-m-d');
                 <label class="form-label">Unidades de Corrección</label>
                 <input type="number" name="unidades_correccion" class="form-control" required>
             </div>
-            <a href="../panel.php">Cancelar</a> 
+
             <button type="submit" class="btn btn-info w-100">Insertar Registro</button>
+            <a href="../panel.php" class="btn btn-light">Volver a Inicio</a>
         </form>
     </div>
 

@@ -29,8 +29,8 @@ if (isset($fecha_control)&& !$fecha_control ) {
 
 // TODO Si el formulario se envió, actualizar los datos
 if (isset($_POST['updateControl'])) {
-    $nueva_glucosa_lenta = $_POST['glucosa_lenta'];
-    $nuevo_indice_actividad = $_POST['indice_actividad'];
+    $nueva_glucosa_lenta = trim($_POST['glucosa_lenta']);
+    $nuevo_indice_actividad = trim($_POST['indice_actividad']);
 
     $update = $conn->prepare('UPDATE control_glucosa SET glucosa_lenta = ?, indice_actividad = ? WHERE id_usuario = ? AND fecha_control = ?');
     $update->bind_param('iiis', $nueva_glucosa_lenta, $nuevo_indice_actividad, $id_usuario, $fecha_control);

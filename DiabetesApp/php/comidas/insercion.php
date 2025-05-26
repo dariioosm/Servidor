@@ -8,20 +8,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     $fecha_control = $_POST['fecha_control'];
     $tipo_comida = $_POST['tipo_comida'];
-    $raciones = $_POST['raciones'];
-    $glucosa_pre = $_POST['glucosa_preingesta'];
-    $insulina = $_POST['insulina'];
-    $glucosa_pos = $_POST['glucosa_postingesta'];
+    $raciones = trim($_POST['raciones']);
+    $glucosa_pre = trim($_POST['glucosa_preingesta']);
+    $insulina = trim($_POST['insulina']);
+    $glucosa_pos = trim($_POST['glucosa_postingesta']);
     
     //?Posibles datos de las tablas hiper e hipoglucemia (puede estar vacía la tabla)
-    $glucosa_estado = $_POST['glucosa_estado'] ?? ''; //* tiene comillas, porque coge la info del value del radio
+    $glucosa_estado = trim($_POST['glucosa_estado']) ?? ''; //* tiene comillas, porque coge la info del value del radio
 
-    $glucosa_hiper = $_POST['glucosa_hiper'] ?? null;
-    $hora_hiper = $_POST['hora_hiper'] ?? null;
-    $unidades_correccion = $_POST['unidades_correccion'] ?? null;
+    $glucosa_hiper = trim($_POST['glucosa_hiper']) ?? null;
+    $hora_hiper = trim($_POST['hora_hiper']) ?? null;
+    $unidades_correccion = trim($_POST['unidades_correccion']) ?? null;
 
-    $glucosa_hipo = $_POST['glucosa_hipo'] ?? null;
-    $hora_hipo = $_POST['hora_hipo'] ?? null;
+    $glucosa_hipo = trim($_POST['glucosa_hipo']) ?? null;
+    $hora_hipo = trim($_POST['hora_hipo']) ?? null;
 
     //TODO comprobación de campos obligatorios
 

@@ -3,12 +3,12 @@ require 'conexion.php';
 
 //TODO pillar datos del form
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-    $nombre = $_POST['nombre'];
-    $apellidos = $_POST['apellidos'];
+    $nombre = trim($_POST['nombre']);
+    $apellidos = trim($_POST['apellidos']);
     $fecha_nacimiento = $_POST['fecha_nacimiento']; // Formato esperado: d/m/Y
-    $user = $_POST['usuario'];
-    $pass = $_POST['pass'];
-    $pass2 = $_POST['pass2'];
+    $user = trim($_POST['usuario']);
+    $pass = trim($_POST['pass']);
+    $pass2 = trim($_POST['pass2']);
    
     //TODO comprobacion de datos cumplimentados
     if(empty($nombre) || empty($apellidos) || empty($fecha_nacimiento) || empty($user) || empty($pass) || empty($pass2)){

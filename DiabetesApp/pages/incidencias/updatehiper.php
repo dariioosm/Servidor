@@ -1,26 +1,24 @@
 <?php
 //? Guarda fecha en la variable para marcar límite en el registro
-$fecha_hoy = date('Y-m-d');
+$fecha_control = date('Y-m-d');
 ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actualizar Hiperglucemia</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body class="bg-light d-flex justify-content-center align-items-center vh-100">
-
-    <div class="form-container bg-white p-4 rounded shadow" style="max-width: 500px; width: 100%;">
-        <h2 class="text-center text-success mb-4">Actualizar Hiperglucemia</h2>
-        
+<body class="bg-light">
+    <div class="container mt-5">
+        <h2 class="mb-4 text-primary">Actualizar Hiperglucemia</h2>
         <form action="../../php/hiper/update.php" method="POST">
+            <input type="hidden" name="fecha_control" value="<?=htmlspecialchars($fecha_control)?>">
+            <input type="hidden" name="tipo_comida" value="<?=htmlspecialchars($tipo_comida)?>">
             <div class="mb-3">
-                <label class="form-label">Fecha de Control</label>
-                <input type="date" name="fecha_control" max="<?=$fecha_hoy;?>" class="form-control" required>
+                <label for="glucosa_hiper" class="form-label">Fecha</label>
+                <input type="date" class="form-control" id="glucosa_hiper" name="glucosa_hiper" required value="<?=htmlspecialchars($fecha_hiper)?>">
             </div>
-
             <div class="mb-3">
                 <label class="form-label">Tipo de Comida</label>
                 <select name="tipo_comida" class="form-select" required>
@@ -32,26 +30,22 @@ $fecha_hoy = date('Y-m-d');
                     <option value="Cena">Cena</option>
                 </select>
             </div>
-
             <div class="mb-3">
-                <label class="form-label">Nueva Glucosa Hiper</label>
-                <input type="number" name="glucosa_hiper" class="form-control" required>
+                <label for="glucosa_hiper" class="form-label">Glucosa</label>
+                <input type="number" class="form-control" id="glucosa_hiper" name="glucosa_hiper" min="100" max="400" placeholder="100-400 mg/dl" required value="<?=htmlspecialchars($glucosa_hiper)?>">
             </div>
-
             <div class="mb-3">
-                <label class="form-label">Nueva Hora de la Hiper</label>
-                <input type="time" name="hora_hiper" class="form-control" required>
+                <label for="hora_hiper" class="form-label">Hora</label>
+                <input type="time" class="form-control" id="hora_hiper" name="hora_hiper" required value="<?=htmlspecialchars($hora_hiper)?>">
             </div>
-
             <div class="mb-3">
-                <label class="form-label">Nuevas Unidades de Corrección</label>
-                <input type="number" name="unidades_correccion" class="form-control" required>
+                <label for="unidades_correccion" class="form-label">Unidades de Corrección</label>
+                <input type="number" class="form-control" id="unidades_correccion" name="unidades_correccion" required value="<?=htmlspecialchars($unidades_correccion)?>">
             </div>
-            <a href="../panel.php">Cancelar</a> 
-            <button type="submit" class="btn btn-success w-100">Actualizar Registro</button>
+            <button type="submit" class="btn btn-success">Actualizar</button>
+            <a href="../panel.php" class="btn btn-light">Volver a Inicio</a>
         </form>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+

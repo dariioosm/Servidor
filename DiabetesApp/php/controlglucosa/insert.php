@@ -1,8 +1,8 @@
 <?php 
-//session_start();
+//
 require __DIR__ . '/../conexion.php';
 //TODO recoger los datos del formulario
-
+session_start();
     function insertarControl($datos){
     try{
         global $conn,$_SESSION;
